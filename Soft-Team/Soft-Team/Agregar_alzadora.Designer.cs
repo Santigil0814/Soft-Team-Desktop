@@ -64,6 +64,17 @@ namespace Soft_Team
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(371, 19);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(305, 29);
+            label1.TabIndex = 42;
+            label1.Text = "Registrar nueva Alzadora";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox8);
@@ -260,7 +271,7 @@ namespace Soft_Team
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(351, 76);
+            this.textBox1.Location = new System.Drawing.Point(352, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(345, 20);
             this.textBox1.TabIndex = 57;
@@ -309,22 +320,11 @@ namespace Soft_Team
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(348, 59);
+            this.label2.Location = new System.Drawing.Point(349, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 14);
             this.label2.TabIndex = 52;
             this.label2.Text = "Número interno";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(376, 19);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(305, 29);
-            label1.TabIndex = 42;
-            label1.Text = "Registrar nueva Alzadora";
             // 
             // button2
             // 
