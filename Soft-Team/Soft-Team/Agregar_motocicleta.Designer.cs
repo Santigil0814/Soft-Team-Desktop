@@ -64,6 +64,17 @@ namespace Soft_Team
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(353, 20);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(337, 29);
+            label1.TabIndex = 42;
+            label1.Text = "Registrar nueva Motocicleta";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox8);
@@ -315,17 +326,6 @@ namespace Soft_Team
             this.label2.TabIndex = 52;
             this.label2.Text = "Número interno";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(353, 20);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(337, 29);
-            label1.TabIndex = 42;
-            label1.Text = "Registrar nueva Motocicleta";
-            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -348,6 +348,7 @@ namespace Soft_Team
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(78, 278);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 194);
