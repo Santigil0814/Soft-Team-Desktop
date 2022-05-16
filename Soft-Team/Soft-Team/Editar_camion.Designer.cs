@@ -64,6 +64,17 @@ namespace Soft_Team
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(432, 19);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(178, 29);
+            label1.TabIndex = 42;
+            label1.Text = "Editar Camión";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox8);
@@ -314,17 +325,6 @@ namespace Soft_Team
             this.label2.Size = new System.Drawing.Size(92, 14);
             this.label2.TabIndex = 52;
             this.label2.Text = "Número interno";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(432, 19);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(178, 29);
-            label1.TabIndex = 42;
-            label1.Text = "Editar Camión";
             // 
             // button2
             // 

@@ -94,6 +94,48 @@
     <Compile Include="captura_info.Designer.cs">
       <DependentUpon>captura_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editar_alzadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_alzadora.Designer.cs">
+      <DependentUpon>Editar_alzadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_camion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_camion.Designer.cs">
+      <DependentUpon>Editar_camion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_cosechadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_cosechadora.Designer.cs">
+      <DependentUpon>Editar_cosechadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_motocicleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_motocicleta.Designer.cs">
+      <DependentUpon>Editar_motocicleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_tractocamion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_tractocamion.Designer.cs">
+      <DependentUpon>Editar_tractocamion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_tractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_tractor.Designer.cs">
+      <DependentUpon>Editar_tractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editar_vehiculo_liviano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_vehiculo_liviano.Designer.cs">
+      <DependentUpon>Editar_vehiculo_liviano.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +203,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="captura_info.resx">
       <DependentUpon>captura_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_alzadora.resx">
+      <DependentUpon>Editar_alzadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_camion.resx">
+      <DependentUpon>Editar_camion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_cosechadora.resx">
+      <DependentUpon>Editar_cosechadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_motocicleta.resx">
+      <DependentUpon>Editar_motocicleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_tractocamion.resx">
+      <DependentUpon>Editar_tractocamion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_tractor.resx">
+      <DependentUpon>Editar_tractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_vehiculo_liviano.resx">
+      <DependentUpon>Editar_vehiculo_liviano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
