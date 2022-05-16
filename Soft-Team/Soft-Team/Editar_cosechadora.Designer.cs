@@ -1,7 +1,7 @@
 ﻿
 namespace Soft_Team
 {
-    partial class Agregar_cosechadora
+    partial class Editar_cosechadora
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Soft_Team
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_cosechadora));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar_cosechadora));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -56,28 +56,16 @@ namespace Soft_Team
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(345, 20);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(358, 29);
-            label1.TabIndex = 42;
-            label1.Text = "Registrar nueva Cosechadora";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.textBox6);
@@ -103,11 +91,12 @@ namespace Soft_Team
             this.panel1.Controls.Add(label1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 568);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 5;
             // 
             // textBox8
             // 
@@ -219,9 +208,9 @@ namespace Soft_Team
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
             this.label9.Location = new System.Drawing.Point(348, 410);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 14);
+            this.label9.Size = new System.Drawing.Size(175, 14);
             this.label9.TabIndex = 64;
-            this.label9.Text = "Horometro / Kilometraje inicial";
+            this.label9.Text = "Horometro / Kilometraje actual";
             // 
             // label10
             // 
@@ -271,7 +260,7 @@ namespace Soft_Team
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(353, 76);
+            this.textBox1.Location = new System.Drawing.Point(352, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(345, 20);
             this.textBox1.TabIndex = 57;
@@ -320,11 +309,22 @@ namespace Soft_Team
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(350, 59);
+            this.label2.Location = new System.Drawing.Point(349, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 14);
             this.label2.TabIndex = 52;
             this.label2.Text = "Número interno";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(401, 19);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(244, 29);
+            label1.TabIndex = 42;
+            label1.Text = "Editar Cosechadora";
             // 
             // button2
             // 
@@ -333,7 +333,7 @@ namespace Soft_Team
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Regresar";
+            this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -343,8 +343,18 @@ namespace Soft_Team
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Registrar";
+            this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(78, 278);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 194);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -356,17 +366,7 @@ namespace Soft_Team
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(63, 295);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(228, 152);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 79;
-            this.pictureBox2.TabStop = false;
-            // 
-            // Agregar_cosechadora
+            // Editar_cosechadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -375,12 +375,12 @@ namespace Soft_Team
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Agregar_cosechadora";
-            this.Text = "Agregar_cosechadora";
+            this.Name = "Editar_cosechadora";
+            this.Text = "Editar_cosechadora";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,7 +412,7 @@ namespace Soft_Team
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

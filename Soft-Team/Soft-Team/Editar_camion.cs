@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Soft_Team
 {
-    public partial class Agregar_campero : Form
+    public partial class Editar_camion : Form
     {
-        public Agregar_campero()
+        public Editar_camion()
         {
             InitializeComponent();
         }

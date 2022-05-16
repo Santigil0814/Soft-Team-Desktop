@@ -1,7 +1,7 @@
 ﻿
 namespace Soft_Team
 {
-    partial class Agregar_campero
+    partial class Editar_camion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Soft_Team
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_campero));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar_camion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -96,7 +96,7 @@ namespace Soft_Team
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 568);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 4;
             // 
             // textBox8
             // 
@@ -208,9 +208,9 @@ namespace Soft_Team
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
             this.label9.Location = new System.Drawing.Point(348, 410);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 14);
+            this.label9.Size = new System.Drawing.Size(175, 14);
             this.label9.TabIndex = 64;
-            this.label9.Text = "Horometro / Kilometraje inicial";
+            this.label9.Text = "Horometro / Kilometraje actual";
             // 
             // label10
             // 
@@ -260,7 +260,7 @@ namespace Soft_Team
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(352, 76);
+            this.textBox1.Location = new System.Drawing.Point(350, 76);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(345, 20);
             this.textBox1.TabIndex = 57;
@@ -309,7 +309,7 @@ namespace Soft_Team
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(349, 59);
+            this.label2.Location = new System.Drawing.Point(347, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 14);
             this.label2.TabIndex = 52;
@@ -320,11 +320,11 @@ namespace Soft_Team
             label1.AutoSize = true;
             label1.BackColor = System.Drawing.Color.Transparent;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(368, 19);
+            label1.Location = new System.Drawing.Point(432, 19);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(310, 29);
+            label1.Size = new System.Drawing.Size(178, 29);
             label1.TabIndex = 42;
-            label1.Text = "Registrar nueva Campero";
+            label1.Text = "Editar Camión";
             // 
             // button2
             // 
@@ -333,7 +333,7 @@ namespace Soft_Team
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Regresar";
+            this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -343,7 +343,7 @@ namespace Soft_Team
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Registrar";
+            this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
@@ -366,7 +366,7 @@ namespace Soft_Team
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // Agregar_campero
+            // Editar_camion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -375,8 +375,8 @@ namespace Soft_Team
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Agregar_campero";
-            this.Text = "Agregar_campero";
+            this.Name = "Editar_camion";
+            this.Text = "Editar_camion";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

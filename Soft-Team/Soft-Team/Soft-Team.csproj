@@ -58,11 +58,11 @@
     <Compile Include="Agregar_camion.Designer.cs">
       <DependentUpon>Agregar_camion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Agregar_campero.cs">
+    <Compile Include="Agregar_vehiculo_liviano.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar_campero.Designer.cs">
-      <DependentUpon>Agregar_campero.cs</DependentUpon>
+    <Compile Include="Agregar_vehiculo_liviano.Designer.cs">
+      <DependentUpon>Agregar_vehiculo_liviano.cs</DependentUpon>
     </Compile>
     <Compile Include="Agregar_cosechadora.cs">
       <SubType>Form</SubType>
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="Agregar_camion.resx">
       <DependentUpon>Agregar_camion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Agregar_campero.resx">
-      <DependentUpon>Agregar_campero.cs</DependentUpon>
+    <EmbeddedResource Include="Agregar_vehiculo_liviano.resx">
+      <DependentUpon>Agregar_vehiculo_liviano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_cosechadora.resx">
       <DependentUpon>Agregar_cosechadora.cs</DependentUpon>
