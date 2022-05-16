@@ -1,0 +1,24 @@
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\bin\Debug\Soft-Team.exe.config
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\bin\Debug\Soft-Team.exe
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\bin\Debug\Soft-Team.pdb
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.AssemblyReference.cache
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Properties.Resources.resources
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Registro_Usuario.resources
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.GenerateResource.cache
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.CoreCompileInputs.cache
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft-Team.exe
+C:\Users\SENA\source\repos\Soft-Team\Soft-Team\obj\Debug\Soft-Team.pdb
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\bin\Debug\Soft-Team.exe.config
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\bin\Debug\Soft-Team.exe
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\bin\Debug\Soft-Team.pdb
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.AssemblyReference.cache
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Properties.Resources.resources
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Registro_Usuario.resources
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.GenerateResource.cache
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.CoreCompileInputs.cache
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft-Team.exe
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft-Team.pdb
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft_Team.captura_info.resources
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Inventario.resources
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Supervisor.resources
+C:\Users\SENA\Desktop\Escritorio Soft-Team\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Registro_maquina.resources
