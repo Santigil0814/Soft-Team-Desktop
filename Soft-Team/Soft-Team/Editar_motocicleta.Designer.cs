@@ -376,6 +376,7 @@ namespace Soft_Team
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Editar_motocicleta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_motocicleta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

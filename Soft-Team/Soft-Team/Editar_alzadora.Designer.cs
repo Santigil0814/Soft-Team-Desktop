@@ -64,6 +64,17 @@ namespace Soft_Team
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(426, 19);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(191, 29);
+            label1.TabIndex = 42;
+            label1.Text = "Editar Alzadora";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox8);
@@ -315,17 +326,6 @@ namespace Soft_Team
             this.label2.TabIndex = 52;
             this.label2.Text = "Número interno";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(426, 19);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(191, 29);
-            label1.TabIndex = 42;
-            label1.Text = "Editar Alzadora";
-            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -376,6 +376,7 @@ namespace Soft_Team
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Editar_alzadora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_alzadora";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

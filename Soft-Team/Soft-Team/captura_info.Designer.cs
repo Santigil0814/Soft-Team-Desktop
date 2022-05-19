@@ -31,6 +31,7 @@ namespace Soft_Team
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -209,7 +210,6 @@ namespace Soft_Team
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(229, 20);
             this.textBox2.TabIndex = 13;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -231,6 +231,7 @@ namespace Soft_Team
             // 
             this.textBox5.Location = new System.Drawing.Point(280, 167);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(229, 20);
             this.textBox5.TabIndex = 16;
             // 
@@ -238,6 +239,7 @@ namespace Soft_Team
             // 
             this.textBox6.Location = new System.Drawing.Point(280, 189);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(229, 20);
             this.textBox6.TabIndex = 17;
             // 
@@ -316,6 +318,7 @@ namespace Soft_Team
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

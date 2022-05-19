@@ -16,7 +16,7 @@ namespace Soft_Team
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registro_maquina());
+            Application.Run(new Inicio());
         }
     }
 }

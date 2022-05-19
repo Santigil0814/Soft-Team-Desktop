@@ -376,6 +376,7 @@ namespace Soft_Team
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Editar_tractor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_tractor";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

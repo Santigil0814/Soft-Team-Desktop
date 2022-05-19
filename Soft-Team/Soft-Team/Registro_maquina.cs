@@ -21,5 +21,44 @@ namespace Soft_Team
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Agregar_cosechadora aco = new Agregar_cosechadora();
+            aco.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Agregar_tractor atr = new Agregar_tractor();
+            atr.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Agregar_alzadora aal = new Agregar_alzadora();
+            aal.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Agregar_camion aca = new Agregar_camion();
+            aca.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
