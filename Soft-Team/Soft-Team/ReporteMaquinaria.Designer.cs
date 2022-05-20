@@ -49,7 +49,10 @@ namespace Soft_Team
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 394);
             this.Controls.Add(this.crystalReportViewer1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ReporteMaquinaria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteMaquinaria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

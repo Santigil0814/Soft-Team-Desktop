@@ -62,6 +62,7 @@ namespace Soft_Team
             this.button1.TabIndex = 0;
             this.button1.Text = "Capturar info.";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -171,7 +172,7 @@ namespace Soft_Team
             "Proactivo"});
             this.comboBox1.Location = new System.Drawing.Point(280, 123);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
+            this.comboBox1.Size = new System.Drawing.Size(229, 21);
             this.comboBox1.TabIndex = 10;
             this.comboBox1.Text = "Seleccione el tipo de mantenimiento";
             // 
@@ -191,7 +192,7 @@ namespace Soft_Team
             "Montallantas"});
             this.comboBox2.Location = new System.Drawing.Point(280, 145);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(228, 21);
+            this.comboBox2.Size = new System.Drawing.Size(229, 21);
             this.comboBox2.TabIndex = 11;
             this.comboBox2.Text = "Seleccione las secciones a las que ingresa";
             // 
@@ -306,6 +307,8 @@ namespace Soft_Team
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "captura_info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajustes";

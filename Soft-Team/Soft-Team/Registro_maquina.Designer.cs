@@ -114,7 +114,7 @@ namespace Soft_Team
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 23);
             this.button5.TabIndex = 25;
-            this.button5.Text = "Campero";
+            this.button5.Text = "Vehiculo liviano";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -234,6 +234,8 @@ namespace Soft_Team
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registro_maquina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_maquina";

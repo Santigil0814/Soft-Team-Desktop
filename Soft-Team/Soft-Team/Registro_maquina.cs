@@ -42,7 +42,8 @@ namespace Soft_Team
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            Agregar_tractocamion atc = new Agregar_tractocamion();
+            atc.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -53,12 +54,14 @@ namespace Soft_Team
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            Agregar_vehiculo_liviano avl = new Agregar_vehiculo_liviano();
+            avl.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-           
+            Agregar_motocicleta am = new Agregar_motocicleta();
+            am.ShowDialog();
         }
     }
 }

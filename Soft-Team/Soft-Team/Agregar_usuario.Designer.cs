@@ -135,6 +135,16 @@ namespace Soft_Team
             nom_1Label.TabIndex = 2;
             nom_1Label.Text = "Primer Nombre:*";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(107, 253);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(49, 13);
+            label2.TabIndex = 26;
+            label2.Text = "Correo:*";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -259,16 +269,6 @@ namespace Soft_Team
             this.contrasenaTextBox.Size = new System.Drawing.Size(218, 20);
             this.contrasenaTextBox.TabIndex = 8;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(107, 253);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(49, 13);
-            label2.TabIndex = 26;
-            label2.Text = "Correo:*";
-            // 
             // correoTextBox
             // 
             this.correoTextBox.Location = new System.Drawing.Point(162, 249);
@@ -301,6 +301,8 @@ namespace Soft_Team
             this.Controls.Add(nom_2Label);
             this.Controls.Add(nom_1Label);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Agregar_usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar_usuario";

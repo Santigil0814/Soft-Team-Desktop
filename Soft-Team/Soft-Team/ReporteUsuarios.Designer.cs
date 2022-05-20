@@ -52,6 +52,7 @@ namespace Soft_Team
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ReporteUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteUsuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

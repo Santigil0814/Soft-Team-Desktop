@@ -135,6 +135,16 @@ namespace Soft_Team
             rolLabel.TabIndex = 24;
             rolLabel.Text = "Rol:";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
+            label2.Location = new System.Drawing.Point(107, 259);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(49, 13);
+            label2.TabIndex = 33;
+            label2.Text = "Correo:*";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -195,16 +205,6 @@ namespace Soft_Team
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
-            label2.Location = new System.Drawing.Point(107, 259);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(49, 13);
-            label2.TabIndex = 33;
-            label2.Text = "Correo:*";
             // 
             // correoTextBox
             // 
@@ -297,6 +297,8 @@ namespace Soft_Team
             this.Controls.Add(nom_2Label);
             this.Controls.Add(nom_1Label);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarUsuario";
