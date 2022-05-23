@@ -32,7 +32,6 @@ namespace Soft_Team
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recuperar_usuario));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.correoTextBox = new System.Windows.Forms.TextBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.button5 = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@ namespace Soft_Team
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
@@ -61,15 +61,6 @@ namespace Soft_Team
             this.panel1.Size = new System.Drawing.Size(775, 425);
             this.panel1.TabIndex = 0;
             // 
-            // correoTextBox
-            // 
-            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(203, 294);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(368, 20);
-            this.correoTextBox.TabIndex = 47;
-            this.correoTextBox.Text = "Ingrese su correo registrado";
-            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
@@ -85,16 +76,17 @@ namespace Soft_Team
             this.button5.Location = new System.Drawing.Point(422, 337);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 46;
+            this.button5.TabIndex = 3;
             this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(293, 337);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 45;
+            this.button4.TabIndex = 2;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -136,9 +128,19 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.Location = new System.Drawing.Point(203, 294);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(368, 20);
+            this.correoTextBox.TabIndex = 1;
+            this.correoTextBox.Text = "Ingrese su correo registrado";
             // 
             // Recuperar_usuario
             // 

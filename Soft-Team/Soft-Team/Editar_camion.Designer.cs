@@ -229,6 +229,7 @@ namespace Soft_Team
             // n_internoTextBox
             // 
             this.n_internoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "N_interno", true));
+            this.n_internoTextBox.Enabled = false;
             this.n_internoTextBox.Location = new System.Drawing.Point(350, 76);
             this.n_internoTextBox.Name = "n_internoTextBox";
             this.n_internoTextBox.Size = new System.Drawing.Size(299, 20);
@@ -392,6 +393,8 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = this.maquinasTableAdapter;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;

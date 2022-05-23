@@ -31,28 +31,34 @@ namespace Soft_Team
                 MessageBox.Show("Primer Nombre requerido", "¡Advertencia!");
                 this.nom_1TextBox.Focus();
             }
+            else
+            {
+                if (string.IsNullOrEmpty(this.ape_1TextBox.Text))
+                {
+                    MessageBox.Show("Primer Apellido requerido", "¡Advertencia!");
+                    this.ape_1TextBox.Focus();
+                }
                 else
                 {
-                    if (string.IsNullOrEmpty(this.ape_1TextBox.Text))
+                    if (string.IsNullOrEmpty(this.correoTextBox.Text))
                     {
-                        MessageBox.Show("Primer Apellido requerido", "¡Advertencia!");
-                        this.ape_1TextBox.Focus();
+                        MessageBox.Show("Correo requerido", "¡Advertencia!");
+                        this.correoTextBox.Focus();
                     }
-                        else
+                    else
+                    if (string.IsNullOrEmpty(this.rolComboBox.Text))
                     {
-                        if (string.IsNullOrEmpty(this.rolComboBox.Text))
+                        MessageBox.Show("Rol requerido", "¡Advertencia!");
+                        this.rolComboBox.Focus();
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(this.usuarioTextBox.Text))
                         {
-                            MessageBox.Show("Rol requerido", "¡Advertencia!");
-                            this.rolComboBox.Focus();
+                            MessageBox.Show("Usuario requerido", "¡Advertencia!");
+                            this.usuarioTextBox.Focus();
                         }
-                            else
-                            {
-                                if (string.IsNullOrEmpty(this.usuarioTextBox.Text))
-                                {
-                                    MessageBox.Show("Usuario requerido", "¡Advertencia!");
-                                    this.usuarioTextBox.Focus();
-                                }
-                                else
+                        else
                         {
                             if (string.IsNullOrEmpty(this.contrasenaTextBox.Text))
                             {
