@@ -293,7 +293,7 @@ namespace Soft_Team
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox1.ToolTipText = "Imprimir";
+            this.toolStripTextBox1.ToolTipText = "Buscar";
             this.toolStripTextBox1.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
             // toolStripSeparator2
@@ -319,6 +319,8 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = this.maquinasTableAdapter;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;

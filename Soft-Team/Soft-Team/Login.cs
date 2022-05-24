@@ -19,7 +19,10 @@ namespace Soft_Team
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
+            this.Enabled = false;
+            Inicio I = new Inicio();
+            I.ShowDialog();
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -49,6 +52,8 @@ namespace Soft_Team
                     {
                         MessageBox.Show("El usuario no existe. Por favor, digite un usuario existente", "Alerta");
                         this.Txtusuario.Focus();
+                        this.Txtusuario.Text = string.Empty;
+                        this.Txtcontrasena.Text = string.Empty;
                     }
                     else
                     {
@@ -56,6 +61,8 @@ namespace Soft_Team
                         {
                             MessageBox.Show("La contraseña es incorrecta. Por favor, verifique la contraseña", "Error");
                             this.Txtcontrasena.Focus();
+                            this.Txtcontrasena.Text = string.Empty;
+                            this.Txtusuario.Text = string.Empty;
                         }
                         else
                         {
@@ -63,6 +70,7 @@ namespace Soft_Team
                             {
                                 this.Visible = false;
                                 this.Enabled = false;
+                                General.DatoRol = this.usuarioTableAdapter.TraerRol(this.Txtusuario.Text);
                                 Administrador m = new Administrador();
                                 m.ShowDialog();
                                 this.Txtusuario.Text = string.Empty;

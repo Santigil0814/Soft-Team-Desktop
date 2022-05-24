@@ -158,6 +158,7 @@ namespace Soft_Team
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
@@ -173,6 +174,7 @@ namespace Soft_Team
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -203,6 +205,8 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
@@ -244,7 +248,8 @@ namespace Soft_Team
             this.rolComboBox.FormattingEnabled = true;
             this.rolComboBox.Items.AddRange(new object[] {
             "Administrador",
-            "Usuario"});
+            "Supervisor",
+            "Mecanico Recepcionista"});
             this.rolComboBox.Location = new System.Drawing.Point(162, 284);
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(153, 21);
@@ -259,6 +264,7 @@ namespace Soft_Team
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(232, 20);
             this.usuarioTextBox.TabIndex = 7;
+            this.usuarioTextBox.Validated += new System.EventHandler(this.usuarioTextBox_Validated);
             // 
             // contrasenaTextBox
             // 
@@ -275,6 +281,7 @@ namespace Soft_Team
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(322, 20);
             this.correoTextBox.TabIndex = 5;
+            this.correoTextBox.Validated += new System.EventHandler(this.correoTextBox_Validated);
             // 
             // Agregar_usuario
             // 

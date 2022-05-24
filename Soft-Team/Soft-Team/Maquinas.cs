@@ -34,6 +34,10 @@ namespace Soft_Team
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            this.Enabled = false;
+            Administrador m = new Administrador();
+            m.ShowDialog();
             this.Close();
         }
 

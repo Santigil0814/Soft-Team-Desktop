@@ -202,6 +202,8 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
@@ -218,7 +220,12 @@ namespace Soft_Team
             // 
             this.rolComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "rol", true));
             this.rolComboBox.FormattingEnabled = true;
+            this.rolComboBox.Items.AddRange(new object[] {
+            "Administrador",
+            "Supervisor",
+            "Mecanico Recepcionista"});
             this.rolComboBox.Location = new System.Drawing.Point(162, 288);
+            this.rolComboBox.MaxLength = 50;
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(153, 21);
             this.rolComboBox.TabIndex = 35;

@@ -51,6 +51,7 @@ namespace Soft_Team
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;

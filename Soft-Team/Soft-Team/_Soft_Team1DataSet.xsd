@@ -332,7 +332,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarPorCorreo" Modifier="Public" Name="LlamarPorCorreo" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="LlamarPorCorreo">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarPorCorreo" Modifier="Public" Name="LlamarPorCorreo" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="LlamarPorCorreo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        correo
@@ -344,7 +344,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarRol" Modifier="Public" Name="LlamarRol" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="LlamarRol">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarRol" Modifier="Public" Name="LlamarRol" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="LlamarRol">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT rol, contrasena, correo FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -354,7 +354,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="LlamarUnUsuario" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="LlamarUnUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="LlamarUnUsuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="LlamarUnUsuario" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="LlamarUnUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="LlamarUnUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -364,7 +364,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerContraseña" Modifier="Public" Name="TraerContraseña" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="TraerContraseña">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerContraseña" Modifier="Public" Name="TraerContraseña" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="TraerContraseña">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT contrasena, correo FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -374,7 +374,43 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificaUsuario" Modifier="Public" Name="VerificaUsuario" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="VerificaUsuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerRol" Modifier="Public" Name="TraerRol" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="TraerRol">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        rol
+FROM            Usuario
+WHERE        (usuario = @usuario)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="usuario" ColumnName="usuario" DataSourceName="[Soft-Team1].dbo.Usuario" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@usuario" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificarContra" Modifier="Public" Name="VerificarContra" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="VerificarContra">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        contrasena
+FROM            Usuario
+WHERE        (contrasena = @contrasena)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="contrasena" ColumnName="contrasena" DataSourceName="[Soft-Team1].dbo.Usuario" DataTypeServer="varchar(600)" DbType="AnsiString" Direction="Input" ParameterName="@contrasena" Precision="0" ProviderType="VarChar" Scale="0" Size="600" SourceColumn="contrasena" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificarCorreo" Modifier="Public" Name="VerificarCorreo" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="VerificarCorreo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        correo
+FROM            Usuario
+WHERE        (correo = @correo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="correo" ColumnName="correo" DataSourceName="[Soft-Team1].dbo.Usuario" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@correo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="correo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificaUsuario" Modifier="Public" Name="VerificaUsuario" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="VerificaUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        usuario, contrasena, correo
@@ -639,7 +675,7 @@ SELECT id_maquinaria_mantenimiento, id_Maquina, id_mantenimiento, id_usuario, fe
               <xs:element name="rol" msprop:Generator_ColumnVarNameInTable="columnrol" msprop:Generator_ColumnPropNameInRow="rol" msprop:Generator_ColumnPropNameInTable="rolColumn" msprop:Generator_UserColumnName="rol">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="26" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

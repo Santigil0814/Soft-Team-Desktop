@@ -58,22 +58,28 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 425);
+            this.panel1.Size = new System.Drawing.Size(792, 425);
             this.panel1.TabIndex = 1;
             // 
             // correoTextBox
             // 
+            this.correoTextBox.AccessibleDescription = "";
+            this.correoTextBox.AccessibleName = "";
             this.correoTextBox.Location = new System.Drawing.Point(203, 294);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(368, 20);
             this.correoTextBox.TabIndex = 1;
+            this.correoTextBox.Tag = "";
             this.correoTextBox.Text = "Digite su correo registrado";
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(422, 337);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(72, 28);
             this.button5.TabIndex = 3;
             this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
@@ -81,9 +87,12 @@ namespace Soft_Team
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(293, 337);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(72, 28);
             this.button4.TabIndex = 2;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;

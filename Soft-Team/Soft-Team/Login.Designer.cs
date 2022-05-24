@@ -95,14 +95,15 @@ namespace Soft_Team
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MV Boli", 14F);
-            this.button1.Location = new System.Drawing.Point(722, 307);
+            this.button1.Location = new System.Drawing.Point(716, 307);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 36);
+            this.button1.Size = new System.Drawing.Size(99, 36);
             this.button1.TabIndex = 4;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,12 +111,13 @@ namespace Soft_Team
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("MV Boli", 14F);
-            this.button2.Location = new System.Drawing.Point(623, 307);
+            this.button2.Location = new System.Drawing.Point(615, 307);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
             this.button2.TabIndex = 3;
@@ -150,6 +152,7 @@ namespace Soft_Team
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(517, 426);
             this.checkBox1.Name = "checkBox1";
@@ -175,6 +178,8 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;

@@ -48,6 +48,8 @@ namespace Soft_Team
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(31, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 23);
@@ -57,6 +59,8 @@ namespace Soft_Team
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(623, 158);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
@@ -66,6 +70,8 @@ namespace Soft_Team
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(327, 158);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -211,6 +217,7 @@ namespace Soft_Team
             this.Name = "Supervisor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supervisor";
+            this.Load += new System.EventHandler(this.Supervisor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,5 +16,10 @@ namespace Soft_Team
         {
             InitializeComponent();
         }
+
+        private void Supervisor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

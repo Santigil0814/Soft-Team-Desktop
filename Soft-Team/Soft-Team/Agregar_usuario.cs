@@ -114,5 +114,25 @@ namespace Soft_Team
         {
             e.Handled = true;
         }
+
+        private void correoTextBox_Validated(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(this.usuarioTableAdapter.VerificarCorreo(this.correoTextBox.Text)))
+            {
+                MessageBox.Show("El correo ya existe", "Notificación");
+                this.correoTextBox.Focus();
+                return;
+            }
+        }
+
+        private void usuarioTextBox_Validated(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty((string)this.usuarioTableAdapter.VerificaUsuario(this.usuarioTextBox.Text))))
+            {
+                MessageBox.Show("El usuario ya existe", "Notificación");
+                this.usuarioTextBox.Focus();
+                return;
+            }
+        }
     }
 }

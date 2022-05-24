@@ -32,20 +32,20 @@ namespace Soft_Team
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recuperar_usuario));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
-            this.correoTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,21 +61,22 @@ namespace Soft_Team
             this.panel1.Size = new System.Drawing.Size(775, 425);
             this.panel1.TabIndex = 0;
             // 
-            // usuarioBindingSource
+            // correoTextBox
             // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.correoTextBox.Location = new System.Drawing.Point(203, 294);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(368, 20);
+            this.correoTextBox.TabIndex = 1;
+            this.correoTextBox.Text = "Ingrese su correo registrado";
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("MV Boli", 9.75F);
             this.button5.Location = new System.Drawing.Point(422, 337);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(72, 28);
             this.button5.TabIndex = 3;
             this.button5.Text = "Cancelar";
             this.button5.UseVisualStyleBackColor = true;
@@ -83,9 +84,12 @@ namespace Soft_Team
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("MV Boli", 9.75F);
             this.button4.Location = new System.Drawing.Point(293, 337);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(72, 28);
             this.button4.TabIndex = 2;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;
@@ -121,6 +125,16 @@ namespace Soft_Team
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
@@ -133,14 +147,6 @@ namespace Soft_Team
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
-            // 
-            // correoTextBox
-            // 
-            this.correoTextBox.Location = new System.Drawing.Point(203, 294);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(368, 20);
-            this.correoTextBox.TabIndex = 1;
-            this.correoTextBox.Text = "Ingrese su correo registrado";
             // 
             // Recuperar_usuario
             // 
@@ -156,9 +162,9 @@ namespace Soft_Team
             this.Load += new System.EventHandler(this.Recuperar_usuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

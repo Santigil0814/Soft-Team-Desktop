@@ -103,6 +103,8 @@ namespace Soft_Team
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            this.Enabled = false;
             Maquinas p = new Maquinas();
             p.ShowDialog();
         }
