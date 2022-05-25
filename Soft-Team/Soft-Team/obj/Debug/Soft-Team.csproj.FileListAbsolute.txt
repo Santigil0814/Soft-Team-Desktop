@@ -125,3 +125,4 @@ C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.CoreCompileI
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.CopyComplete
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.exe
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.pdb
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Ajustes.resources

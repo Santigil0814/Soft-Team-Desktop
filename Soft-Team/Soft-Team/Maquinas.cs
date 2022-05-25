@@ -118,5 +118,13 @@ namespace Soft_Team
         {
             this.maquinasTableAdapter.BuscarPorN_interno(this._Soft_Team1DataSet.Maquinas, this.toolStripTextBox1.Text);
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Enabled = false;
+            Administrador a = new Administrador();
+            a.ShowDialog();
+        }
     }
 }

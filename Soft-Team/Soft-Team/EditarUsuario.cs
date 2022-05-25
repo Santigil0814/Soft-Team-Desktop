@@ -74,7 +74,8 @@ namespace Soft_Team
                                         this.rolComboBox.Text,
                                         this.usuarioTextBox1.Text,
                                         this.contrasenaTextBox1.Text,
-                                        this.correoTextBox.Text);
+                                        this.correoTextBox.Text
+                                        );
                                     MessageBox.Show("Registro actualizado", "Notificación");
                                     this.Close();
                                 }
