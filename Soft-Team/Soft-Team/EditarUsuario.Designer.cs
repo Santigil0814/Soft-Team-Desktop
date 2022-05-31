@@ -41,10 +41,6 @@ namespace Soft_Team
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
-            this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
-            this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.rolComboBox = new System.Windows.Forms.ComboBox();
             this.ape_2TextBox = new System.Windows.Forms.TextBox();
@@ -53,6 +49,10 @@ namespace Soft_Team
             this.nom_1TextBox = new System.Windows.Forms.TextBox();
             this.usuarioTextBox1 = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox1 = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
+            this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             nom_1Label = new System.Windows.Forms.Label();
             nom_2Label = new System.Windows.Forms.Label();
             ape_1Label = new System.Windows.Forms.Label();
@@ -185,29 +185,6 @@ namespace Soft_Team
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.MantenimientoTableAdapter = null;
-            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
-            this.tableAdapterManager.MaquinasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
-            // 
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "correo", true));
@@ -270,6 +247,7 @@ namespace Soft_Team
             this.usuarioTextBox1.Name = "usuarioTextBox1";
             this.usuarioTextBox1.Size = new System.Drawing.Size(232, 20);
             this.usuarioTextBox1.TabIndex = 40;
+            this.usuarioTextBox1.TextChanged += new System.EventHandler(this.usuarioTextBox1_TextChanged);
             // 
             // contrasenaTextBox1
             // 
@@ -278,6 +256,29 @@ namespace Soft_Team
             this.contrasenaTextBox1.Name = "contrasenaTextBox1";
             this.contrasenaTextBox1.Size = new System.Drawing.Size(218, 20);
             this.contrasenaTextBox1.TabIndex = 41;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MantenimientoTableAdapter = null;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
+            this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
             // EditarUsuario
             // 

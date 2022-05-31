@@ -100,5 +100,10 @@ namespace Soft_Team
         {
             e.Handled = true;
         }
+
+        private void usuarioTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

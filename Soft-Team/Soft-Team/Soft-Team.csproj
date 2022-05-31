@@ -40,7 +40,9 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -112,12 +114,6 @@
     </Compile>
     <Compile Include="Agregar_vehiculo_liviano.designer.cs">
       <DependentUpon>Agregar_vehiculo_liviano.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ajustes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ajustes.Designer.cs">
-      <DependentUpon>Ajustes.cs</DependentUpon>
     </Compile>
     <Compile Include="captura_info.cs">
       <SubType>Form</SubType>
@@ -280,9 +276,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_vehiculo_liviano.resx">
       <DependentUpon>Agregar_vehiculo_liviano.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ajustes.resx">
-      <DependentUpon>Ajustes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="captura_info.resx">
       <DependentUpon>captura_info.cs</DependentUpon>
