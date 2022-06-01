@@ -77,6 +77,7 @@ namespace Soft_Team
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(734, 382);
             this.panel1.TabIndex = 16;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button4
             // 
@@ -246,6 +247,7 @@ namespace Soft_Team
             this.Name = "Registro_maquina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_maquina";
+            this.Load += new System.EventHandler(this.Registro_maquina_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

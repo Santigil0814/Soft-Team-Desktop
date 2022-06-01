@@ -63,5 +63,15 @@ namespace Soft_Team
             Agregar_motocicleta am = new Agregar_motocicleta();
             am.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Registro_maquina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

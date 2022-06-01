@@ -21,5 +21,10 @@ namespace Soft_Team
         {
 
         }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

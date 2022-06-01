@@ -21,5 +21,24 @@ namespace Soft_Team
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Supervisor_Resize(object sender, EventArgs e)
+        {
+            this.panel1.Left = (this.Width - this.panel1.Width) / 2;
+            this.panel1.Top = (this.Height - this.panel1.Height) / 2;
+            //
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            Size = Screen.PrimaryScreen.WorkingArea.Size;
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

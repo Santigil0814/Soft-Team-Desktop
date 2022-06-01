@@ -29,7 +29,7 @@ namespace Soft_Team
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -44,27 +44,41 @@ namespace Soft_Team
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // panel1
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(31, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Capturar info.";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 363);
+            this.panel1.TabIndex = 39;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button5
             // 
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(623, 158);
+            this.button5.Location = new System.Drawing.Point(610, 136);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 38;
+            this.button5.TabIndex = 53;
             this.button5.Text = "Rechazar";
             this.button5.UseVisualStyleBackColor = true;
             // 
@@ -72,79 +86,79 @@ namespace Soft_Team
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(327, 158);
+            this.button4.Location = new System.Drawing.Point(314, 136);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 37;
+            this.button4.TabIndex = 52;
             this.button4.Text = "Aprobar";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(543, 50);
+            this.textBox7.Location = new System.Drawing.Point(530, 28);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(228, 89);
-            this.textBox7.TabIndex = 36;
+            this.textBox7.TabIndex = 51;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label9.Location = new System.Drawing.Point(546, 34);
+            this.label9.Location = new System.Drawing.Point(533, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 14);
-            this.label9.TabIndex = 35;
+            this.label9.TabIndex = 50;
             this.label9.Text = "Observaciones:";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(287, 119);
+            this.textBox5.Location = new System.Drawing.Point(274, 97);
             this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(229, 20);
-            this.textBox5.TabIndex = 34;
+            this.textBox5.TabIndex = 49;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(287, 97);
+            this.textBox4.Location = new System.Drawing.Point(274, 75);
             this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(229, 20);
-            this.textBox4.TabIndex = 33;
+            this.textBox4.TabIndex = 48;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(287, 75);
+            this.textBox3.Location = new System.Drawing.Point(274, 53);
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(229, 20);
-            this.textBox3.TabIndex = 32;
+            this.textBox3.TabIndex = 47;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(287, 53);
+            this.textBox2.Location = new System.Drawing.Point(274, 31);
             this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(229, 20);
-            this.textBox2.TabIndex = 31;
+            this.textBox2.TabIndex = 46;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(287, 31);
+            this.textBox1.Location = new System.Drawing.Point(274, 9);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(229, 20);
-            this.textBox1.TabIndex = 30;
+            this.textBox1.TabIndex = 45;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(143, 122);
+            this.label5.Location = new System.Drawing.Point(130, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 14);
-            this.label5.TabIndex = 29;
+            this.label5.TabIndex = 44;
             this.label5.Text = "Tipo de mantenimiento:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -152,10 +166,10 @@ namespace Soft_Team
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(165, 100);
+            this.label4.Location = new System.Drawing.Point(152, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 14);
-            this.label4.TabIndex = 28;
+            this.label4.TabIndex = 43;
             this.label4.Text = "Fecha/Hora ingreso:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -163,10 +177,10 @@ namespace Soft_Team
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(212, 78);
+            this.label3.Location = new System.Drawing.Point(199, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 14);
-            this.label3.TabIndex = 27;
+            this.label3.TabIndex = 42;
             this.label3.Text = "Horómetro:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -174,10 +188,10 @@ namespace Soft_Team
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(185, 56);
+            this.label2.Location = new System.Drawing.Point(172, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 14);
-            this.label2.TabIndex = 26;
+            this.label2.TabIndex = 41;
             this.label2.Text = "Número interno:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -185,47 +199,48 @@ namespace Soft_Team
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label1.Location = new System.Drawing.Point(180, 33);
+            this.label1.Location = new System.Drawing.Point(167, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 14);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 40;
             this.label1.Text = "Tipo maquinaria:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(18, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Capturar info.";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Supervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 387);
+            this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Supervisor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supervisor";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Supervisor_Load);
+            this.Resize += new System.EventHandler(this.Supervisor_Resize);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox7;
@@ -240,5 +255,6 @@ namespace Soft_Team
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

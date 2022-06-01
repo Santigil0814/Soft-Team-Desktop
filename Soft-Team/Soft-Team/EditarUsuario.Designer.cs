@@ -34,14 +34,16 @@ namespace Soft_Team
             System.Windows.Forms.Label nom_2Label;
             System.Windows.Forms.Label ape_1Label;
             System.Windows.Forms.Label ape_2Label;
-            System.Windows.Forms.Label usuarioLabel;
-            System.Windows.Forms.Label contraseñaLabel;
-            System.Windows.Forms.Label rolLabel;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label label5;
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.rolComboBox = new System.Windows.Forms.ComboBox();
             this.ape_2TextBox = new System.Windows.Forms.TextBox();
             this.ape_1TextBox = new System.Windows.Forms.TextBox();
@@ -49,18 +51,16 @@ namespace Soft_Team
             this.nom_1TextBox = new System.Windows.Forms.TextBox();
             this.usuarioTextBox1 = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox1 = new System.Windows.Forms.TextBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             nom_1Label = new System.Windows.Forms.Label();
             nom_2Label = new System.Windows.Forms.Label();
             ape_1Label = new System.Windows.Forms.Label();
             ape_2Label = new System.Windows.Forms.Label();
-            usuarioLabel = new System.Windows.Forms.Label();
-            contraseñaLabel = new System.Windows.Forms.Label();
-            rolLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             this.SuspendLayout();
@@ -104,36 +104,6 @@ namespace Soft_Team
             ape_2Label.Size = new System.Drawing.Size(96, 13);
             ape_2Label.TabIndex = 7;
             ape_2Label.Text = "Segundo Apellido:";
-            // 
-            // usuarioLabel
-            // 
-            usuarioLabel.AutoSize = true;
-            usuarioLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
-            usuarioLabel.Location = new System.Drawing.Point(101, 326);
-            usuarioLabel.Name = "usuarioLabel";
-            usuarioLabel.Size = new System.Drawing.Size(48, 13);
-            usuarioLabel.TabIndex = 11;
-            usuarioLabel.Text = "Usuario:";
-            // 
-            // contraseñaLabel
-            // 
-            contraseñaLabel.AutoSize = true;
-            contraseñaLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
-            contraseñaLabel.Location = new System.Drawing.Point(85, 357);
-            contraseñaLabel.Name = "contraseñaLabel";
-            contraseñaLabel.Size = new System.Drawing.Size(63, 13);
-            contraseñaLabel.TabIndex = 13;
-            contraseñaLabel.Text = "Contraseña:";
-            // 
-            // rolLabel
-            // 
-            rolLabel.AutoSize = true;
-            rolLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
-            rolLabel.Location = new System.Drawing.Point(122, 292);
-            rolLabel.Name = "rolLabel";
-            rolLabel.Size = new System.Drawing.Size(27, 13);
-            rolLabel.TabIndex = 24;
-            rolLabel.Text = "Rol:";
             // 
             // label2
             // 
@@ -192,6 +162,16 @@ namespace Soft_Team
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(322, 20);
             this.correoTextBox.TabIndex = 34;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rolComboBox
             // 
@@ -257,16 +237,6 @@ namespace Soft_Team
             this.contrasenaTextBox1.Size = new System.Drawing.Size(218, 20);
             this.contrasenaTextBox1.TabIndex = 41;
             // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
@@ -280,12 +250,45 @@ namespace Soft_Team
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(84, 357);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(72, 13);
+            label3.TabIndex = 44;
+            label3.Text = "Contraseña: *";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(99, 326);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(57, 13);
+            label4.TabIndex = 43;
+            label4.Text = "Usuario: *";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Location = new System.Drawing.Point(120, 292);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(36, 13);
+            label5.TabIndex = 42;
+            label5.Text = "Rol: *";
+            // 
             // EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(715, 475);
+            this.Controls.Add(label3);
+            this.Controls.Add(label4);
+            this.Controls.Add(label5);
             this.Controls.Add(this.contrasenaTextBox1);
             this.Controls.Add(this.usuarioTextBox1);
             this.Controls.Add(this.nom_1TextBox);
@@ -295,11 +298,8 @@ namespace Soft_Team
             this.Controls.Add(this.rolComboBox);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(label2);
-            this.Controls.Add(rolLabel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(contraseñaLabel);
-            this.Controls.Add(usuarioLabel);
             this.Controls.Add(ape_2Label);
             this.Controls.Add(ape_1Label);
             this.Controls.Add(nom_2Label);

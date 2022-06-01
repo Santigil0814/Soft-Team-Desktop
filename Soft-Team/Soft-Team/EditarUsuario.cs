@@ -34,55 +34,68 @@ namespace Soft_Team
             }
             else
             {
-                if (string.IsNullOrEmpty(this.ape_1TextBox.Text))
+                if (string.IsNullOrEmpty(this.nom_1TextBox.Text))
                 {
-                    MessageBox.Show("Digite el primer apellido", "Alerta");
-                    this.ape_1TextBox.Focus();
+                    MessageBox.Show("Primer Nombre requerido", "¡Advertencia!");
+                    this.nom_1TextBox.Focus();
                 }
                 else
                 {
-                    if (string.IsNullOrEmpty(this.rolComboBox.Text))
+                    if (string.IsNullOrEmpty(this.ape_1TextBox.Text))
                     {
-                        MessageBox.Show("Seleccione el rol", "Alerta");
-                        this.rolComboBox.Focus();
+                        MessageBox.Show("Primer Apellido requerido", "¡Advertencia!");
+                        this.ape_1TextBox.Focus();
                     }
-
                     else
                     {
-                        if (string.IsNullOrEmpty(this.usuarioTextBox1.Text))
+                        if (string.IsNullOrEmpty(this.correoTextBox.Text))
                         {
-                            MessageBox.Show("Digite el usuario", "Alerta");
-                            this.usuarioTextBox1.Focus();
+                            MessageBox.Show("Correo requerido", "¡Advertencia!");
+                            this.correoTextBox.Focus();
+                        }
+                        else
+                        if (string.IsNullOrEmpty(this.rolComboBox.Text))
+                        {
+                            MessageBox.Show("Rol requerido", "¡Advertencia!");
+                            this.rolComboBox.Focus();
                         }
                         else
                         {
-                            if (string.IsNullOrEmpty(this.contrasenaTextBox1.Text))
+                            if (string.IsNullOrEmpty(this.usuarioTextBox1.Text))
                             {
-                                MessageBox.Show("Digite la contraseña", "Alerta");
-                                this.contrasenaTextBox1.Focus();
+                                MessageBox.Show("Usuario requerido", "¡Advertencia!");
+                                this.usuarioTextBox1.Focus();
                             }
                             else
                             {
-                                try
+                                if (string.IsNullOrEmpty(this.contrasenaTextBox1.Text))
                                 {
-                                    this.contrasenaTextBox1.Text = Encriptar.encriptar1(this.contrasenaTextBox1.Text);
-                                    usuarioTableAdapter.ActualizarUsuarios(
-                                        this.nom_1TextBox.Text,
-                                        this.nom_2TextBox.Text,
-                                        this.ape_1TextBox.Text,
-                                        this.ape_2TextBox.Text,
-                                        this.rolComboBox.Text,
-                                        this.usuarioTextBox1.Text,
-                                        this.contrasenaTextBox1.Text,
-                                        this.correoTextBox.Text
-                                        );
-                                    MessageBox.Show("Registro actualizado", "Notificación");
-                                    this.Close();
+                                    MessageBox.Show("Contraseña requerida", "¡Advertencia!");
+                                    this.contrasenaTextBox1.Focus();
                                 }
-                                catch (Exception)
+                                else
                                 {
-                                    MessageBox.Show("El registro no se puede actualizar", "Alerta");
-                                    this.Close();
+                                    try
+                                    {
+                                        this.contrasenaTextBox1.Text = Encriptar.encriptar1(this.contrasenaTextBox1.Text);
+                                        usuarioTableAdapter.ActualizarUsuarios(
+                                            this.nom_1TextBox.Text,
+                                            this.nom_2TextBox.Text,
+                                            this.ape_1TextBox.Text,
+                                            this.ape_2TextBox.Text,
+                                            this.rolComboBox.Text,
+                                            this.usuarioTextBox1.Text,
+                                            this.contrasenaTextBox1.Text,
+                                            this.correoTextBox.Text
+                                            );
+                                        MessageBox.Show("Registro actualizado", "Notificación");
+                                        this.Close();
+                                    }
+                                    catch (Exception)
+                                    {
+                                        MessageBox.Show("El registro no se puede actualizar", "Alerta");
+                                        this.Close();
+                                    }
                                 }
                             }
                         }

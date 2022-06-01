@@ -69,31 +69,31 @@ namespace Soft_Team
             // 
             contraseñaLabel.AutoSize = true;
             contraseñaLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contraseñaLabel.Location = new System.Drawing.Point(81, 353);
+            contraseñaLabel.Location = new System.Drawing.Point(86, 353);
             contraseñaLabel.Name = "contraseñaLabel";
-            contraseñaLabel.Size = new System.Drawing.Size(63, 13);
+            contraseñaLabel.Size = new System.Drawing.Size(72, 13);
             contraseñaLabel.TabIndex = 14;
-            contraseñaLabel.Text = "Contraseña:";
+            contraseñaLabel.Text = "Contraseña: *";
             // 
             // usuarioLabel
             // 
             usuarioLabel.AutoSize = true;
             usuarioLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarioLabel.Location = new System.Drawing.Point(99, 322);
+            usuarioLabel.Location = new System.Drawing.Point(101, 322);
             usuarioLabel.Name = "usuarioLabel";
-            usuarioLabel.Size = new System.Drawing.Size(48, 13);
+            usuarioLabel.Size = new System.Drawing.Size(57, 13);
             usuarioLabel.TabIndex = 12;
-            usuarioLabel.Text = "Usuario:";
+            usuarioLabel.Text = "Usuario: *";
             // 
             // rolLabel
             // 
             rolLabel.AutoSize = true;
             rolLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rolLabel.Location = new System.Drawing.Point(119, 288);
+            rolLabel.Location = new System.Drawing.Point(122, 288);
             rolLabel.Name = "rolLabel";
-            rolLabel.Size = new System.Drawing.Size(27, 13);
+            rolLabel.Size = new System.Drawing.Size(36, 13);
             rolLabel.TabIndex = 10;
-            rolLabel.Text = "Rol:";
+            rolLabel.Text = "Rol: *";
             // 
             // ape_2Label
             // 
@@ -129,7 +129,7 @@ namespace Soft_Team
             // 
             nom_1Label.AutoSize = true;
             nom_1Label.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nom_1Label.Location = new System.Drawing.Point(66, 125);
+            nom_1Label.Location = new System.Drawing.Point(68, 125);
             nom_1Label.Name = "nom_1Label";
             nom_1Label.Size = new System.Drawing.Size(90, 13);
             nom_1Label.TabIndex = 2;
@@ -139,7 +139,7 @@ namespace Soft_Team
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(107, 253);
+            label2.Location = new System.Drawing.Point(109, 253);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(49, 13);
             label2.TabIndex = 26;
