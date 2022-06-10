@@ -30,9 +30,9 @@ namespace Soft_Team {
         
         private maquinaria_mantenimientoDataTable tablemaquinaria_mantenimiento;
         
-        private global::System.Data.DataRelation relationFK_maquinaria_mantenimiento_Maquinas;
-        
         private global::System.Data.DataRelation relationFK_maquinaria_mantenimiento_Usuario;
+        
+        private global::System.Data.DataRelation relationFK_maquinaria_mantenimiento_Maquinas;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -246,8 +246,8 @@ namespace Soft_Team {
                     this.tablemaquinaria_mantenimiento.InitVars();
                 }
             }
-            this.relationFK_maquinaria_mantenimiento_Maquinas = this.Relations["FK_maquinaria_mantenimiento_Maquinas"];
             this.relationFK_maquinaria_mantenimiento_Usuario = this.Relations["FK_maquinaria_mantenimiento_Usuario"];
+            this.relationFK_maquinaria_mantenimiento_Maquinas = this.Relations["FK_maquinaria_mantenimiento_Maquinas"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,14 +264,14 @@ namespace Soft_Team {
             base.Tables.Add(this.tableUsuario);
             this.tablemaquinaria_mantenimiento = new maquinaria_mantenimientoDataTable();
             base.Tables.Add(this.tablemaquinaria_mantenimiento);
-            this.relationFK_maquinaria_mantenimiento_Maquinas = new global::System.Data.DataRelation("FK_maquinaria_mantenimiento_Maquinas", new global::System.Data.DataColumn[] {
-                        this.tableMaquinas.id_MaquinaColumn}, new global::System.Data.DataColumn[] {
-                        this.tablemaquinaria_mantenimiento.id_MaquinaColumn}, false);
-            this.Relations.Add(this.relationFK_maquinaria_mantenimiento_Maquinas);
             this.relationFK_maquinaria_mantenimiento_Usuario = new global::System.Data.DataRelation("FK_maquinaria_mantenimiento_Usuario", new global::System.Data.DataColumn[] {
                         this.tableUsuario.id_UsuarioColumn}, new global::System.Data.DataColumn[] {
                         this.tablemaquinaria_mantenimiento.id_usuarioColumn}, false);
             this.Relations.Add(this.relationFK_maquinaria_mantenimiento_Usuario);
+            this.relationFK_maquinaria_mantenimiento_Maquinas = new global::System.Data.DataRelation("FK_maquinaria_mantenimiento_Maquinas", new global::System.Data.DataColumn[] {
+                        this.tableMaquinas.id_MaquinaColumn}, new global::System.Data.DataColumn[] {
+                        this.tablemaquinaria_mantenimiento.id_MaquinaColumn}, false);
+            this.Relations.Add(this.relationFK_maquinaria_mantenimiento_Maquinas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2322,23 +2322,23 @@ namespace Soft_Team {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MaquinasRow MaquinasRow {
-                get {
-                    return ((MaquinasRow)(this.GetParentRow(this.Table.ParentRelations["FK_maquinaria_mantenimiento_Maquinas"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_maquinaria_mantenimiento_Maquinas"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsuarioRow UsuarioRow {
                 get {
                     return ((UsuarioRow)(this.GetParentRow(this.Table.ParentRelations["FK_maquinaria_mantenimiento_Usuario"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_maquinaria_mantenimiento_Usuario"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public MaquinasRow MaquinasRow {
+                get {
+                    return ((MaquinasRow)(this.GetParentRow(this.Table.ParentRelations["FK_maquinaria_mantenimiento_Maquinas"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_maquinaria_mantenimiento_Maquinas"]);
                 }
             }
             
