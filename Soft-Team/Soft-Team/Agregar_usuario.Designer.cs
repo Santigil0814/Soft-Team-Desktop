@@ -205,7 +205,6 @@ namespace Soft_Team
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.MantenimientoTableAdapter = null;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -281,6 +280,7 @@ namespace Soft_Team
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(322, 20);
             this.correoTextBox.TabIndex = 5;
+            this.correoTextBox.TextChanged += new System.EventHandler(this.correoTextBox_TextChanged);
             this.correoTextBox.Validated += new System.EventHandler(this.correoTextBox_Validated);
             // 
             // Agregar_usuario

@@ -11,5 +11,6 @@ namespace Soft_Team
         static public string UsuUsuario = string.Empty;
         static public string MaNoInterno = string.Empty;
         static public string DatoRol = string.Empty;
+        static public string NomUsuario = string.Empty;
     }
 }

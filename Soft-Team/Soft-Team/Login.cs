@@ -66,13 +66,42 @@ namespace Soft_Team
                         }
                         else
                         {
+                            General.NomUsuario = this.Txtusuario.Text;
                             if (this.Txtcontrasena.Text == Encriptar.descencriptar1(this.usuarioTableAdapter.TraerContraseña(this.Txtusuario.Text)))
                             {
                                 this.Visible = false;
                                 this.Enabled = false;
                                 General.DatoRol = this.usuarioTableAdapter.TraerRol(this.Txtusuario.Text);
-                                Administrador m = new Administrador();
-                                m.ShowDialog();
+                                if(General.DatoRol == "Administrador")
+                                {
+                                    this.Visible = false;
+                                    Administrador m = new Administrador();
+                                    m.ShowDialog();
+                                }
+                                else
+                                {
+                                    if(General.DatoRol == "Supervisor")
+                                    {
+                                        this.Visible = false;
+                                        Supervisor s = new Supervisor();
+                                        s.ShowDialog();
+                                    }
+                                    else
+                                    {
+                                        if(General.DatoRol == "Mecanico Recepcionis")
+                                        {
+                                            this.Visible = false;
+                                            captura_info c = new captura_info();
+                                            c.ShowDialog();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("El rol no existe", "Advertencia");
+                                        }
+                                    }
+                                }
+                                this.Visible = true;
+                                this.Enabled = true;
                                 this.Txtusuario.Text = string.Empty;
                                 this.Txtcontrasena.Text = string.Empty;
                                 this.Txtusuario.Focus();

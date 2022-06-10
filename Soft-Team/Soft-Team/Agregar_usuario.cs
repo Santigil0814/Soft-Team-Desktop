@@ -134,5 +134,10 @@ namespace Soft_Team
                 return;
             }
         }
+
+        private void correoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
