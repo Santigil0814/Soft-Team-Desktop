@@ -3839,7 +3839,7 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[14];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[15];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo F" +
@@ -3909,31 +3909,37 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[9].Connection = this.Connection;
-            this._commandCollection[9].CommandText = "SELECT contrasena, correo FROM Usuario WHERE (usuario = @usuario)";
+            this._commandCollection[9].CommandText = "SELECT        contrasena\r\nFROM            Usuario\r\nWHERE        (correo = @correo" +
+                ")";
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[10].Connection = this.Connection;
-            this._commandCollection[10].CommandText = "SELECT        rol\r\nFROM            Usuario\r\nWHERE        (usuario = @usuario)";
+            this._commandCollection[10].CommandText = "SELECT contrasena, correo FROM Usuario WHERE (usuario = @usuario)";
             this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[11].Connection = this.Connection;
-            this._commandCollection[11].CommandText = "SELECT        contrasena\r\nFROM            Usuario\r\nWHERE        (contrasena = @co" +
-                "ntrasena)";
+            this._commandCollection[11].CommandText = "SELECT        rol\r\nFROM            Usuario\r\nWHERE        (usuario = @usuario)";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contrasena", global::System.Data.SqlDbType.VarChar, 600, global::System.Data.ParameterDirection.Input, 0, 0, "contrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[12].Connection = this.Connection;
-            this._commandCollection[12].CommandText = "SELECT        correo\r\nFROM            Usuario\r\nWHERE        (correo = @correo)";
+            this._commandCollection[12].CommandText = "SELECT        contrasena\r\nFROM            Usuario\r\nWHERE        (contrasena = @co" +
+                "ntrasena)";
             this._commandCollection[12].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[12].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contrasena", global::System.Data.SqlDbType.VarChar, 600, global::System.Data.ParameterDirection.Input, 0, 0, "contrasena", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[13] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[13].Connection = this.Connection;
-            this._commandCollection[13].CommandText = "SELECT        usuario, contrasena, correo\r\nFROM            Usuario\r\nWHERE        " +
-                "(usuario = @usuario)";
+            this._commandCollection[13].CommandText = "SELECT        correo\r\nFROM            Usuario\r\nWHERE        (correo = @correo)";
             this._commandCollection[13].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[13].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[14] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[14].Connection = this.Connection;
+            this._commandCollection[14].CommandText = "SELECT        usuario, contrasena, correo\r\nFROM            Usuario\r\nWHERE        " +
+                "(usuario = @usuario)";
+            this._commandCollection[14].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[14].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4629,13 +4635,13 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string TraerContraseña(string usuario) {
+        public virtual object RecuperarContra(string correo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[9];
-            if ((usuario == null)) {
-                throw new global::System.ArgumentNullException("usuario");
+            if ((correo == null)) {
+                throw new global::System.ArgumentNullException("correo");
             }
             else {
-                command.Parameters[0].Value = ((string)(usuario));
+                command.Parameters[0].Value = ((string)(correo));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4656,14 +4662,14 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
                 return null;
             }
             else {
-                return ((string)(returnValue));
+                return ((object)(returnValue));
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string TraerRol(string usuario) {
+        public virtual string TraerContraseña(string usuario) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[10];
             if ((usuario == null)) {
                 throw new global::System.ArgumentNullException("usuario");
@@ -4697,8 +4703,42 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object VerificarContra(string contrasena) {
+        public virtual string TraerRol(string usuario) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[11];
+            if ((usuario == null)) {
+                throw new global::System.ArgumentNullException("usuario");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(usuario));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object VerificarContra(string contrasena) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[12];
             if ((contrasena == null)) {
                 throw new global::System.ArgumentNullException("contrasena");
             }
@@ -4732,7 +4772,7 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual string VerificarCorreo(string correo) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[12];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[13];
             if ((correo == null)) {
                 throw new global::System.ArgumentNullException("correo");
             }
@@ -4766,7 +4806,7 @@ SELECT id_Usuario, nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object VerificaUsuario(string usuario) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[13];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[14];
             if ((usuario == null)) {
                 throw new global::System.ArgumentNullException("usuario");
             }

@@ -126,5 +126,10 @@ namespace Soft_Team
             Administrador a = new Administrador();
             a.ShowDialog();
         }
+
+        private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

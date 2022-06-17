@@ -31,6 +31,7 @@ namespace Soft_Team
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recuperar_contraseña));
+            System.Windows.Forms.Label contrasenaLabel;
             this.panel1 = new System.Windows.Forms.Panel();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -38,18 +39,27 @@ namespace Soft_Team
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.suContraEs = new System.Windows.Forms.Label();
+            this.TxtAsunto = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.RecuperaciónTxT = new System.Windows.Forms.Label();
+            this.contrasenaTextBox = new System.Windows.Forms.TextBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
+            contrasenaLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.correoTextBox);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -128,15 +138,81 @@ namespace Soft_Team
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
-            // _Soft_Team1DataSet
+            // panel2
             // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.panel2.Controls.Add(this.suContraEs);
+            this.panel2.Controls.Add(this.TxtAsunto);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.RecuperaciónTxT);
+            this.panel2.Controls.Add(contrasenaLabel);
+            this.panel2.Controls.Add(this.contrasenaTextBox);
+            this.panel2.Location = new System.Drawing.Point(22, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 28);
+            this.panel2.TabIndex = 45;
+            // 
+            // suContraEs
+            // 
+            this.suContraEs.AutoSize = true;
+            this.suContraEs.Location = new System.Drawing.Point(18, 130);
+            this.suContraEs.Name = "suContraEs";
+            this.suContraEs.Size = new System.Drawing.Size(96, 13);
+            this.suContraEs.TabIndex = 13;
+            this.suContraEs.Text = "Su contraseña es: ";
+            // 
+            // TxtAsunto
+            // 
+            this.TxtAsunto.AutoSize = true;
+            this.TxtAsunto.Location = new System.Drawing.Point(15, 104);
+            this.TxtAsunto.Name = "TxtAsunto";
+            this.TxtAsunto.Size = new System.Drawing.Size(198, 13);
+            this.TxtAsunto.TabIndex = 12;
+            this.TxtAsunto.Text = "Solicitud de recuperacion de contraseña";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Asunto:";
+            // 
+            // RecuperaciónTxT
+            // 
+            this.RecuperaciónTxT.AutoSize = true;
+            this.RecuperaciónTxT.Location = new System.Drawing.Point(52, 45);
+            this.RecuperaciónTxT.Name = "RecuperaciónTxT";
+            this.RecuperaciónTxT.Size = new System.Drawing.Size(145, 13);
+            this.RecuperaciónTxT.TabIndex = 2;
+            this.RecuperaciónTxT.Text = "Recuperación de contraseña";
+            // 
+            // contrasenaLabel
+            // 
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.Location = new System.Drawing.Point(15, 12);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(63, 13);
+            contrasenaLabel.TabIndex = 0;
+            contrasenaLabel.Text = "contrasena:";
+            // 
+            // contrasenaTextBox
+            // 
+            this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "contrasena", true));
+            this.contrasenaTextBox.Location = new System.Drawing.Point(84, 9);
+            this.contrasenaTextBox.Name = "contrasenaTextBox";
+            this.contrasenaTextBox.Size = new System.Drawing.Size(149, 20);
+            this.contrasenaTextBox.TabIndex = 1;
             // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
             this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuarioTableAdapter
             // 
@@ -156,6 +232,7 @@ namespace Soft_Team
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Recuperar_contraseña";
@@ -165,8 +242,10 @@ namespace Soft_Team
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +263,11 @@ namespace Soft_Team
         private _Soft_Team1DataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private _Soft_Team1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label suContraEs;
+        private System.Windows.Forms.Label TxtAsunto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label RecuperaciónTxT;
+        private System.Windows.Forms.TextBox contrasenaTextBox;
     }
 }

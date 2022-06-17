@@ -38,6 +38,7 @@ namespace Soft_Team
             System.Windows.Forms.Label nom_2Label;
             System.Windows.Forms.Label nom_1Label;
             System.Windows.Forms.Label label2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -308,6 +309,7 @@ namespace Soft_Team
             this.Controls.Add(nom_2Label);
             this.Controls.Add(nom_1Label);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Agregar_usuario";

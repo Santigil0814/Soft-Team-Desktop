@@ -38,6 +38,7 @@ namespace Soft_Team
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -114,6 +115,36 @@ namespace Soft_Team
             label2.Size = new System.Drawing.Size(49, 13);
             label2.TabIndex = 33;
             label2.Text = "Correo:*";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(84, 357);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(72, 13);
+            label3.TabIndex = 44;
+            label3.Text = "Contraseña: *";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Location = new System.Drawing.Point(99, 326);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(57, 13);
+            label4.TabIndex = 43;
+            label4.Text = "Usuario: *";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Location = new System.Drawing.Point(120, 292);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(36, 13);
+            label5.TabIndex = 42;
+            label5.Text = "Rol: *";
             // 
             // label1
             // 
@@ -249,36 +280,6 @@ namespace Soft_Team
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(84, 357);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(72, 13);
-            label3.TabIndex = 44;
-            label3.Text = "Contraseña: *";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(99, 326);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(57, 13);
-            label4.TabIndex = 43;
-            label4.Text = "Usuario: *";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.Location = new System.Drawing.Point(120, 292);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(36, 13);
-            label5.TabIndex = 42;
-            label5.Text = "Rol: *";
-            // 
             // EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +305,7 @@ namespace Soft_Team
             this.Controls.Add(nom_2Label);
             this.Controls.Add(nom_1Label);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EditarUsuario";
