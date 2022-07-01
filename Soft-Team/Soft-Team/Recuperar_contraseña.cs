@@ -56,10 +56,11 @@ namespace Soft_Team
                 {
                     this.contrasenaTextBox.Text = Encriptar.descencriptar1(this.contrasenaTextBox.Text);
                     usuarioTableAdapter.RecuperarContra(
-                        this.contrasenaTextBox.Text
-                        );
+                    this.contrasenaTextBox.Text
+                    );
+
                     try
-                    {
+                    {                        
                         string correoqueenvia = "soft.team2001@gmail.com";
                         string correoquerecibe = this.correoTextBox.Text;
                         string msjContra = this.suContraEs.Text;

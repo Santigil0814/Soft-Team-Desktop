@@ -172,5 +172,10 @@ namespace Soft_Team
                 this.id_MaquinaTextBox.Text = string.Empty;
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

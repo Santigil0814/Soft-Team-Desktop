@@ -60,10 +60,74 @@ namespace Soft_Team
             }
             else
             {
-                Editar_camion edu = new Editar_camion();
-                edu.ShowDialog();
-                this.maquinasTableAdapter.Fill(this._Soft_Team1DataSet.Maquinas);
-                General.MaNoInterno = string.Empty;
+                this.Visible = false;
+                this.Enabled = false;
+                if (General.TipoMaquina == "Cosechadora")
+                {
+                    this.Visible = false;
+                    Editar_cosechadora Ec = new Editar_cosechadora();
+                    Ec.ShowDialog();
+                }
+                else
+                {
+                    if (General.TipoMaquina == "Tractor")
+                    {
+                        this.Visible = false;
+                        Editar_tractor Et = new Editar_tractor();
+                        Et.ShowDialog();
+                    }
+                    else
+                    {
+                        if (General.TipoMaquina == "Alzadora")
+                        {
+                            this.Visible = false;
+                            Editar_alzadora Ea = new Editar_alzadora();
+                            Ea.ShowDialog();
+                        }
+                        else
+                        {
+                            if (General.TipoMaquina == "Tractocamión")
+                            {
+                                this.Visible = false;
+                                Editar_tractocamion Etr = new Editar_tractocamion();
+                                Etr.ShowDialog();
+                            }
+                            else
+                            {
+                                if (General.TipoMaquina == "Camión")
+                                {
+                                    this.Visible = false;
+                                    Editar_camion Eca = new Editar_camion();
+                                    Eca.ShowDialog();
+                                }
+                                else
+                                {
+                                    if (General.TipoMaquina == "Vehiculo liviano")
+                                    {
+                                        this.Visible = false;
+                                        Editar_vehiculo_liviano Evl = new Editar_vehiculo_liviano();
+                                        Evl.ShowDialog();
+                                    }
+                                    else
+                                    {
+                                        if (General.TipoMaquina == "Motocicleta")
+                                        {
+                                            this.Visible = false;
+                                            Editar_motocicleta Em = new Editar_motocicleta();
+                                            Em.ShowDialog();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("El rol no existe", "Advertencia");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    this.Visible = true;
+                    this.Enabled = true; 
+                }
             }
         }
 
@@ -130,6 +194,17 @@ namespace Soft_Team
         private void mENUToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ajustesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ajustes A = new Ajustes();
+            A.ShowDialog();
         }
     }
 }

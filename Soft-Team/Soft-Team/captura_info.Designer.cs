@@ -79,12 +79,16 @@ namespace Soft_Team
             this.maquinasTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.MaquinasTableAdapter();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,7 +113,7 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(16, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 431);
             this.panel1.TabIndex = 22;
@@ -440,20 +444,30 @@ namespace Soft_Team
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(530, 170);
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(530, 172);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(228, 23);
+            this.button4.Size = new System.Drawing.Size(228, 26);
             this.button4.TabIndex = 13;
             this.button4.Text = "Generar correo";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(530, 142);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 23);
+            this.button3.Size = new System.Drawing.Size(228, 26);
             this.button3.TabIndex = 12;
-            this.button3.Text = "Solicitar aprovación de ingreso";
+            this.button3.Text = "Solicitar aprobación de ingreso";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -524,21 +538,34 @@ namespace Soft_Team
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(23, 51);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(23, 53);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
+            this.button2.Size = new System.Drawing.Size(98, 26);
             this.button2.TabIndex = 2;
             this.button2.Text = "Inventario";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(23, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 1;
+            this.button1.Size = new System.Drawing.Size(98, 26);
+            this.button1.TabIndex = 2;
             this.button1.Text = "Capturar info.";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // maquinaria_mantenimientoTableAdapter
             // 
@@ -570,12 +597,53 @@ namespace Soft_Team
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(824, 31);
+            this.panel3.TabIndex = 41;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(783, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(29, 30);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "X";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(3, 3);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(223, 26);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Mecánico Recepcionista";
+            // 
             // captura_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(824, 482);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -591,6 +659,8 @@ namespace Soft_Team
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -644,5 +714,8 @@ namespace Soft_Team
         private System.Windows.Forms.DateTimePicker fecha_hora_ingresoDateTimePicker;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker fecha_hora_salidaDateTimePicker;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label18;
     }
 }
