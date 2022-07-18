@@ -16,5 +16,10 @@ namespace Soft_Team
         {
             InitializeComponent();
         }
+
+        private void ReporteMaquinaria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

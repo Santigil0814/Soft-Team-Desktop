@@ -109,6 +109,12 @@
     <Compile Include="Agregar_motocicleta.designer.cs">
       <DependentUpon>Agregar_motocicleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agregar_operador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_operador.designer.cs">
+      <DependentUpon>Agregar_operador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agregar_tractocamion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
       <DependentUpon>CrystalMaquinaria.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalOperadores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalOperadores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalUsuarios.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +199,12 @@
     <Compile Include="Editar_motocicleta.designer.cs">
       <DependentUpon>Editar_motocicleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Editar_operador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editar_operador.Designer.cs">
+      <DependentUpon>Editar_operador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Editar_tractocamion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +230,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteOperadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteOperadores.Designer.cs">
+      <DependentUpon>ReporteOperadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="General.cs" />
     <Compile Include="Inventario.cs">
       <SubType>Form</SubType>
@@ -230,6 +254,12 @@
     </Compile>
     <Compile Include="Maquinas.Designer.cs">
       <DependentUpon>Maquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operadores.Designer.cs">
+      <DependentUpon>Operadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -290,6 +320,9 @@
     <EmbeddedResource Include="Agregar_motocicleta.resx">
       <DependentUpon>Agregar_motocicleta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_operador.resx">
+      <DependentUpon>Agregar_operador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar_tractocamion.resx">
       <DependentUpon>Agregar_tractocamion.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +345,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalMaquinaria.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalOperadores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalOperadores.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalUsuarios.cs</LastGenOutput>
@@ -330,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_motocicleta.resx">
       <DependentUpon>Editar_motocicleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_operador.resx">
+      <DependentUpon>Editar_operador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_tractocamion.resx">
       <DependentUpon>Editar_tractocamion.cs</DependentUpon>
@@ -352,6 +392,9 @@
     <EmbeddedResource Include="Maquinas.resx">
       <DependentUpon>Maquinas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Operadores.resx">
+      <DependentUpon>Operadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -372,6 +415,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteMaquinaria.resx">
       <DependentUpon>ReporteMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteOperadores.resx">
+      <DependentUpon>ReporteOperadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteUsuarios.resx">
       <DependentUpon>ReporteUsuarios.cs</DependentUpon>

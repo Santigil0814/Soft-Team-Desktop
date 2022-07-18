@@ -126,3 +126,7 @@ C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.CopyComplete
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.exe
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.pdb
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Ajustes.resources
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Agregar_operador.resources
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Operadores.resources
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Editar_operador.resources
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.ReporteOperadores.resources

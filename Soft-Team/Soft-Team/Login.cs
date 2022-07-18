@@ -109,6 +109,11 @@ namespace Soft_Team
                             else
                             {
                                 MessageBox.Show("La contraseña es incorrecta. Por favor, verifique la contraseña", "Error");
+                                this.Visible = true;
+                                this.Enabled = true;
+                                this.Txtusuario.Text = string.Empty;
+                                this.Txtcontrasena.Text = string.Empty;
+                                this.Txtusuario.Focus();
                             }
                         }
                     }

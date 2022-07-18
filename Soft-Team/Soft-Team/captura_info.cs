@@ -37,6 +37,8 @@ namespace Soft_Team
 
         private void captura_info_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla '_Soft_Team1DataSet.Operadores' Puede moverla o quitarla según sea necesario.
+            this.operadoresTableAdapter.Fill(this._Soft_Team1DataSet.Operadores);
             // TODO: esta línea de código carga datos en la tabla '_Soft_Team1DataSet.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this._Soft_Team1DataSet.Usuario);
             // TODO: esta línea de código carga datos en la tabla '_Soft_Team1DataSet.Maquinas' Puede moverla o quitarla según sea necesario.
@@ -67,10 +69,10 @@ namespace Soft_Team
                 }
                 else
                 {
-                    if (string.IsNullOrEmpty(this.ficha_operadorTextBox.Text))
+                    if (string.IsNullOrEmpty(this.fichaOperadorTextBox.Text))
                     {
                         MessageBox.Show("Ficha del operador de la máquina requerido", "¡Advertencia!");
-                        this.ficha_operadorTextBox.Focus();
+                        this.fichaOperadorTextBox.Focus();
                     }
                     else
                     {
@@ -92,7 +94,7 @@ namespace Soft_Team
                                 {
                                     string id_ma = this.maquinasTableAdapter.Traerid_maquina(id_MaquinaTextBox.Text).ToString();
                                     string id_us = this.usuarioTableAdapter.Llamarid_usuario(General.NomUsuario).ToString();
-                                    this.maquinaria_mantenimientoTableAdapter.AgregarMantenimiento(Convert.ToInt32(id_ma), Convert.ToInt32(id_us), Convert.ToDateTime(fecha_hora_ingresoDateTimePicker.Value), Convert.ToDateTime(fecha_hora_salidaDateTimePicker.Value), this.observacionesTextBox.Text, this.ficha_operadorTextBox.Text, Convert.ToInt32(horometro_actualTextBox.Text), this.tipo_mantenimientoComboBox.Text, this.seccion_1ComboBox.Text, this.seccion_2ComboBox.Text, this.seccion_3ComboBox.Text, this.seccion_4ComboBox.Text, this.seccion_5ComboBox.Text, this.seccion_6ComboBox.Text, this.seccion_7ComboBox.Text, this.seccion_8ComboBox.Text, this.seccion_9ComboBox.Text);
+                                    this.maquinaria_mantenimientoTableAdapter.AgregarMantenimiento(Convert.ToInt32(id_ma), Convert.ToInt32(id_us), Convert.ToDateTime(fecha_hora_ingresoDateTimePicker.Value), Convert.ToDateTime(fecha_hora_salidaDateTimePicker.Value), this.observacionesTextBox.Text, this.fichaOperadorTextBox.Text, Convert.ToInt32(horometro_actualTextBox.Text), this.tipo_mantenimientoComboBox.Text, this.seccion_1ComboBox.Text, this.seccion_2ComboBox.Text, this.seccion_3ComboBox.Text, this.seccion_4ComboBox.Text, this.seccion_5ComboBox.Text, this.seccion_6ComboBox.Text, this.seccion_7ComboBox.Text, this.seccion_8ComboBox.Text, this.seccion_9ComboBox.Text);
                                     MessageBox.Show("Matenimiento insertado con éxito", "¡Felicidades!");
                                 }
                                 catch (Exception x)
@@ -100,6 +102,11 @@ namespace Soft_Team
                                     MessageBox.Show("El registro no se puede guardar en la base de datos "+ x.ToString(), "Error");
                                     throw;
                                 }
+                                this.id_MaquinaTextBox.Text = string.Empty;
+                                this.fecha_hora_ingresoDateTimePicker.Text = string.Empty;
+                                this.fichaOperadorTextBox.Text = string.Empty;
+                                this.horometro_actualTextBox.Text = string.Empty;
+                                this.tipo_mantenimientoComboBox.Text = string.Empty;
                             }
                         }
                     }
@@ -169,13 +176,27 @@ namespace Soft_Team
                 MessageBox.Show("El Número Interno ingresado no existe. Por favor, digite un Número Interno existente", "Alerta");
                 this.id_MaquinaTextBox.Focus();
                 this.id_MaquinaTextBox.Text = string.Empty;
-                this.id_MaquinaTextBox.Text = string.Empty;
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void fichaOperadorTextBox_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty((string)this.operadoresTableAdapter.RevisarFichaOperador(this.fichaOperadorTextBox.Text)))
+            {
+                MessageBox.Show("La ficha de operador ingresado no existe. Por favor, digite una ficha de operador existente", "Alerta");
+                this.fichaOperadorTextBox.Focus();
+                this.fichaOperadorTextBox.Text = string.Empty;
+            }
+        }
+
+        private void fichaOperadorTextBox_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

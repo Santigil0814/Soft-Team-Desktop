@@ -96,12 +96,6 @@ namespace Soft_Team
             this.usuarioTableAdapter.BuscarPorUsuario(this._Soft_Team1DataSet.Usuario, this.toolStripTextBox1.Text);
         }
 
-        private void Administrador_Resize(object sender, EventArgs e)
-        {
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-        }
-
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -129,6 +123,46 @@ namespace Soft_Team
             Ru.crystalReportViewer1.ReportSource = reporte;
             Ru.ShowDialog();
             Ru.Close();
+        }
+
+        private void ajustesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ajustesToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Ajustes A = new Ajustes();
+            A.ShowDialog();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Enabled = false;
+            Operadores Op = new Operadores();
+            Op.ShowDialog();
+        }
+
+        private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Administrador_Resize(object sender, EventArgs e)
+        {
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
     }
 }

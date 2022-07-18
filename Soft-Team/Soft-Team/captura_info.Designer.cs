@@ -35,8 +35,6 @@ namespace Soft_Team
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.fecha_hora_salidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.fecha_hora_ingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.seccion_1ComboBox = new System.Windows.Forms.ComboBox();
@@ -59,7 +57,6 @@ namespace Soft_Team
             this.seccion_9ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.observacionesTextBox = new System.Windows.Forms.TextBox();
-            this.ficha_operadorTextBox = new System.Windows.Forms.TextBox();
             this.tipo_mantenimientoComboBox = new System.Windows.Forms.ComboBox();
             this.horometro_actualTextBox = new System.Windows.Forms.TextBox();
             this.id_MaquinaTextBox = new System.Windows.Forms.TextBox();
@@ -73,33 +70,39 @@ namespace Soft_Team
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.fichaOperadorTextBox = new System.Windows.Forms.TextBox();
+            this.operadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maquinaria_mantenimientoTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.maquinaria_mantenimientoTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             this.maquinasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maquinasTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.MaquinasTableAdapter();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
+            this.operadoresTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.OperadoresTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.fichaOperadorTextBox);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.fecha_hora_salidaDateTimePicker);
             this.panel1.Controls.Add(this.fecha_hora_ingresoDateTimePicker);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.observacionesTextBox);
-            this.panel1.Controls.Add(this.ficha_operadorTextBox);
             this.panel1.Controls.Add(this.tipo_mantenimientoComboBox);
             this.panel1.Controls.Add(this.horometro_actualTextBox);
             this.panel1.Controls.Add(this.id_MaquinaTextBox);
@@ -137,17 +140,7 @@ namespace Soft_Team
             this.fecha_hora_salidaDateTimePicker.Location = new System.Drawing.Point(268, 107);
             this.fecha_hora_salidaDateTimePicker.Name = "fecha_hora_salidaDateTimePicker";
             this.fecha_hora_salidaDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_salidaDateTimePicker.TabIndex = 68;
-            // 
-            // maquinaria_mantenimientoBindingSource
-            // 
-            this.maquinaria_mantenimientoBindingSource.DataMember = "maquinaria_mantenimiento";
-            this.maquinaria_mantenimientoBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.fecha_hora_salidaDateTimePicker.TabIndex = 6;
             // 
             // fecha_hora_ingresoDateTimePicker
             // 
@@ -156,7 +149,7 @@ namespace Soft_Team
             this.fecha_hora_ingresoDateTimePicker.Location = new System.Drawing.Point(268, 85);
             this.fecha_hora_ingresoDateTimePicker.Name = "fecha_hora_ingresoDateTimePicker";
             this.fecha_hora_ingresoDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_ingresoDateTimePicker.TabIndex = 67;
+            this.fecha_hora_ingresoDateTimePicker.TabIndex = 5;
             // 
             // panel2
             // 
@@ -192,7 +185,7 @@ namespace Soft_Team
             this.seccion_1ComboBox.Location = new System.Drawing.Point(59, 16);
             this.seccion_1ComboBox.Name = "seccion_1ComboBox";
             this.seccion_1ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_1ComboBox.TabIndex = 48;
+            this.seccion_1ComboBox.TabIndex = 12;
             this.seccion_1ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_1ComboBox_KeyPress);
             // 
             // label16
@@ -234,7 +227,7 @@ namespace Soft_Team
             this.seccion_2ComboBox.Location = new System.Drawing.Point(59, 43);
             this.seccion_2ComboBox.Name = "seccion_2ComboBox";
             this.seccion_2ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_2ComboBox.TabIndex = 50;
+            this.seccion_2ComboBox.TabIndex = 15;
             this.seccion_2ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_2ComboBox_KeyPress);
             // 
             // label14
@@ -256,7 +249,7 @@ namespace Soft_Team
             this.seccion_3ComboBox.Location = new System.Drawing.Point(59, 70);
             this.seccion_3ComboBox.Name = "seccion_3ComboBox";
             this.seccion_3ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_3ComboBox.TabIndex = 51;
+            this.seccion_3ComboBox.TabIndex = 18;
             this.seccion_3ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_3ComboBox_KeyPress);
             // 
             // label13
@@ -278,7 +271,7 @@ namespace Soft_Team
             this.seccion_4ComboBox.Location = new System.Drawing.Point(330, 16);
             this.seccion_4ComboBox.Name = "seccion_4ComboBox";
             this.seccion_4ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_4ComboBox.TabIndex = 52;
+            this.seccion_4ComboBox.TabIndex = 13;
             this.seccion_4ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_4ComboBox_KeyPress);
             // 
             // label12
@@ -300,7 +293,7 @@ namespace Soft_Team
             this.seccion_5ComboBox.Location = new System.Drawing.Point(330, 43);
             this.seccion_5ComboBox.Name = "seccion_5ComboBox";
             this.seccion_5ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_5ComboBox.TabIndex = 53;
+            this.seccion_5ComboBox.TabIndex = 16;
             this.seccion_5ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_5ComboBox_KeyPress);
             // 
             // label11
@@ -322,7 +315,7 @@ namespace Soft_Team
             this.seccion_6ComboBox.Location = new System.Drawing.Point(330, 70);
             this.seccion_6ComboBox.Name = "seccion_6ComboBox";
             this.seccion_6ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_6ComboBox.TabIndex = 54;
+            this.seccion_6ComboBox.TabIndex = 19;
             this.seccion_6ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_6ComboBox_KeyPress);
             // 
             // label10
@@ -344,7 +337,7 @@ namespace Soft_Team
             this.seccion_7ComboBox.Location = new System.Drawing.Point(604, 13);
             this.seccion_7ComboBox.Name = "seccion_7ComboBox";
             this.seccion_7ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_7ComboBox.TabIndex = 55;
+            this.seccion_7ComboBox.TabIndex = 14;
             this.seccion_7ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_7ComboBox_KeyPress);
             // 
             // label8
@@ -366,7 +359,7 @@ namespace Soft_Team
             this.seccion_8ComboBox.Location = new System.Drawing.Point(604, 40);
             this.seccion_8ComboBox.Name = "seccion_8ComboBox";
             this.seccion_8ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_8ComboBox.TabIndex = 56;
+            this.seccion_8ComboBox.TabIndex = 17;
             this.seccion_8ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_8ComboBox_KeyPress);
             // 
             // seccion_9ComboBox
@@ -378,7 +371,7 @@ namespace Soft_Team
             this.seccion_9ComboBox.Location = new System.Drawing.Point(604, 67);
             this.seccion_9ComboBox.Name = "seccion_9ComboBox";
             this.seccion_9ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_9ComboBox.TabIndex = 57;
+            this.seccion_9ComboBox.TabIndex = 20;
             this.seccion_9ComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seccion_9ComboBox_KeyPress);
             // 
             // label1
@@ -398,15 +391,7 @@ namespace Soft_Team
             this.observacionesTextBox.Multiline = true;
             this.observacionesTextBox.Name = "observacionesTextBox";
             this.observacionesTextBox.Size = new System.Drawing.Size(228, 97);
-            this.observacionesTextBox.TabIndex = 46;
-            // 
-            // ficha_operadorTextBox
-            // 
-            this.ficha_operadorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "ficha_operador", true));
-            this.ficha_operadorTextBox.Location = new System.Drawing.Point(268, 151);
-            this.ficha_operadorTextBox.Name = "ficha_operadorTextBox";
-            this.ficha_operadorTextBox.Size = new System.Drawing.Size(229, 20);
-            this.ficha_operadorTextBox.TabIndex = 45;
+            this.observacionesTextBox.TabIndex = 9;
             // 
             // tipo_mantenimientoComboBox
             // 
@@ -420,7 +405,7 @@ namespace Soft_Team
             this.tipo_mantenimientoComboBox.Location = new System.Drawing.Point(268, 128);
             this.tipo_mantenimientoComboBox.Name = "tipo_mantenimientoComboBox";
             this.tipo_mantenimientoComboBox.Size = new System.Drawing.Size(229, 21);
-            this.tipo_mantenimientoComboBox.TabIndex = 44;
+            this.tipo_mantenimientoComboBox.TabIndex = 7;
             this.tipo_mantenimientoComboBox.Text = "Seleccione el tipo de mantenimiento";
             this.tipo_mantenimientoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipo_mantenimientoComboBox_KeyPress);
             // 
@@ -430,7 +415,7 @@ namespace Soft_Team
             this.horometro_actualTextBox.Location = new System.Drawing.Point(268, 63);
             this.horometro_actualTextBox.Name = "horometro_actualTextBox";
             this.horometro_actualTextBox.Size = new System.Drawing.Size(229, 20);
-            this.horometro_actualTextBox.TabIndex = 42;
+            this.horometro_actualTextBox.TabIndex = 4;
             // 
             // id_MaquinaTextBox
             // 
@@ -438,7 +423,7 @@ namespace Soft_Team
             this.id_MaquinaTextBox.Location = new System.Drawing.Point(268, 41);
             this.id_MaquinaTextBox.Name = "id_MaquinaTextBox";
             this.id_MaquinaTextBox.Size = new System.Drawing.Size(229, 20);
-            this.id_MaquinaTextBox.TabIndex = 41;
+            this.id_MaquinaTextBox.TabIndex = 3;
             this.id_MaquinaTextBox.TextChanged += new System.EventHandler(this.id_MaquinaTextBox_TextChanged);
             this.id_MaquinaTextBox.Validated += new System.EventHandler(this.id_MaquinaTextBox_Validated);
             // 
@@ -452,7 +437,7 @@ namespace Soft_Team
             this.button4.Location = new System.Drawing.Point(530, 172);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(228, 26);
-            this.button4.TabIndex = 13;
+            this.button4.TabIndex = 11;
             this.button4.Text = "Generar correo";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -466,7 +451,7 @@ namespace Soft_Team
             this.button3.Location = new System.Drawing.Point(530, 142);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(228, 26);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 10;
             this.button3.Text = "Solicitar aprobación de ingreso";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -563,39 +548,9 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(23, 22);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 26);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Capturar info.";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // maquinaria_mantenimientoTableAdapter
-            // 
-            this.maquinaria_mantenimientoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = this.maquinaria_mantenimientoTableAdapter;
-            this.tableAdapterManager.MaquinasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // maquinasBindingSource
-            // 
-            this.maquinasBindingSource.DataMember = "Maquinas";
-            this.maquinasBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // maquinasTableAdapter
-            // 
-            this.maquinasTableAdapter.ClearBeforeFill = true;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // panel3
             // 
@@ -635,6 +590,66 @@ namespace Soft_Team
             this.label18.TabIndex = 0;
             this.label18.Text = "Mecánico Recepcionista";
             // 
+            // fichaOperadorTextBox
+            // 
+            this.fichaOperadorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operadoresBindingSource, "FichaOperador", true));
+            this.fichaOperadorTextBox.Location = new System.Drawing.Point(268, 151);
+            this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
+            this.fichaOperadorTextBox.Size = new System.Drawing.Size(229, 20);
+            this.fichaOperadorTextBox.TabIndex = 8;
+            this.fichaOperadorTextBox.TextChanged += new System.EventHandler(this.fichaOperadorTextBox_TextChanged_1);
+            this.fichaOperadorTextBox.Validated += new System.EventHandler(this.fichaOperadorTextBox_Validated);
+            // 
+            // operadoresBindingSource
+            // 
+            this.operadoresBindingSource.DataMember = "Operadores";
+            this.operadoresBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // maquinaria_mantenimientoBindingSource
+            // 
+            this.maquinaria_mantenimientoBindingSource.DataMember = "maquinaria_mantenimiento";
+            this.maquinaria_mantenimientoBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // maquinaria_mantenimientoTableAdapter
+            // 
+            this.maquinaria_mantenimientoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = this.maquinaria_mantenimientoTableAdapter;
+            this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // maquinasBindingSource
+            // 
+            this.maquinasBindingSource.DataMember = "Maquinas";
+            this.maquinasBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // maquinasTableAdapter
+            // 
+            this.maquinasTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // operadoresTableAdapter
+            // 
+            this.operadoresTableAdapter.ClearBeforeFill = true;
+            // 
             // captura_info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,14 +668,15 @@ namespace Soft_Team
             this.Load += new System.EventHandler(this.captura_info_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -685,7 +701,6 @@ namespace Soft_Team
         private System.Windows.Forms.TextBox horometro_actualTextBox;
         private System.Windows.Forms.TextBox id_MaquinaTextBox;
         private System.Windows.Forms.TextBox observacionesTextBox;
-        private System.Windows.Forms.TextBox ficha_operadorTextBox;
         private System.Windows.Forms.ComboBox tipo_mantenimientoComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label16;
@@ -717,5 +732,8 @@ namespace Soft_Team
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.BindingSource operadoresBindingSource;
+        private _Soft_Team1DataSetTableAdapters.OperadoresTableAdapter operadoresTableAdapter;
+        private System.Windows.Forms.TextBox fichaOperadorTextBox;
     }
 }

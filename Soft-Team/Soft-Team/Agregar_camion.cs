@@ -150,5 +150,10 @@ namespace Soft_Team
         {
             this.Close();
         }
+
+        private void horometro_Km_inicialTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

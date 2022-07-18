@@ -206,5 +206,13 @@ namespace Soft_Team
             Ajustes A = new Ajustes();
             A.ShowDialog();
         }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Enabled = false;
+            Operadores Op = new Operadores();
+            Op.ShowDialog();
+        }
     }
 }

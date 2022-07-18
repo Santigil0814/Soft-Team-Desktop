@@ -148,6 +148,7 @@ namespace Soft_Team
             this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
             this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(174, 20);
             this.horometro_Km_inicialTextBox.TabIndex = 81;
+            this.horometro_Km_inicialTextBox.TextChanged += new System.EventHandler(this.horometro_Km_inicialTextBox_TextChanged);
             // 
             // modeloTextBox
             // 
@@ -385,6 +386,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = this.maquinasTableAdapter;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 

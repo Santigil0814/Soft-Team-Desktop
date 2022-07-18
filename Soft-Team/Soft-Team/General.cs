@@ -13,5 +13,6 @@ namespace Soft_Team
         static public string DatoRol = string.Empty;
         static public string NomUsuario = string.Empty;
         static public string TipoMaquina = string.Empty;
+        static public string OpeOperador = string.Empty;
     }
 }
