@@ -70,7 +70,7 @@ namespace Soft_Team
                                 try
                                 {
                                     this.contrasenaTextBox.Text = Encriptar.encriptar1(this.contrasenaTextBox.Text);
-                                    this.usuarioTableAdapter.AgregarUsuario(this.nom_1TextBox.Text, this.nom_2TextBox.Text, this.ape_1TextBox.Text, this.ape_2TextBox.Text, this.rolComboBox.Text, this.usuarioTextBox.Text, this.contrasenaTextBox.Text, this.correoTextBox.Text);
+                                    this.usuarioTableAdapter.AgregarUsuario(this.nom_1TextBox.Text, this.nom_2TextBox.Text, this.ape_1TextBox.Text, this.ape_2TextBox.Text, this.rolComboBox.Text, this.usuarioTextBox.Text, this.contrasenaTextBox.Text, this.correoTextBox.Text, this.estadoComboBox.Text);
                                     MessageBox.Show("Registro insertado con éxito", "¡Felicidades!");
                                     this.Close();
                                 }
@@ -138,6 +138,26 @@ namespace Soft_Team
         private void correoTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void usuarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255) || (e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64))
+            {
+                MessageBox.Show("Por favor, digite solo letras y números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void rolComboBox_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void estadoComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -73,6 +73,7 @@ namespace Soft_Team
             this.panel2 = new System.Windows.Forms.Panel();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingNavigator)).BeginInit();
@@ -91,7 +92,7 @@ namespace Soft_Team
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1098, 42);
+            this.panel1.Size = new System.Drawing.Size(1264, 42);
             this.panel1.TabIndex = 5;
             // 
             // menuStrip1
@@ -102,7 +103,7 @@ namespace Soft_Team
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(884, 8);
+            this.menuStrip1.Location = new System.Drawing.Point(1050, 8);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(168, 27);
             this.menuStrip1.TabIndex = 9;
@@ -144,7 +145,7 @@ namespace Soft_Team
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1055, 5);
+            this.button1.Location = new System.Drawing.Point(1221, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 32);
             this.button1.TabIndex = 1;
@@ -196,7 +197,7 @@ namespace Soft_Team
             this.usuarioBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.usuarioBindingNavigator.Name = "usuarioBindingNavigator";
             this.usuarioBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usuarioBindingNavigator.Size = new System.Drawing.Size(1098, 25);
+            this.usuarioBindingNavigator.Size = new System.Drawing.Size(1264, 25);
             this.usuarioBindingNavigator.TabIndex = 6;
             this.usuarioBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -380,13 +381,13 @@ namespace Soft_Team
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.correo});
+            this.correo,
+            this.estado});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usuarioDataGridView.Location = new System.Drawing.Point(0, 67);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(1098, 520);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(1264, 520);
             this.usuarioDataGridView.TabIndex = 6;
             this.usuarioDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuarioDataGridView_CellClick);
             this.usuarioDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usuarioDataGridView_CellContentClick);
@@ -467,7 +468,7 @@ namespace Soft_Team
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 542);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1098, 45);
+            this.panel2.Size = new System.Drawing.Size(1264, 45);
             this.panel2.TabIndex = 7;
             // 
             // usuarioTableAdapter
@@ -483,11 +484,18 @@ namespace Soft_Team
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 587);
+            this.ClientSize = new System.Drawing.Size(1264, 587);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.usuarioBindingNavigator);
@@ -558,5 +566,6 @@ namespace Soft_Team
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
     }
 }

@@ -71,8 +71,9 @@ namespace Soft_Team
                             {
                                 this.Visible = false;
                                 this.Enabled = false;
-                                General.DatoRol = this.usuarioTableAdapter.TraerRol(this.Txtusuario.Text);
-                                if(General.DatoRol == "Administrador")
+                                General.DatoRol = (string)this.usuarioTableAdapter.TraerRol(this.Txtusuario.Text);
+                                General.EstadoUsu = (string)this.usuarioTableAdapter.TraerEstado(this.Txtusuario.Text);
+                                if(General.DatoRol == "Administrador" && General.EstadoUsu == "Habilitado")
                                 {
                                     this.Visible = false;
                                     Administrador m = new Administrador();
@@ -80,7 +81,7 @@ namespace Soft_Team
                                 }
                                 else
                                 {
-                                    if(General.DatoRol == "Supervisor")
+                                    if(General.DatoRol == "Supervisor" && General.EstadoUsu == "Habilitado")
                                     {
                                         this.Visible = false;
                                         Supervisor s = new Supervisor();
@@ -88,7 +89,7 @@ namespace Soft_Team
                                     }
                                     else
                                     {
-                                        if(General.DatoRol == "Mecanico Recepcionis")
+                                        if(General.DatoRol == "Mecanico Recepcionista" && General.EstadoUsu == "Habilitado")
                                         {
                                             this.Visible = false;
                                             captura_info c = new captura_info();
@@ -96,7 +97,7 @@ namespace Soft_Team
                                         }
                                         else
                                         {
-                                            MessageBox.Show("El rol no existe", "Advertencia");
+                                            MessageBox.Show("El rol no existe o se encuentra inhabiltado", "Advertencia");
                                         }
                                     }
                                 }
@@ -131,6 +132,21 @@ namespace Soft_Team
         {
             Recuperar_contraseña Rc = new Recuperar_contraseña();
             Rc.ShowDialog();
+        }
+
+        private void Txtcontrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255) || (e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64))
+            {
+                MessageBox.Show("Por favor, digite solo letras y números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

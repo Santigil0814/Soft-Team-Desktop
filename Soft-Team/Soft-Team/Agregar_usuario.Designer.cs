@@ -38,6 +38,7 @@ namespace Soft_Team
             System.Windows.Forms.Label nom_2Label;
             System.Windows.Forms.Label nom_1Label;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@ namespace Soft_Team
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.estadoComboBox = new System.Windows.Forms.ComboBox();
             contraseñaLabel = new System.Windows.Forms.Label();
             usuarioLabel = new System.Windows.Forms.Label();
             rolLabel = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@ namespace Soft_Team
             nom_2Label = new System.Windows.Forms.Label();
             nom_1Label = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +73,7 @@ namespace Soft_Team
             // 
             contraseñaLabel.AutoSize = true;
             contraseñaLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contraseñaLabel.Location = new System.Drawing.Point(86, 353);
+            contraseñaLabel.Location = new System.Drawing.Point(86, 379);
             contraseñaLabel.Name = "contraseñaLabel";
             contraseñaLabel.Size = new System.Drawing.Size(72, 13);
             contraseñaLabel.TabIndex = 14;
@@ -80,7 +83,7 @@ namespace Soft_Team
             // 
             usuarioLabel.AutoSize = true;
             usuarioLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            usuarioLabel.Location = new System.Drawing.Point(101, 322);
+            usuarioLabel.Location = new System.Drawing.Point(101, 348);
             usuarioLabel.Name = "usuarioLabel";
             usuarioLabel.Size = new System.Drawing.Size(57, 13);
             usuarioLabel.TabIndex = 12;
@@ -146,6 +149,16 @@ namespace Soft_Team
             label2.TabIndex = 26;
             label2.Text = "Correo:*";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Location = new System.Drawing.Point(109, 319);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(51, 13);
+            label3.TabIndex = 28;
+            label3.Text = "Estado: *";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -165,7 +178,7 @@ namespace Soft_Team
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(323, 402);
+            this.button1.Location = new System.Drawing.Point(327, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
             this.button1.TabIndex = 9;
@@ -181,7 +194,7 @@ namespace Soft_Team
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(423, 402);
+            this.button2.Location = new System.Drawing.Point(427, 434);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
             this.button2.TabIndex = 10;
@@ -208,6 +221,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
@@ -256,19 +270,21 @@ namespace Soft_Team
             this.rolComboBox.TabIndex = 6;
             this.rolComboBox.SelectedIndexChanged += new System.EventHandler(this.rolComboBox_SelectedIndexChanged);
             this.rolComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rolComboBox_KeyPress);
+            this.rolComboBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.rolComboBox_KeyUp);
             // 
             // usuarioTextBox
             // 
-            this.usuarioTextBox.Location = new System.Drawing.Point(162, 318);
+            this.usuarioTextBox.Location = new System.Drawing.Point(162, 344);
             this.usuarioTextBox.MaxLength = 10;
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(232, 20);
             this.usuarioTextBox.TabIndex = 7;
+            this.usuarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usuarioTextBox_KeyPress);
             this.usuarioTextBox.Validated += new System.EventHandler(this.usuarioTextBox_Validated);
             // 
             // contrasenaTextBox
             // 
-            this.contrasenaTextBox.Location = new System.Drawing.Point(162, 349);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(162, 375);
             this.contrasenaTextBox.MaxLength = 1000;
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.PasswordChar = '*';
@@ -284,12 +300,26 @@ namespace Soft_Team
             this.correoTextBox.TextChanged += new System.EventHandler(this.correoTextBox_TextChanged);
             this.correoTextBox.Validated += new System.EventHandler(this.correoTextBox_Validated);
             // 
+            // estadoComboBox
+            // 
+            this.estadoComboBox.FormattingEnabled = true;
+            this.estadoComboBox.Items.AddRange(new object[] {
+            "Habilitado",
+            "Inhabilitado"});
+            this.estadoComboBox.Location = new System.Drawing.Point(162, 314);
+            this.estadoComboBox.Name = "estadoComboBox";
+            this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.estadoComboBox.TabIndex = 29;
+            this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress);
+            // 
             // Agregar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(715, 475);
+            this.ClientSize = new System.Drawing.Size(715, 501);
+            this.Controls.Add(this.estadoComboBox);
+            this.Controls.Add(label3);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(label2);
             this.Controls.Add(this.contrasenaTextBox);
@@ -340,5 +370,6 @@ namespace Soft_Team
         private System.Windows.Forms.TextBox usuarioTextBox;
         private System.Windows.Forms.TextBox contrasenaTextBox;
         private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.ComboBox estadoComboBox;
     }
 }

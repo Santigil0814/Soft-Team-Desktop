@@ -38,6 +38,7 @@ namespace Soft_Team
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label6;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarUsuario));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@ namespace Soft_Team
             this.contrasenaTextBox1 = new System.Windows.Forms.TextBox();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
+            this.estadoComboBox = new System.Windows.Forms.ComboBox();
             nom_1Label = new System.Windows.Forms.Label();
             nom_2Label = new System.Windows.Forms.Label();
             ape_1Label = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@ namespace Soft_Team
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +123,7 @@ namespace Soft_Team
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(84, 357);
+            label3.Location = new System.Drawing.Point(84, 378);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(72, 13);
             label3.TabIndex = 44;
@@ -130,7 +133,7 @@ namespace Soft_Team
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.Location = new System.Drawing.Point(99, 326);
+            label4.Location = new System.Drawing.Point(99, 347);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(57, 13);
             label4.TabIndex = 43;
@@ -145,6 +148,16 @@ namespace Soft_Team
             label5.Size = new System.Drawing.Size(36, 13);
             label5.TabIndex = 42;
             label5.Text = "Rol: *";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Location = new System.Drawing.Point(107, 320);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(51, 13);
+            label6.TabIndex = 46;
+            label6.Text = "Estado: *";
             // 
             // label1
             // 
@@ -163,7 +176,7 @@ namespace Soft_Team
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MV Boli", 14.25F);
-            this.button1.Location = new System.Drawing.Point(323, 402);
+            this.button1.Location = new System.Drawing.Point(323, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
             this.button1.TabIndex = 15;
@@ -178,7 +191,7 @@ namespace Soft_Team
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("MV Boli", 14.25F);
-            this.button2.Location = new System.Drawing.Point(423, 402);
+            this.button2.Location = new System.Drawing.Point(423, 426);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
             this.button2.TabIndex = 16;
@@ -254,7 +267,7 @@ namespace Soft_Team
             // usuarioTextBox1
             // 
             this.usuarioTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "usuario", true));
-            this.usuarioTextBox1.Location = new System.Drawing.Point(162, 322);
+            this.usuarioTextBox1.Location = new System.Drawing.Point(162, 343);
             this.usuarioTextBox1.Name = "usuarioTextBox1";
             this.usuarioTextBox1.Size = new System.Drawing.Size(232, 20);
             this.usuarioTextBox1.TabIndex = 40;
@@ -263,7 +276,7 @@ namespace Soft_Team
             // contrasenaTextBox1
             // 
             this.contrasenaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "contrasena", true));
-            this.contrasenaTextBox1.Location = new System.Drawing.Point(162, 353);
+            this.contrasenaTextBox1.Location = new System.Drawing.Point(162, 374);
             this.contrasenaTextBox1.Name = "contrasenaTextBox1";
             this.contrasenaTextBox1.Size = new System.Drawing.Size(218, 20);
             this.contrasenaTextBox1.TabIndex = 41;
@@ -277,15 +290,30 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
+            // 
+            // estadoComboBox
+            // 
+            this.estadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "estado", true));
+            this.estadoComboBox.FormattingEnabled = true;
+            this.estadoComboBox.Items.AddRange(new object[] {
+            "Habilitado",
+            "Inhabilitado"});
+            this.estadoComboBox.Location = new System.Drawing.Point(162, 316);
+            this.estadoComboBox.Name = "estadoComboBox";
+            this.estadoComboBox.Size = new System.Drawing.Size(153, 21);
+            this.estadoComboBox.TabIndex = 45;
             // 
             // EditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(715, 475);
+            this.ClientSize = new System.Drawing.Size(715, 498);
+            this.Controls.Add(label6);
+            this.Controls.Add(this.estadoComboBox);
             this.Controls.Add(label3);
             this.Controls.Add(label4);
             this.Controls.Add(label5);
@@ -336,5 +364,6 @@ namespace Soft_Team
         private System.Windows.Forms.TextBox nom_1TextBox;
         private System.Windows.Forms.TextBox usuarioTextBox1;
         private System.Windows.Forms.TextBox contrasenaTextBox1;
+        private System.Windows.Forms.ComboBox estadoComboBox;
     }
 }

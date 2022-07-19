@@ -180,6 +180,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
@@ -188,8 +189,10 @@ namespace Soft_Team
             this.Txtusuario.Location = new System.Drawing.Point(522, 176);
             this.Txtusuario.MaxLength = 10;
             this.Txtusuario.Name = "Txtusuario";
+            this.Txtusuario.ShortcutsEnabled = false;
             this.Txtusuario.Size = new System.Drawing.Size(293, 20);
             this.Txtusuario.TabIndex = 1;
+            this.Txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtusuario_KeyPress);
             // 
             // Txtcontrasena
             // 
@@ -197,8 +200,10 @@ namespace Soft_Team
             this.Txtcontrasena.MaxLength = 600;
             this.Txtcontrasena.Name = "Txtcontrasena";
             this.Txtcontrasena.PasswordChar = '*';
+            this.Txtcontrasena.ShortcutsEnabled = false;
             this.Txtcontrasena.Size = new System.Drawing.Size(293, 20);
             this.Txtcontrasena.TabIndex = 2;
+            this.Txtcontrasena.TextChanged += new System.EventHandler(this.Txtcontrasena_TextChanged);
             // 
             // Login
             // 

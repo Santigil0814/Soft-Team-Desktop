@@ -14,5 +14,6 @@ namespace Soft_Team
         static public string NomUsuario = string.Empty;
         static public string TipoMaquina = string.Empty;
         static public string OpeOperador = string.Empty;
+        static public string EstadoUsu = string.Empty;
     }
 }

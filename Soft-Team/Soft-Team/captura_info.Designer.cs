@@ -33,8 +33,12 @@ namespace Soft_Team
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(captura_info));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fichaOperadorTextBox = new System.Windows.Forms.TextBox();
+            this.operadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.label17 = new System.Windows.Forms.Label();
             this.fecha_hora_salidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fecha_hora_ingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.seccion_1ComboBox = new System.Windows.Forms.ComboBox();
@@ -73,10 +77,6 @@ namespace Soft_Team
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.fichaOperadorTextBox = new System.Windows.Forms.TextBox();
-            this.operadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
-            this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maquinaria_mantenimientoTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.maquinaria_mantenimientoTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             this.maquinasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -85,11 +85,11 @@ namespace Soft_Team
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.operadoresTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.OperadoresTableAdapter();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +122,25 @@ namespace Soft_Team
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // fichaOperadorTextBox
+            // 
+            this.fichaOperadorTextBox.Location = new System.Drawing.Point(268, 151);
+            this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
+            this.fichaOperadorTextBox.Size = new System.Drawing.Size(229, 20);
+            this.fichaOperadorTextBox.TabIndex = 8;
+            this.fichaOperadorTextBox.TextChanged += new System.EventHandler(this.fichaOperadorTextBox_TextChanged_1);
+            this.fichaOperadorTextBox.Validated += new System.EventHandler(this.fichaOperadorTextBox_Validated);
+            // 
+            // operadoresBindingSource
+            // 
+            this.operadoresBindingSource.DataMember = "Operadores";
+            this.operadoresBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -141,6 +160,11 @@ namespace Soft_Team
             this.fecha_hora_salidaDateTimePicker.Name = "fecha_hora_salidaDateTimePicker";
             this.fecha_hora_salidaDateTimePicker.Size = new System.Drawing.Size(229, 20);
             this.fecha_hora_salidaDateTimePicker.TabIndex = 6;
+            // 
+            // maquinaria_mantenimientoBindingSource
+            // 
+            this.maquinaria_mantenimientoBindingSource.DataMember = "maquinaria_mantenimiento";
+            this.maquinaria_mantenimientoBindingSource.DataSource = this._Soft_Team1DataSet;
             // 
             // fecha_hora_ingresoDateTimePicker
             // 
@@ -590,31 +614,6 @@ namespace Soft_Team
             this.label18.TabIndex = 0;
             this.label18.Text = "Mecánico Recepcionista";
             // 
-            // fichaOperadorTextBox
-            // 
-            this.fichaOperadorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operadoresBindingSource, "FichaOperador", true));
-            this.fichaOperadorTextBox.Location = new System.Drawing.Point(268, 151);
-            this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
-            this.fichaOperadorTextBox.Size = new System.Drawing.Size(229, 20);
-            this.fichaOperadorTextBox.TabIndex = 8;
-            this.fichaOperadorTextBox.TextChanged += new System.EventHandler(this.fichaOperadorTextBox_TextChanged_1);
-            this.fichaOperadorTextBox.Validated += new System.EventHandler(this.fichaOperadorTextBox_Validated);
-            // 
-            // operadoresBindingSource
-            // 
-            this.operadoresBindingSource.DataMember = "Operadores";
-            this.operadoresBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // maquinaria_mantenimientoBindingSource
-            // 
-            this.maquinaria_mantenimientoBindingSource.DataMember = "maquinaria_mantenimiento";
-            this.maquinaria_mantenimientoBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
             // maquinaria_mantenimientoTableAdapter
             // 
             this.maquinaria_mantenimientoTableAdapter.ClearBeforeFill = true;
@@ -668,13 +667,13 @@ namespace Soft_Team
             this.Load += new System.EventHandler(this.captura_info_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
