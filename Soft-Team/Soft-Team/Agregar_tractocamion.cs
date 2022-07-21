@@ -68,79 +68,122 @@ namespace Soft_Team
                 }
                 else
                 {
-                    if (string.IsNullOrEmpty(this.referenciaTextBox.Text))
+                    if (string.IsNullOrEmpty(this.estadoComboBox.Text))
                     {
-                        MessageBox.Show("Referencia de la máquina requerida", "¡Advertencia!");
-                        this.referenciaTextBox.Focus();
+                        MessageBox.Show("Estado de la máquina requerido", "¡Advertencia!");
+                        this.estadoComboBox.Focus();
                     }
                     else
                     {
-                        if (string.IsNullOrEmpty(this.serieTextBox.Text))
+                        if (string.IsNullOrEmpty(this.referenciaTextBox.Text))
                         {
-                            MessageBox.Show("Serie de la Máquina requerida", "¡Advertencia!");
-                            this.serieTextBox.Focus();
+                            MessageBox.Show("Referencia de la máquina requerida", "¡Advertencia!");
+                            this.referenciaTextBox.Focus();
                         }
                         else
                         {
-                            if (string.IsNullOrEmpty(this.u_tecnicaComboBox.Text))
+                            if (string.IsNullOrEmpty(this.serieTextBox.Text))
                             {
-                                MessageBox.Show("Ubicación técnica de la Maquina requerida", "¡Advertencia!");
-                                this.u_tecnicaComboBox.Focus();
-                            }
-                            else
-                             if (string.IsNullOrEmpty(this.marcaComboBox.Text))
-                            {
-                                MessageBox.Show("Marca de la Maquina requerida", "¡Advertencia!");
-                                this.marcaComboBox.Focus();
-                            }
-                            else
-                             if (string.IsNullOrEmpty(this.modeloTextBox.Text))
-                            {
-                                MessageBox.Show("Modelo de la Maquina requerido", "¡Advertencia!");
-                                this.modeloTextBox.Focus();
-                            }
-                            else
-                             if (string.IsNullOrEmpty(this.horometro_Km_inicialTextBox.Text))
-                            {
-                                MessageBox.Show("Horómetro o Kilometraje inicial de la Maquina requerido", "¡Advertencia!");
-                                this.horometro_Km_inicialTextBox.Focus();
-                            }
-                            else
-                             if (string.IsNullOrEmpty(this.horas_KmComboBox.Text))
-                            {
-                                MessageBox.Show("Establecer horas o Kilometraje inicial de la Maquina requerida", "¡Advertencia!");
-                                this.horas_KmComboBox.Focus();
-                            }
-                            else
-                             if (string.IsNullOrEmpty(this.cilindrajeTextBox.Text))
-                            {
-                                MessageBox.Show("Cilindraje de la Maquina requerida", "¡Advertencia!");
-                                this.cilindrajeTextBox.Focus();
-                            }
-                            else
-                             if (string.IsNullOrEmpty(this.rPMTextBox.Text))
-                            {
-                                MessageBox.Show("RPM de la Maquina requerido", "¡Advertencia!");
-                                this.rPMTextBox.Focus();
+                                MessageBox.Show("Serie de la Máquina requerida", "¡Advertencia!");
+                                this.serieTextBox.Focus();
                             }
                             else
                             {
-                                try
+                                if (string.IsNullOrEmpty(this.u_tecnicaComboBox.Text))
                                 {
-                                    this.maquinasTableAdapter.Agregar_camion(this.n_internoTextBox.Text, this.tipo_maquinaComboBox.Text, this.referenciaTextBox.Text, this.serieTextBox.Text, this.u_tecnicaComboBox.Text, this.marcaComboBox.Text, this.modeloTextBox.Text, this.horometro_Km_inicialTextBox.Text, horas_KmComboBox.Text, this.cilindrajeTextBox.Text, this.rPMTextBox.Text);
-                                    MessageBox.Show("Registro insertado con éxito", "¡Felicidades!");
-                                    this.Close();
+                                    MessageBox.Show("Ubicación técnica de la Maquina requerida", "¡Advertencia!");
+                                    this.u_tecnicaComboBox.Focus();
                                 }
-                                catch (Exception x)
+                                else
+                                 if (string.IsNullOrEmpty(this.marcaComboBox.Text))
                                 {
-                                    MessageBox.Show("El registro no se puede guardar en la base de datos", "Error");
-                                    throw;
+                                    MessageBox.Show("Marca de la Maquina requerida", "¡Advertencia!");
+                                    this.marcaComboBox.Focus();
+                                }
+                                else
+                                 if (string.IsNullOrEmpty(this.modeloTextBox.Text))
+                                {
+                                    MessageBox.Show("Modelo de la Maquina requerido", "¡Advertencia!");
+                                    this.modeloTextBox.Focus();
+                                }
+                                else
+                                 if (string.IsNullOrEmpty(this.horometro_Km_inicialTextBox.Text))
+                                {
+                                    MessageBox.Show("Horómetro o Kilometraje inicial de la Maquina requerido", "¡Advertencia!");
+                                    this.horometro_Km_inicialTextBox.Focus();
+                                }
+                                else
+                                 if (string.IsNullOrEmpty(this.horas_KmComboBox.Text))
+                                {
+                                    MessageBox.Show("Establecer horas o Kilometraje inicial de la Maquina requerida", "¡Advertencia!");
+                                    this.horas_KmComboBox.Focus();
+                                }
+                                else
+                                 if (string.IsNullOrEmpty(this.cilindrajeTextBox.Text))
+                                {
+                                    MessageBox.Show("Cilindraje de la Maquina requerida", "¡Advertencia!");
+                                    this.cilindrajeTextBox.Focus();
+                                }
+                                else
+                                 if (string.IsNullOrEmpty(this.rPMTextBox.Text))
+                                {
+                                    MessageBox.Show("RPM de la Maquina requerido", "¡Advertencia!");
+                                    this.rPMTextBox.Focus();
+                                }
+                                else
+                                {
+                                    try
+                                    {
+                                        this.maquinasTableAdapter.Agregar_camion(this.n_internoTextBox.Text, this.tipo_maquinaComboBox.Text, this.referenciaTextBox.Text, this.serieTextBox.Text, this.u_tecnicaComboBox.Text, this.marcaComboBox.Text, this.modeloTextBox.Text, Convert.ToInt32(horometro_Km_inicialTextBox.Text), horas_KmComboBox.Text, this.cilindrajeTextBox.Text, this.rPMTextBox.Text, this.estadoComboBox.Text);
+                                        MessageBox.Show("Registro insertado con éxito", "¡Felicidades!");
+                                        this.Close();
+                                    }
+                                    catch (Exception x)
+                                    {
+                                        MessageBox.Show("El registro no se puede guardar en la base de datos", "Error");
+                                        throw;
+                                    }
                                 }
                             }
                         }
-                    }
 
+                    }
                 }
+            }
+        }
+
+        private void estadoComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void horometro_Km_inicialTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor, digite solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void cilindrajeTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor, digite solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void rPMTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Por favor, digite solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
         }
     }

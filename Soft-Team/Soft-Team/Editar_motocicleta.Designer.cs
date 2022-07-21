@@ -29,39 +29,48 @@ namespace Soft_Team
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar_motocicleta));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.maquinasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.maquinasTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.MaquinasTableAdapter();
+            this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tipo_maquinaComboBox = new System.Windows.Forms.ComboBox();
+            this.n_internoTextBox = new System.Windows.Forms.TextBox();
+            this.estadoComboBox = new System.Windows.Forms.ComboBox();
+            this.referenciaTextBox = new System.Windows.Forms.TextBox();
+            this.serieTextBox = new System.Windows.Forms.TextBox();
+            this.u_tecnicaComboBox = new System.Windows.Forms.ComboBox();
+            this.marcaComboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rPMTextBox = new System.Windows.Forms.TextBox();
+            this.cilindrajeTextBox = new System.Windows.Forms.TextBox();
+            this.horas_KmComboBox = new System.Windows.Forms.ComboBox();
+            this.horometro_Km_inicialTextBox = new System.Windows.Forms.TextBox();
+            this.modeloTextBox = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -75,25 +84,283 @@ namespace Soft_Team
             label1.TabIndex = 42;
             label1.Text = "Editar Motocicleta";
             // 
+            // maquinasBindingSource
+            // 
+            this.maquinasBindingSource.DataMember = "Maquinas";
+            this.maquinasBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // maquinasTableAdapter
+            // 
+            this.maquinasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
+            this.tableAdapterManager.MaquinasTableAdapter = this.maquinasTableAdapter;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(78, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 205);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(78, 278);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 194);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(89, 502);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(194, 502);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Regresar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label2.Location = new System.Drawing.Point(347, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 14);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Número interno";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label3.Location = new System.Drawing.Point(348, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 14);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Tipo máquina";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label4.Location = new System.Drawing.Point(348, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 14);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Referencia";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label5.Location = new System.Drawing.Point(349, 254);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 14);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Serie";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label6.Location = new System.Drawing.Point(349, 304);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 14);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Ubicación técnica";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label11.Location = new System.Drawing.Point(349, 353);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(41, 14);
+            this.label11.TabIndex = 62;
+            this.label11.Text = "Marca";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label10.Location = new System.Drawing.Point(348, 404);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 14);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Modelo";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label9.Location = new System.Drawing.Point(348, 454);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(177, 14);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Horometro / Kilometraje inicial";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label8.Location = new System.Drawing.Point(349, 504);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 14);
+            this.label8.TabIndex = 65;
+            this.label8.Text = "Cilindraje";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label7.Location = new System.Drawing.Point(350, 556);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 14);
+            this.label7.TabIndex = 66;
+            this.label7.Text = "RPM";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label12.Location = new System.Drawing.Point(541, 454);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 14);
+            this.label12.TabIndex = 73;
+            this.label12.Text = "Horas / Kilometros";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label13.Location = new System.Drawing.Point(350, 158);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 14);
+            this.label13.TabIndex = 79;
+            this.label13.Text = "Estado";
+            // 
+            // tipo_maquinaComboBox
+            // 
+            this.tipo_maquinaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Tipo_maquina", true));
+            this.tipo_maquinaComboBox.FormattingEnabled = true;
+            this.tipo_maquinaComboBox.Items.AddRange(new object[] {
+            "Motocicleta"});
+            this.tipo_maquinaComboBox.Location = new System.Drawing.Point(351, 126);
+            this.tipo_maquinaComboBox.Name = "tipo_maquinaComboBox";
+            this.tipo_maquinaComboBox.Size = new System.Drawing.Size(183, 21);
+            this.tipo_maquinaComboBox.TabIndex = 81;
+            this.tipo_maquinaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipo_maquinaComboBox_KeyPress);
+            // 
+            // n_internoTextBox
+            // 
+            this.n_internoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "N_interno", true));
+            this.n_internoTextBox.Enabled = false;
+            this.n_internoTextBox.Location = new System.Drawing.Point(351, 76);
+            this.n_internoTextBox.Name = "n_internoTextBox";
+            this.n_internoTextBox.Size = new System.Drawing.Size(298, 20);
+            this.n_internoTextBox.TabIndex = 82;
+            // 
+            // estadoComboBox
+            // 
+            this.estadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Estado", true));
+            this.estadoComboBox.FormattingEnabled = true;
+            this.estadoComboBox.Location = new System.Drawing.Point(350, 175);
+            this.estadoComboBox.Name = "estadoComboBox";
+            this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.estadoComboBox.TabIndex = 83;
+            this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress_1);
+            // 
+            // referenciaTextBox
+            // 
+            this.referenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Referencia", true));
+            this.referenciaTextBox.Location = new System.Drawing.Point(351, 221);
+            this.referenciaTextBox.Name = "referenciaTextBox";
+            this.referenciaTextBox.Size = new System.Drawing.Size(298, 20);
+            this.referenciaTextBox.TabIndex = 84;
+            // 
+            // serieTextBox
+            // 
+            this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Serie", true));
+            this.serieTextBox.Location = new System.Drawing.Point(350, 271);
+            this.serieTextBox.Name = "serieTextBox";
+            this.serieTextBox.Size = new System.Drawing.Size(299, 20);
+            this.serieTextBox.TabIndex = 85;
+            // 
+            // u_tecnicaComboBox
+            // 
+            this.u_tecnicaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "U_tecnica", true));
+            this.u_tecnicaComboBox.FormattingEnabled = true;
+            this.u_tecnicaComboBox.Items.AddRange(new object[] {
+            "Campo",
+            "Cosecha",
+            "Servicios Generales",
+            "Fábrica"});
+            this.u_tecnicaComboBox.Location = new System.Drawing.Point(351, 321);
+            this.u_tecnicaComboBox.Name = "u_tecnicaComboBox";
+            this.u_tecnicaComboBox.Size = new System.Drawing.Size(183, 21);
+            this.u_tecnicaComboBox.TabIndex = 86;
+            this.u_tecnicaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.u_tecnicaComboBox_KeyPress);
+            // 
+            // marcaComboBox
+            // 
+            this.marcaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Marca", true));
+            this.marcaComboBox.FormattingEnabled = true;
+            this.marcaComboBox.Location = new System.Drawing.Point(351, 370);
+            this.marcaComboBox.Name = "marcaComboBox";
+            this.marcaComboBox.Size = new System.Drawing.Size(183, 21);
+            this.marcaComboBox.TabIndex = 87;
+            this.marcaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.marcaComboBox_KeyPress);
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.comboBox7);
+            this.panel1.Controls.Add(this.rPMTextBox);
+            this.panel1.Controls.Add(this.cilindrajeTextBox);
+            this.panel1.Controls.Add(this.horas_KmComboBox);
+            this.panel1.Controls.Add(this.horometro_Km_inicialTextBox);
+            this.panel1.Controls.Add(this.modeloTextBox);
+            this.panel1.Controls.Add(this.marcaComboBox);
+            this.panel1.Controls.Add(this.u_tecnicaComboBox);
+            this.panel1.Controls.Add(this.serieTextBox);
+            this.panel1.Controls.Add(this.referenciaTextBox);
+            this.panel1.Controls.Add(this.estadoComboBox);
+            this.panel1.Controls.Add(this.n_internoTextBox);
+            this.panel1.Controls.Add(this.tipo_maquinaComboBox);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.comboBox6);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -106,272 +373,60 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 568);
+            this.panel1.Size = new System.Drawing.Size(876, 613);
             this.panel1.TabIndex = 8;
             // 
-            // textBox8
+            // rPMTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(352, 529);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(345, 20);
-            this.textBox8.TabIndex = 78;
+            this.rPMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "RPM", true));
+            this.rPMTextBox.Location = new System.Drawing.Point(350, 573);
+            this.rPMTextBox.Name = "rPMTextBox";
+            this.rPMTextBox.Size = new System.Drawing.Size(299, 20);
+            this.rPMTextBox.TabIndex = 92;
+            this.rPMTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rPMTextBox_KeyPress);
             // 
-            // textBox7
+            // cilindrajeTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(352, 477);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(345, 20);
-            this.textBox7.TabIndex = 77;
+            this.cilindrajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Cilindraje", true));
+            this.cilindrajeTextBox.Location = new System.Drawing.Point(350, 521);
+            this.cilindrajeTextBox.Name = "cilindrajeTextBox";
+            this.cilindrajeTextBox.Size = new System.Drawing.Size(299, 20);
+            this.cilindrajeTextBox.TabIndex = 91;
+            this.cilindrajeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cilindrajeTextBox_KeyPress);
             // 
-            // textBox6
+            // horas_KmComboBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(351, 227);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(345, 20);
-            this.textBox6.TabIndex = 76;
+            this.horas_KmComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horas_Km", true));
+            this.horas_KmComboBox.FormattingEnabled = true;
+            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 470);
+            this.horas_KmComboBox.Name = "horas_KmComboBox";
+            this.horas_KmComboBox.Size = new System.Drawing.Size(121, 21);
+            this.horas_KmComboBox.TabIndex = 90;
+            this.horas_KmComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horas_KmComboBox_KeyPress);
             // 
-            // textBox4
+            // horometro_Km_inicialTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(351, 177);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(345, 20);
-            this.textBox4.TabIndex = 75;
+            this.horometro_Km_inicialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horometro_Km_inicial", true));
+            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(350, 471);
+            this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
+            this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(175, 20);
+            this.horometro_Km_inicialTextBox.TabIndex = 89;
+            this.horometro_Km_inicialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horometro_Km_inicialTextBox_KeyPress);
             // 
-            // comboBox7
+            // modeloTextBox
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Autosoft",
-            "Puma",
-            "Paystar",
-            "Chevrolet",
-            "Toyota",
-            "Susuki",
-            "Yamaha",
-            "Case",
-            "JohnDeere",
-            "Kenworth"});
-            this.comboBox7.Location = new System.Drawing.Point(352, 326);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(345, 21);
-            this.comboBox7.TabIndex = 74;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label12.Location = new System.Drawing.Point(541, 410);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 14);
-            this.label12.TabIndex = 73;
-            this.label12.Text = "Horas / Kilometros";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(351, 427);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(171, 20);
-            this.textBox5.TabIndex = 72;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Campo",
-            "Cosecha",
-            "Fábrica",
-            "Servicios Generales"});
-            this.comboBox6.Location = new System.Drawing.Point(544, 427);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(152, 21);
-            this.comboBox6.TabIndex = 69;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(352, 377);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(345, 20);
-            this.textBox3.TabIndex = 68;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label7.Location = new System.Drawing.Point(350, 512);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 14);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "RPM";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label8.Location = new System.Drawing.Point(349, 460);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 14);
-            this.label8.TabIndex = 65;
-            this.label8.Text = "Cilindraje";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label9.Location = new System.Drawing.Point(348, 410);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(177, 14);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Horometro / Kilometraje inicial";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label10.Location = new System.Drawing.Point(348, 360);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 14);
-            this.label10.TabIndex = 63;
-            this.label10.Text = "Modelo";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label11.Location = new System.Drawing.Point(349, 309);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 14);
-            this.label11.TabIndex = 62;
-            this.label11.Text = "Marca";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Autosoft",
-            "Puma",
-            "Paystar",
-            "Chevrolet",
-            "Toyota",
-            "Susuki",
-            "Yamaha",
-            "Case",
-            "JohnDeere",
-            "Kenworth"});
-            this.comboBox3.Location = new System.Drawing.Point(352, 277);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(345, 21);
-            this.comboBox3.TabIndex = 61;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(352, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(345, 20);
-            this.textBox2.TabIndex = 58;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(350, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 20);
-            this.textBox1.TabIndex = 57;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(349, 260);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 14);
-            this.label6.TabIndex = 56;
-            this.label6.Text = "Ubicación técnica";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(349, 210);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 14);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Serie";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(348, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 14);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "Referencia";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label3.Location = new System.Drawing.Point(348, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 14);
-            this.label3.TabIndex = 53;
-            this.label3.Text = "Tipo máquina";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(347, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 14);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Número interno";
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(194, 502);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(89, 502);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(78, 278);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 194);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(78, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 205);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Modelo", true));
+            this.modeloTextBox.Location = new System.Drawing.Point(351, 421);
+            this.modeloTextBox.Name = "modeloTextBox";
+            this.modeloTextBox.Size = new System.Drawing.Size(298, 20);
+            this.modeloTextBox.TabIndex = 88;
             // 
             // Editar_motocicleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 593);
+            this.ClientSize = new System.Drawing.Size(889, 625);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -379,42 +434,50 @@ namespace Soft_Team
             this.Name = "Editar_motocicleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar_motocicleta";
+            this.Load += new System.EventHandler(this.Editar_motocicleta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private _Soft_Team1DataSet _Soft_Team1DataSet;
+        private System.Windows.Forms.BindingSource maquinasBindingSource;
+        private _Soft_Team1DataSetTableAdapters.MaquinasTableAdapter maquinasTableAdapter;
+        private _Soft_Team1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox tipo_maquinaComboBox;
+        private System.Windows.Forms.TextBox n_internoTextBox;
+        private System.Windows.Forms.ComboBox estadoComboBox;
+        private System.Windows.Forms.TextBox referenciaTextBox;
+        private System.Windows.Forms.TextBox serieTextBox;
+        private System.Windows.Forms.ComboBox u_tecnicaComboBox;
+        private System.Windows.Forms.ComboBox marcaComboBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox modeloTextBox;
+        private System.Windows.Forms.TextBox rPMTextBox;
+        private System.Windows.Forms.TextBox cilindrajeTextBox;
+        private System.Windows.Forms.ComboBox horas_KmComboBox;
+        private System.Windows.Forms.TextBox horometro_Km_inicialTextBox;
     }
 }

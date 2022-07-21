@@ -27,7 +27,6 @@ namespace Soft_Team
 
         private void Maquinas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_Soft_Team1DataSet.Maquinas' Puede moverla o quitarla según sea necesario.
             this.maquinasTableAdapter.Fill(this._Soft_Team1DataSet.Maquinas);
 
         }
@@ -60,11 +59,10 @@ namespace Soft_Team
             }
             else
             {
-                this.Visible = false;
-                this.Enabled = false;
+                General.TipoMaquina = (string)this.maquinasTableAdapter.Traer_tipoMaquina(General.MaNoInterno);
                 if (General.TipoMaquina == "Cosechadora")
                 {
-                    this.Visible = false;
+                    
                     Editar_cosechadora Ec = new Editar_cosechadora();
                     Ec.ShowDialog();
                 }
@@ -72,7 +70,7 @@ namespace Soft_Team
                 {
                     if (General.TipoMaquina == "Tractor")
                     {
-                        this.Visible = false;
+                        
                         Editar_tractor Et = new Editar_tractor();
                         Et.ShowDialog();
                     }
@@ -80,7 +78,7 @@ namespace Soft_Team
                     {
                         if (General.TipoMaquina == "Alzadora")
                         {
-                            this.Visible = false;
+                            
                             Editar_alzadora Ea = new Editar_alzadora();
                             Ea.ShowDialog();
                         }
@@ -88,7 +86,7 @@ namespace Soft_Team
                         {
                             if (General.TipoMaquina == "Tractocamión")
                             {
-                                this.Visible = false;
+                                
                                 Editar_tractocamion Etr = new Editar_tractocamion();
                                 Etr.ShowDialog();
                             }
@@ -96,37 +94,44 @@ namespace Soft_Team
                             {
                                 if (General.TipoMaquina == "Camión")
                                 {
-                                    this.Visible = false;
+                                    
                                     Editar_camion Eca = new Editar_camion();
                                     Eca.ShowDialog();
                                 }
                                 else
                                 {
-                                    if (General.TipoMaquina == "Vehiculo liviano")
+                                    if (General.TipoMaquina == "Campero")
                                     {
-                                        this.Visible = false;
-                                        Editar_vehiculo_liviano Evl = new Editar_vehiculo_liviano();
-                                        Evl.ShowDialog();
+                                        
+                                        Editar_vehiculo_liviano camp = new Editar_vehiculo_liviano();
+                                        camp.ShowDialog();
                                     }
                                     else
                                     {
-                                        if (General.TipoMaquina == "Motocicleta")
+                                        if (General.TipoMaquina == "Camioneta")
                                         {
-                                            this.Visible = false;
-                                            Editar_motocicleta Em = new Editar_motocicleta();
-                                            Em.ShowDialog();
+                                            
+                                            Editar_vehiculo_liviano cami = new Editar_vehiculo_liviano();
+                                            cami.ShowDialog();
                                         }
                                         else
                                         {
-                                            MessageBox.Show("El rol no existe", "Advertencia");
+                                            if (General.TipoMaquina == "Motocicleta")
+                                            {
+                                                
+                                                Editar_motocicleta Em = new Editar_motocicleta();
+                                                Em.ShowDialog();
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("El tipo de máquina no existe", "Advertencia");
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    this.Visible = true;
-                    this.Enabled = true; 
                 }
             }
         }

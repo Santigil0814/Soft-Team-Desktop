@@ -422,6 +422,8 @@ namespace Soft_Team {
             
             private global::System.Data.DataColumn columnRPM;
             
+            private global::System.Data.DataColumn columnEstado;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public MaquinasDataTable() {
@@ -553,6 +555,14 @@ namespace Soft_Team {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -588,7 +598,7 @@ namespace Soft_Team {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public MaquinasRow AddMaquinasRow(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, string Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM) {
+            public MaquinasRow AddMaquinasRow(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, string Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM, string Estado) {
                 MaquinasRow rowMaquinasRow = ((MaquinasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -602,7 +612,8 @@ namespace Soft_Team {
                         Horometro_Km_inicial,
                         Horas_Km,
                         Cilindraje,
-                        RPM};
+                        RPM,
+                        Estado};
                 rowMaquinasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMaquinasRow);
                 return rowMaquinasRow;
@@ -644,6 +655,7 @@ namespace Soft_Team {
                 this.columnHoras_Km = base.Columns["Horas_Km"];
                 this.columnCilindraje = base.Columns["Cilindraje"];
                 this.columnRPM = base.Columns["RPM"];
+                this.columnEstado = base.Columns["Estado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -673,6 +685,8 @@ namespace Soft_Team {
                 base.Columns.Add(this.columnCilindraje);
                 this.columnRPM = new global::System.Data.DataColumn("RPM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRPM);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_Maquina}, true));
                 this.columnid_Maquina.AutoIncrement = true;
@@ -703,6 +717,8 @@ namespace Soft_Team {
                 this.columnCilindraje.MaxLength = 50;
                 this.columnRPM.AllowDBNull = false;
                 this.columnRPM.MaxLength = 50;
+                this.columnEstado.AllowDBNull = false;
+                this.columnEstado.MaxLength = 12;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2258,6 +2274,17 @@ namespace Soft_Team {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Estado {
+                get {
+                    return ((string)(this[this.tableMaquinas.EstadoColumn]));
+                }
+                set {
+                    this[this.tableMaquinas.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public maquinaria_mantenimientoRow[] Getmaquinaria_mantenimientoRows() {
                 if ((this.Table.ChildRelations["FK_maquinaria_mantenimiento_Maquinas"] == null)) {
                     return new maquinaria_mantenimientoRow[0];
@@ -3277,10 +3304,11 @@ namespace Soft_Team._Soft_Team1DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Horas_Km", "Horas_Km");
             tableMapping.ColumnMappings.Add("Cilindraje", "Cilindraje");
             tableMapping.ColumnMappings.Add("RPM", "RPM");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Maquinas] WHERE (([id_Maquina] = @Original_id_Maquina) AND ([N_interno] = @Original_N_interno) AND ([Tipo_maquina] = @Original_Tipo_maquina) AND ([Referencia] = @Original_Referencia) AND ([Serie] = @Original_Serie) AND ([U_tecnica] = @Original_U_tecnica) AND ([Marca] = @Original_Marca) AND ([Modelo] = @Original_Modelo) AND ([Horometro_Km_inicial] = @Original_Horometro_Km_inicial) AND ([Horas_Km] = @Original_Horas_Km) AND ([Cilindraje] = @Original_Cilindraje) AND ([RPM] = @Original_RPM))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Maquinas] WHERE (([id_Maquina] = @Original_id_Maquina) AND ([N_interno] = @Original_N_interno) AND ([Tipo_maquina] = @Original_Tipo_maquina) AND ([Referencia] = @Original_Referencia) AND ([Serie] = @Original_Serie) AND ([U_tecnica] = @Original_U_tecnica) AND ([Marca] = @Original_Marca) AND ([Modelo] = @Original_Modelo) AND ([Horometro_Km_inicial] = @Original_Horometro_Km_inicial) AND ([Horas_Km] = @Original_Horas_Km) AND ([Cilindraje] = @Original_Cilindraje) AND ([RPM] = @Original_RPM) AND ([Estado] = @Original_Estado))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Maquina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Maquina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_N_interno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3290,14 +3318,15 @@ namespace Soft_Team._Soft_Team1DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_U_tecnica", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "U_tecnica", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Horometro_Km_inicial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Horometro_Km_inicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Horas_Km", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horas_Km", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cilindraje", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RPM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Maquinas] ([N_interno], [Tipo_maquina], [Referencia], [Serie], [U_tecnica], [Marca], [Modelo], [Horometro_Km_inicial], [Horas_Km], [Cilindraje], [RPM]) VALUES (@N_interno, @Tipo_maquina, @Referencia, @Serie, @U_tecnica, @Marca, @Modelo, @Horometro_Km_inicial, @Horas_Km, @Cilindraje, @RPM);
-SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM FROM Maquinas WHERE (id_Maquina = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Maquinas] ([N_interno], [Tipo_maquina], [Referencia], [Serie], [U_tecnica], [Marca], [Modelo], [Horometro_Km_inicial], [Horas_Km], [Cilindraje], [RPM], [Estado]) VALUES (@N_interno, @Tipo_maquina, @Referencia, @Serie, @U_tecnica, @Marca, @Modelo, @Horometro_Km_inicial, @Horas_Km, @Cilindraje, @RPM, @Estado);
+SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado FROM Maquinas WHERE (id_Maquina = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_maquina", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3306,14 +3335,15 @@ SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@U_tecnica", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "U_tecnica", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas_Km", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horas_Km", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cilindraje", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RPM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Maquinas] SET [N_interno] = @N_interno, [Tipo_maquina] = @Tipo_maquina, [Referencia] = @Referencia, [Serie] = @Serie, [U_tecnica] = @U_tecnica, [Marca] = @Marca, [Modelo] = @Modelo, [Horometro_Km_inicial] = @Horometro_Km_inicial, [Horas_Km] = @Horas_Km, [Cilindraje] = @Cilindraje, [RPM] = @RPM WHERE (([id_Maquina] = @Original_id_Maquina) AND ([N_interno] = @Original_N_interno) AND ([Tipo_maquina] = @Original_Tipo_maquina) AND ([Referencia] = @Original_Referencia) AND ([Serie] = @Original_Serie) AND ([U_tecnica] = @Original_U_tecnica) AND ([Marca] = @Original_Marca) AND ([Modelo] = @Original_Modelo) AND ([Horometro_Km_inicial] = @Original_Horometro_Km_inicial) AND ([Horas_Km] = @Original_Horas_Km) AND ([Cilindraje] = @Original_Cilindraje) AND ([RPM] = @Original_RPM));
-SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM FROM Maquinas WHERE (id_Maquina = @id_Maquina)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Maquinas] SET [N_interno] = @N_interno, [Tipo_maquina] = @Tipo_maquina, [Referencia] = @Referencia, [Serie] = @Serie, [U_tecnica] = @U_tecnica, [Marca] = @Marca, [Modelo] = @Modelo, [Horometro_Km_inicial] = @Horometro_Km_inicial, [Horas_Km] = @Horas_Km, [Cilindraje] = @Cilindraje, [RPM] = @RPM, [Estado] = @Estado WHERE (([id_Maquina] = @Original_id_Maquina) AND ([N_interno] = @Original_N_interno) AND ([Tipo_maquina] = @Original_Tipo_maquina) AND ([Referencia] = @Original_Referencia) AND ([Serie] = @Original_Serie) AND ([U_tecnica] = @Original_U_tecnica) AND ([Marca] = @Original_Marca) AND ([Modelo] = @Original_Modelo) AND ([Horometro_Km_inicial] = @Original_Horometro_Km_inicial) AND ([Horas_Km] = @Original_Horas_Km) AND ([Cilindraje] = @Original_Cilindraje) AND ([RPM] = @Original_RPM) AND ([Estado] = @Original_Estado));
+SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado FROM Maquinas WHERE (id_Maquina = @id_Maquina)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_maquina", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3322,10 +3352,11 @@ SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@U_tecnica", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "U_tecnica", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas_Km", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horas_Km", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cilindraje", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RPM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Maquina", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Maquina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_N_interno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tipo_maquina", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_maquina", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3334,10 +3365,11 @@ SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_U_tecnica", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "U_tecnica", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marca", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Modelo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Horometro_Km_inicial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Horometro_Km_inicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Horas_Km", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Horas_Km", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cilindraje", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RPM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Estado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_Maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3355,13 +3387,12 @@ SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca,
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, " +
-                "Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM FROM dbo.Maquinas";
+                "Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado FROM Maquinas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = @"UPDATE       Maquinas
-SET                N_interno = @N_interno, Tipo_maquina = @Tipo_maquina, Referencia = @Referencia, Serie = @Serie, U_tecnica = @U_tecnica, Marca = @Marca, Modelo = @Modelo, Horometro_Km_inicial = @Horometro_Km_inicial, 
-                         Horas_Km = @Horas_Km, Cilindraje = @Cilindraje, RPM = @RPM
+SET                N_interno = @N_interno, Tipo_maquina = @Tipo_maquina, Referencia = @Referencia, Serie = @Serie, U_tecnica = @U_tecnica, Marca = @Marca, Modelo = @Modelo, Horometro_Km_inicial = @Horometro_Km_inicial, Horas_Km = @Horas_Km, Cilindraje = @Cilindraje, RPM = @RPM, Estado = @Estado
 WHERE        (N_interno = @N_interno)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3371,15 +3402,16 @@ WHERE        (N_interno = @N_interno)";
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@U_tecnica", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "U_tecnica", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas_Km", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Horas_Km", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cilindraje", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RPM", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cilindraje", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RPM", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.VarChar, 12, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"INSERT INTO Maquinas
-                         (N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM)
-VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Modelo,@Horometro_Km_inicial,@Horas_Km,@Cilindraje,@RPM)";
+                         (N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado)
+VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Modelo,@Horometro_Km_inicial,@Horas_Km,@Cilindraje,@RPM,@Estado)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tipo_maquina", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Tipo_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3388,15 +3420,16 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@U_tecnica", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "U_tecnica", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marca", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Modelo", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Modelo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horometro_Km_inicial", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Horometro_Km_inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horas_Km", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Horas_Km", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cilindraje", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RPM", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cilindraje", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Cilindraje", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RPM", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "RPM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.VarChar, 12, global::System.Data.ParameterDirection.Input, 0, 0, "Estado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, " +
-                "Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM\r\nFROM            " +
-                "Maquinas\r\nWHERE        (N_interno LIKE \'%\' + @N_interno + \'%\')";
+            this._commandCollection[3].CommandText = "SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, " +
+                "Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado FROM Maquinas WH" +
+                "ERE (N_interno LIKE \'%\' + @N_interno + \'%\')";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -3406,27 +3439,24 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
-            this._commandCollection[5].CommandText = "SELECT        id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, " +
-                "Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM\r\nFROM            " +
-                "Maquinas\r\nWHERE        (N_interno = @N_interno)";
+            this._commandCollection[5].CommandText = "SELECT id_Maquina, N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, " +
+                "Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado FROM Maquinas WH" +
+                "ERE (N_interno = @N_interno)";
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = "SELECT        Tipo_maquina\r\nFROM            Maquinas\r\nWHERE        (N_interno = @" +
-                "N_interno)";
+            this._commandCollection[6].CommandText = "SELECT Tipo_maquina, Estado FROM Maquinas WHERE (N_interno = @N_interno)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "SELECT        id_Maquina\r\nFROM            Maquinas\r\nWHERE        (N_interno = @N_" +
-                "interno)";
+            this._commandCollection[7].CommandText = "SELECT id_Maquina, Estado FROM Maquinas WHERE (N_interno = @N_interno)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[8].Connection = this.Connection;
-            this._commandCollection[8].CommandText = "SELECT        N_interno\r\nFROM            Maquinas\r\nWHERE        (N_interno = @N_i" +
-                "nterno)";
+            this._commandCollection[8].CommandText = "SELECT N_interno, Estado FROM Maquinas WHERE (N_interno = @N_interno)";
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@N_interno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "N_interno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -3543,7 +3573,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_Maquina, string Original_N_interno, string Original_Tipo_maquina, string Original_Referencia, string Original_Serie, string Original_U_tecnica, string Original_Marca, string Original_Modelo, string Original_Horometro_Km_inicial, string Original_Horas_Km, string Original_Cilindraje, string Original_RPM) {
+        public virtual int Delete(int Original_id_Maquina, string Original_N_interno, string Original_Tipo_maquina, string Original_Referencia, string Original_Serie, string Original_U_tecnica, string Original_Marca, string Original_Modelo, int Original_Horometro_Km_inicial, string Original_Horas_Km, string Original_Cilindraje, string Original_RPM, string Original_Estado) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_Maquina));
             if ((Original_N_interno == null)) {
                 throw new global::System.ArgumentNullException("Original_N_interno");
@@ -3587,12 +3617,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Modelo));
             }
-            if ((Original_Horometro_Km_inicial == null)) {
-                throw new global::System.ArgumentNullException("Original_Horometro_Km_inicial");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Horometro_Km_inicial));
-            }
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Horometro_Km_inicial));
             if ((Original_Horas_Km == null)) {
                 throw new global::System.ArgumentNullException("Original_Horas_Km");
             }
@@ -3610,6 +3635,12 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_RPM));
+            }
+            if ((Original_Estado == null)) {
+                throw new global::System.ArgumentNullException("Original_Estado");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Estado));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3631,7 +3662,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, string Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM) {
+        public virtual int Insert(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, int Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM, string Estado) {
             if ((N_interno == null)) {
                 throw new global::System.ArgumentNullException("N_interno");
             }
@@ -3674,12 +3705,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Modelo));
             }
-            if ((Horometro_Km_inicial == null)) {
-                throw new global::System.ArgumentNullException("Horometro_Km_inicial");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Horometro_Km_inicial));
-            }
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Horometro_Km_inicial));
             if ((Horas_Km == null)) {
                 throw new global::System.ArgumentNullException("Horas_Km");
             }
@@ -3697,6 +3723,12 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = ((string)(RPM));
+            }
+            if ((Estado == null)) {
+                throw new global::System.ArgumentNullException("Estado");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Estado));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3726,10 +3758,11 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
                     string U_tecnica, 
                     string Marca, 
                     string Modelo, 
-                    string Horometro_Km_inicial, 
+                    int Horometro_Km_inicial, 
                     string Horas_Km, 
                     string Cilindraje, 
                     string RPM, 
+                    string Estado, 
                     int Original_id_Maquina, 
                     string Original_N_interno, 
                     string Original_Tipo_maquina, 
@@ -3738,10 +3771,11 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
                     string Original_U_tecnica, 
                     string Original_Marca, 
                     string Original_Modelo, 
-                    string Original_Horometro_Km_inicial, 
+                    int Original_Horometro_Km_inicial, 
                     string Original_Horas_Km, 
                     string Original_Cilindraje, 
                     string Original_RPM, 
+                    string Original_Estado, 
                     int id_Maquina) {
             if ((N_interno == null)) {
                 throw new global::System.ArgumentNullException("N_interno");
@@ -3785,12 +3819,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Modelo));
             }
-            if ((Horometro_Km_inicial == null)) {
-                throw new global::System.ArgumentNullException("Horometro_Km_inicial");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Horometro_Km_inicial));
-            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Horometro_Km_inicial));
             if ((Horas_Km == null)) {
                 throw new global::System.ArgumentNullException("Horas_Km");
             }
@@ -3809,74 +3838,81 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(RPM));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_id_Maquina));
+            if ((Estado == null)) {
+                throw new global::System.ArgumentNullException("Estado");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Estado));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_id_Maquina));
             if ((Original_N_interno == null)) {
                 throw new global::System.ArgumentNullException("Original_N_interno");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_N_interno));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_N_interno));
             }
             if ((Original_Tipo_maquina == null)) {
                 throw new global::System.ArgumentNullException("Original_Tipo_maquina");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Tipo_maquina));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Tipo_maquina));
             }
             if ((Original_Referencia == null)) {
                 throw new global::System.ArgumentNullException("Original_Referencia");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Referencia));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Referencia));
             }
             if ((Original_Serie == null)) {
                 throw new global::System.ArgumentNullException("Original_Serie");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Serie));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Serie));
             }
             if ((Original_U_tecnica == null)) {
                 throw new global::System.ArgumentNullException("Original_U_tecnica");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_U_tecnica));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_U_tecnica));
             }
             if ((Original_Marca == null)) {
                 throw new global::System.ArgumentNullException("Original_Marca");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Marca));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Marca));
             }
             if ((Original_Modelo == null)) {
                 throw new global::System.ArgumentNullException("Original_Modelo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Modelo));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Modelo));
             }
-            if ((Original_Horometro_Km_inicial == null)) {
-                throw new global::System.ArgumentNullException("Original_Horometro_Km_inicial");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Horometro_Km_inicial));
-            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Horometro_Km_inicial));
             if ((Original_Horas_Km == null)) {
                 throw new global::System.ArgumentNullException("Original_Horas_Km");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Horas_Km));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Horas_Km));
             }
             if ((Original_Cilindraje == null)) {
                 throw new global::System.ArgumentNullException("Original_Cilindraje");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Cilindraje));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Cilindraje));
             }
             if ((Original_RPM == null)) {
                 throw new global::System.ArgumentNullException("Original_RPM");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_RPM));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_RPM));
             }
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(id_Maquina));
+            if ((Original_Estado == null)) {
+                throw new global::System.ArgumentNullException("Original_Estado");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Estado));
+            }
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(id_Maquina));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3905,10 +3941,11 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
                     string U_tecnica, 
                     string Marca, 
                     string Modelo, 
-                    string Horometro_Km_inicial, 
+                    int Horometro_Km_inicial, 
                     string Horas_Km, 
                     string Cilindraje, 
                     string RPM, 
+                    string Estado, 
                     int Original_id_Maquina, 
                     string Original_N_interno, 
                     string Original_Tipo_maquina, 
@@ -3917,18 +3954,19 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
                     string Original_U_tecnica, 
                     string Original_Marca, 
                     string Original_Modelo, 
-                    string Original_Horometro_Km_inicial, 
+                    int Original_Horometro_Km_inicial, 
                     string Original_Horas_Km, 
                     string Original_Cilindraje, 
-                    string Original_RPM) {
-            return this.Update(N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Original_id_Maquina, Original_N_interno, Original_Tipo_maquina, Original_Referencia, Original_Serie, Original_U_tecnica, Original_Marca, Original_Modelo, Original_Horometro_Km_inicial, Original_Horas_Km, Original_Cilindraje, Original_RPM, Original_id_Maquina);
+                    string Original_RPM, 
+                    string Original_Estado) {
+            return this.Update(N_interno, Tipo_maquina, Referencia, Serie, U_tecnica, Marca, Modelo, Horometro_Km_inicial, Horas_Km, Cilindraje, RPM, Estado, Original_id_Maquina, Original_N_interno, Original_Tipo_maquina, Original_Referencia, Original_Serie, Original_U_tecnica, Original_Marca, Original_Modelo, Original_Horometro_Km_inicial, Original_Horas_Km, Original_Cilindraje, Original_RPM, Original_Estado, Original_id_Maquina);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int Actualizar_Camion(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, string Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM) {
+        public virtual int Actualizar_Camion(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, int Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM, string Estado) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((N_interno == null)) {
                 throw new global::System.ArgumentNullException("N_interno");
@@ -3972,12 +4010,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             else {
                 command.Parameters[6].Value = ((string)(Modelo));
             }
-            if ((Horometro_Km_inicial == null)) {
-                throw new global::System.ArgumentNullException("Horometro_Km_inicial");
-            }
-            else {
-                command.Parameters[7].Value = ((string)(Horometro_Km_inicial));
-            }
+            command.Parameters[7].Value = ((int)(Horometro_Km_inicial));
             if ((Horas_Km == null)) {
                 throw new global::System.ArgumentNullException("Horas_Km");
             }
@@ -3995,6 +4028,12 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             }
             else {
                 command.Parameters[10].Value = ((string)(RPM));
+            }
+            if ((Estado == null)) {
+                throw new global::System.ArgumentNullException("Estado");
+            }
+            else {
+                command.Parameters[11].Value = ((string)(Estado));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4017,7 +4056,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int Agregar_camion(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, string Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM) {
+        public virtual int Agregar_camion(string N_interno, string Tipo_maquina, string Referencia, string Serie, string U_tecnica, string Marca, string Modelo, int Horometro_Km_inicial, string Horas_Km, string Cilindraje, string RPM, string Estado) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((N_interno == null)) {
                 throw new global::System.ArgumentNullException("N_interno");
@@ -4061,12 +4100,7 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             else {
                 command.Parameters[6].Value = ((string)(Modelo));
             }
-            if ((Horometro_Km_inicial == null)) {
-                throw new global::System.ArgumentNullException("Horometro_Km_inicial");
-            }
-            else {
-                command.Parameters[7].Value = ((string)(Horometro_Km_inicial));
-            }
+            command.Parameters[7].Value = ((int)(Horometro_Km_inicial));
             if ((Horas_Km == null)) {
                 throw new global::System.ArgumentNullException("Horas_Km");
             }
@@ -4084,6 +4118,12 @@ VALUES        (@N_interno,@Tipo_maquina,@Referencia,@Serie,@U_tecnica,@Marca,@Mo
             }
             else {
                 command.Parameters[10].Value = ((string)(RPM));
+            }
+            if ((Estado == null)) {
+                throw new global::System.ArgumentNullException("Estado");
+            }
+            else {
+                command.Parameters[11].Value = ((string)(Estado));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

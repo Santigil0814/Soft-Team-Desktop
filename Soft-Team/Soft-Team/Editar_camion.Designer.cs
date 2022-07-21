@@ -33,9 +33,11 @@ namespace Soft_Team
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar_camion));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rPMTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.estadoComboBox = new System.Windows.Forms.ComboBox();
             this.maquinasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.rPMTextBox = new System.Windows.Forms.TextBox();
             this.cilindrajeTextBox = new System.Windows.Forms.TextBox();
             this.horas_KmComboBox = new System.Windows.Forms.ComboBox();
             this.horometro_Km_inicialTextBox = new System.Windows.Forms.TextBox();
@@ -84,6 +86,8 @@ namespace Soft_Team
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.estadoComboBox);
             this.panel1.Controls.Add(this.rPMTextBox);
             this.panel1.Controls.Add(this.cilindrajeTextBox);
             this.panel1.Controls.Add(this.horas_KmComboBox);
@@ -113,16 +117,31 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 569);
+            this.panel1.Size = new System.Drawing.Size(807, 601);
             this.panel1.TabIndex = 4;
             // 
-            // rPMTextBox
+            // label13
             // 
-            this.rPMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "RPM", true));
-            this.rPMTextBox.Location = new System.Drawing.Point(350, 529);
-            this.rPMTextBox.Name = "rPMTextBox";
-            this.rPMTextBox.Size = new System.Drawing.Size(299, 20);
-            this.rPMTextBox.TabIndex = 84;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label13.Location = new System.Drawing.Point(348, 155);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 14);
+            this.label13.TabIndex = 86;
+            this.label13.Text = "Estado";
+            // 
+            // estadoComboBox
+            // 
+            this.estadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Estado", true));
+            this.estadoComboBox.FormattingEnabled = true;
+            this.estadoComboBox.Items.AddRange(new object[] {
+            "Habilitado",
+            "Inhabilitado"});
+            this.estadoComboBox.Location = new System.Drawing.Point(350, 172);
+            this.estadoComboBox.Name = "estadoComboBox";
+            this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.estadoComboBox.TabIndex = 85;
+            this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress);
             // 
             // maquinasBindingSource
             // 
@@ -134,13 +153,24 @@ namespace Soft_Team
             this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
             this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // rPMTextBox
+            // 
+            this.rPMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "RPM", true));
+            this.rPMTextBox.Location = new System.Drawing.Point(350, 570);
+            this.rPMTextBox.Name = "rPMTextBox";
+            this.rPMTextBox.ShortcutsEnabled = false;
+            this.rPMTextBox.Size = new System.Drawing.Size(299, 20);
+            this.rPMTextBox.TabIndex = 84;
+            this.rPMTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rPMTextBox_KeyPress);
+            // 
             // cilindrajeTextBox
             // 
             this.cilindrajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Cilindraje", true));
-            this.cilindrajeTextBox.Location = new System.Drawing.Point(350, 477);
+            this.cilindrajeTextBox.Location = new System.Drawing.Point(350, 518);
             this.cilindrajeTextBox.Name = "cilindrajeTextBox";
             this.cilindrajeTextBox.Size = new System.Drawing.Size(299, 20);
             this.cilindrajeTextBox.TabIndex = 83;
+            this.cilindrajeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cilindrajeTextBox_KeyPress);
             // 
             // horas_KmComboBox
             // 
@@ -149,7 +179,7 @@ namespace Soft_Team
             this.horas_KmComboBox.Items.AddRange(new object[] {
             "Horas",
             "Kilómetros"});
-            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 426);
+            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 467);
             this.horas_KmComboBox.Name = "horas_KmComboBox";
             this.horas_KmComboBox.Size = new System.Drawing.Size(121, 21);
             this.horas_KmComboBox.TabIndex = 82;
@@ -158,15 +188,16 @@ namespace Soft_Team
             // horometro_Km_inicialTextBox
             // 
             this.horometro_Km_inicialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horometro_Km_inicial", true));
-            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(350, 427);
+            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(350, 468);
             this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
             this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(173, 20);
             this.horometro_Km_inicialTextBox.TabIndex = 81;
+            this.horometro_Km_inicialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horometro_Km_inicialTextBox_KeyPress);
             // 
             // modeloTextBox
             // 
             this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Modelo", true));
-            this.modeloTextBox.Location = new System.Drawing.Point(350, 377);
+            this.modeloTextBox.Location = new System.Drawing.Point(350, 418);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(299, 20);
             this.modeloTextBox.TabIndex = 80;
@@ -178,9 +209,9 @@ namespace Soft_Team
             this.marcaComboBox.Items.AddRange(new object[] {
             "Chevrolet",
             "Himo"});
-            this.marcaComboBox.Location = new System.Drawing.Point(352, 326);
+            this.marcaComboBox.Location = new System.Drawing.Point(352, 367);
             this.marcaComboBox.Name = "marcaComboBox";
-            this.marcaComboBox.Size = new System.Drawing.Size(121, 21);
+            this.marcaComboBox.Size = new System.Drawing.Size(197, 21);
             this.marcaComboBox.TabIndex = 79;
             this.marcaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.marcaComboBox_KeyPress);
             // 
@@ -193,7 +224,7 @@ namespace Soft_Team
             "Cosecha",
             "Servicios Generales",
             "Fábrica"});
-            this.u_tecnicaComboBox.Location = new System.Drawing.Point(352, 277);
+            this.u_tecnicaComboBox.Location = new System.Drawing.Point(352, 318);
             this.u_tecnicaComboBox.Name = "u_tecnicaComboBox";
             this.u_tecnicaComboBox.Size = new System.Drawing.Size(197, 21);
             this.u_tecnicaComboBox.TabIndex = 78;
@@ -202,7 +233,7 @@ namespace Soft_Team
             // serieTextBox
             // 
             this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Serie", true));
-            this.serieTextBox.Location = new System.Drawing.Point(350, 227);
+            this.serieTextBox.Location = new System.Drawing.Point(350, 268);
             this.serieTextBox.Name = "serieTextBox";
             this.serieTextBox.Size = new System.Drawing.Size(299, 20);
             this.serieTextBox.TabIndex = 77;
@@ -210,7 +241,7 @@ namespace Soft_Team
             // referenciaTextBox
             // 
             this.referenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Referencia", true));
-            this.referenciaTextBox.Location = new System.Drawing.Point(350, 177);
+            this.referenciaTextBox.Location = new System.Drawing.Point(350, 218);
             this.referenciaTextBox.Name = "referenciaTextBox";
             this.referenciaTextBox.Size = new System.Drawing.Size(299, 20);
             this.referenciaTextBox.TabIndex = 76;
@@ -225,6 +256,7 @@ namespace Soft_Team
             this.tipo_maquinaComboBox.Name = "tipo_maquinaComboBox";
             this.tipo_maquinaComboBox.Size = new System.Drawing.Size(199, 21);
             this.tipo_maquinaComboBox.TabIndex = 75;
+            this.tipo_maquinaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipo_maquinaComboBox_KeyPress);
             // 
             // n_internoTextBox
             // 
@@ -239,7 +271,7 @@ namespace Soft_Team
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label12.Location = new System.Drawing.Point(541, 410);
+            this.label12.Location = new System.Drawing.Point(541, 451);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(108, 14);
             this.label12.TabIndex = 73;
@@ -249,7 +281,7 @@ namespace Soft_Team
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label7.Location = new System.Drawing.Point(350, 512);
+            this.label7.Location = new System.Drawing.Point(350, 553);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 14);
             this.label7.TabIndex = 66;
@@ -259,7 +291,7 @@ namespace Soft_Team
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label8.Location = new System.Drawing.Point(349, 460);
+            this.label8.Location = new System.Drawing.Point(349, 501);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 14);
             this.label8.TabIndex = 65;
@@ -269,7 +301,7 @@ namespace Soft_Team
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label9.Location = new System.Drawing.Point(348, 410);
+            this.label9.Location = new System.Drawing.Point(348, 451);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(175, 14);
             this.label9.TabIndex = 64;
@@ -279,7 +311,7 @@ namespace Soft_Team
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label10.Location = new System.Drawing.Point(348, 360);
+            this.label10.Location = new System.Drawing.Point(348, 401);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 14);
             this.label10.TabIndex = 63;
@@ -289,7 +321,7 @@ namespace Soft_Team
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label11.Location = new System.Drawing.Point(349, 309);
+            this.label11.Location = new System.Drawing.Point(349, 350);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 14);
             this.label11.TabIndex = 62;
@@ -299,7 +331,7 @@ namespace Soft_Team
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(349, 260);
+            this.label6.Location = new System.Drawing.Point(349, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 14);
             this.label6.TabIndex = 56;
@@ -309,7 +341,7 @@ namespace Soft_Team
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(349, 210);
+            this.label5.Location = new System.Drawing.Point(349, 251);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 14);
             this.label5.TabIndex = 55;
@@ -319,7 +351,7 @@ namespace Soft_Team
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(348, 160);
+            this.label4.Location = new System.Drawing.Point(348, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 14);
             this.label4.TabIndex = 54;
@@ -395,6 +427,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = this.maquinasTableAdapter;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
@@ -403,7 +436,7 @@ namespace Soft_Team
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(820, 593);
+            this.ClientSize = new System.Drawing.Size(820, 624);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -455,5 +488,7 @@ namespace Soft_Team
         private System.Windows.Forms.TextBox horometro_Km_inicialTextBox;
         private System.Windows.Forms.TextBox modeloTextBox;
         private System.Windows.Forms.TextBox rPMTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox estadoComboBox;
     }
 }

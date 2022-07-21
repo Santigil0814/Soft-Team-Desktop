@@ -33,6 +33,8 @@ namespace Soft_Team
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_vehiculo_liviano));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.estadoComboBox = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.rPMTextBox = new System.Windows.Forms.TextBox();
             this.cilindrajeTextBox = new System.Windows.Forms.TextBox();
             this.horas_KmComboBox = new System.Windows.Forms.ComboBox();
@@ -84,6 +86,8 @@ namespace Soft_Team
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.estadoComboBox);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.rPMTextBox);
             this.panel1.Controls.Add(this.cilindrajeTextBox);
             this.panel1.Controls.Add(this.horas_KmComboBox);
@@ -113,22 +117,46 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(13, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 573);
+            this.panel1.Size = new System.Drawing.Size(781, 610);
             this.panel1.TabIndex = 5;
+            // 
+            // estadoComboBox
+            // 
+            this.estadoComboBox.FormattingEnabled = true;
+            this.estadoComboBox.Items.AddRange(new object[] {
+            "Habilitado",
+            "Inhabilitado"});
+            this.estadoComboBox.Location = new System.Drawing.Point(353, 176);
+            this.estadoComboBox.Name = "estadoComboBox";
+            this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
+            this.estadoComboBox.TabIndex = 86;
+            this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
+            this.label13.Location = new System.Drawing.Point(350, 159);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 14);
+            this.label13.TabIndex = 85;
+            this.label13.Text = "Estado";
             // 
             // rPMTextBox
             // 
-            this.rPMTextBox.Location = new System.Drawing.Point(353, 529);
+            this.rPMTextBox.Location = new System.Drawing.Point(353, 570);
             this.rPMTextBox.Name = "rPMTextBox";
             this.rPMTextBox.Size = new System.Drawing.Size(298, 20);
             this.rPMTextBox.TabIndex = 84;
+            this.rPMTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rPMTextBox_KeyPress);
             // 
             // cilindrajeTextBox
             // 
-            this.cilindrajeTextBox.Location = new System.Drawing.Point(353, 477);
+            this.cilindrajeTextBox.Location = new System.Drawing.Point(353, 518);
             this.cilindrajeTextBox.Name = "cilindrajeTextBox";
             this.cilindrajeTextBox.Size = new System.Drawing.Size(298, 20);
             this.cilindrajeTextBox.TabIndex = 83;
+            this.cilindrajeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cilindrajeTextBox_KeyPress);
             // 
             // horas_KmComboBox
             // 
@@ -136,7 +164,7 @@ namespace Soft_Team
             this.horas_KmComboBox.Items.AddRange(new object[] {
             "Horas",
             "Kilómetros"});
-            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 427);
+            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 468);
             this.horas_KmComboBox.Name = "horas_KmComboBox";
             this.horas_KmComboBox.Size = new System.Drawing.Size(121, 21);
             this.horas_KmComboBox.TabIndex = 82;
@@ -144,14 +172,15 @@ namespace Soft_Team
             // 
             // horometro_Km_inicialTextBox
             // 
-            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(353, 427);
+            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(353, 468);
             this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
             this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(172, 20);
             this.horometro_Km_inicialTextBox.TabIndex = 81;
+            this.horometro_Km_inicialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horometro_Km_inicialTextBox_KeyPress);
             // 
             // modeloTextBox
             // 
-            this.modeloTextBox.Location = new System.Drawing.Point(353, 377);
+            this.modeloTextBox.Location = new System.Drawing.Point(353, 418);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(298, 20);
             this.modeloTextBox.TabIndex = 80;
@@ -161,7 +190,7 @@ namespace Soft_Team
             this.marcaComboBox.FormattingEnabled = true;
             this.marcaComboBox.Items.AddRange(new object[] {
             "Nissan"});
-            this.marcaComboBox.Location = new System.Drawing.Point(353, 326);
+            this.marcaComboBox.Location = new System.Drawing.Point(353, 367);
             this.marcaComboBox.Name = "marcaComboBox";
             this.marcaComboBox.Size = new System.Drawing.Size(199, 21);
             this.marcaComboBox.TabIndex = 79;
@@ -175,7 +204,7 @@ namespace Soft_Team
             "Cosecha",
             "Servicios Generales",
             "Fábrica"});
-            this.u_tecnicaComboBox.Location = new System.Drawing.Point(353, 277);
+            this.u_tecnicaComboBox.Location = new System.Drawing.Point(353, 318);
             this.u_tecnicaComboBox.Name = "u_tecnicaComboBox";
             this.u_tecnicaComboBox.Size = new System.Drawing.Size(199, 21);
             this.u_tecnicaComboBox.TabIndex = 78;
@@ -183,14 +212,14 @@ namespace Soft_Team
             // 
             // serieTextBox
             // 
-            this.serieTextBox.Location = new System.Drawing.Point(353, 227);
+            this.serieTextBox.Location = new System.Drawing.Point(353, 268);
             this.serieTextBox.Name = "serieTextBox";
             this.serieTextBox.Size = new System.Drawing.Size(298, 20);
             this.serieTextBox.TabIndex = 77;
             // 
             // referenciaTextBox
             // 
-            this.referenciaTextBox.Location = new System.Drawing.Point(353, 177);
+            this.referenciaTextBox.Location = new System.Drawing.Point(353, 218);
             this.referenciaTextBox.Name = "referenciaTextBox";
             this.referenciaTextBox.Size = new System.Drawing.Size(298, 20);
             this.referenciaTextBox.TabIndex = 76;
@@ -218,7 +247,7 @@ namespace Soft_Team
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label12.Location = new System.Drawing.Point(541, 410);
+            this.label12.Location = new System.Drawing.Point(541, 451);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(108, 14);
             this.label12.TabIndex = 73;
@@ -228,7 +257,7 @@ namespace Soft_Team
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label7.Location = new System.Drawing.Point(350, 512);
+            this.label7.Location = new System.Drawing.Point(350, 553);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 14);
             this.label7.TabIndex = 66;
@@ -238,7 +267,7 @@ namespace Soft_Team
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label8.Location = new System.Drawing.Point(349, 460);
+            this.label8.Location = new System.Drawing.Point(349, 501);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 14);
             this.label8.TabIndex = 65;
@@ -248,7 +277,7 @@ namespace Soft_Team
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label9.Location = new System.Drawing.Point(348, 410);
+            this.label9.Location = new System.Drawing.Point(348, 451);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(177, 14);
             this.label9.TabIndex = 64;
@@ -258,7 +287,7 @@ namespace Soft_Team
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label10.Location = new System.Drawing.Point(348, 360);
+            this.label10.Location = new System.Drawing.Point(348, 401);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 14);
             this.label10.TabIndex = 63;
@@ -268,7 +297,7 @@ namespace Soft_Team
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label11.Location = new System.Drawing.Point(349, 309);
+            this.label11.Location = new System.Drawing.Point(349, 350);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 14);
             this.label11.TabIndex = 62;
@@ -278,7 +307,7 @@ namespace Soft_Team
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(349, 260);
+            this.label6.Location = new System.Drawing.Point(349, 301);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 14);
             this.label6.TabIndex = 56;
@@ -288,7 +317,7 @@ namespace Soft_Team
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(349, 210);
+            this.label5.Location = new System.Drawing.Point(349, 251);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 14);
             this.label5.TabIndex = 55;
@@ -298,7 +327,7 @@ namespace Soft_Team
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label4.Location = new System.Drawing.Point(348, 160);
+            this.label4.Location = new System.Drawing.Point(348, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 14);
             this.label4.TabIndex = 54;
@@ -343,6 +372,7 @@ namespace Soft_Team
             this.button1.TabIndex = 7;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
@@ -383,6 +413,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = this.maquinasTableAdapter;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
@@ -391,7 +422,7 @@ namespace Soft_Team
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 593);
+            this.ClientSize = new System.Drawing.Size(820, 624);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -443,5 +474,7 @@ namespace Soft_Team
         private System.Windows.Forms.TextBox referenciaTextBox;
         private System.Windows.Forms.ComboBox tipo_maquinaComboBox;
         private System.Windows.Forms.TextBox n_internoTextBox;
+        private System.Windows.Forms.ComboBox estadoComboBox;
+        private System.Windows.Forms.Label label13;
     }
 }

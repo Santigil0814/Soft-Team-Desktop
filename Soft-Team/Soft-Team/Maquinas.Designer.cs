@@ -60,6 +60,7 @@ namespace Soft_Team
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.maquinasTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.MaquinasTableAdapter();
@@ -77,7 +78,7 @@ namespace Soft_Team
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -97,7 +98,7 @@ namespace Soft_Team
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(968, 42);
+            this.panel1.Size = new System.Drawing.Size(1077, 42);
             this.panel1.TabIndex = 4;
             // 
             // menuStrip1
@@ -108,7 +109,7 @@ namespace Soft_Team
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(754, 8);
+            this.menuStrip1.Location = new System.Drawing.Point(863, 8);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(168, 27);
             this.menuStrip1.TabIndex = 8;
@@ -151,7 +152,7 @@ namespace Soft_Team
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(925, 5);
+            this.button1.Location = new System.Drawing.Point(1034, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 32);
             this.button1.TabIndex = 1;
@@ -178,7 +179,7 @@ namespace Soft_Team
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 504);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(968, 45);
+            this.panel2.Size = new System.Drawing.Size(1077, 45);
             this.panel2.TabIndex = 5;
             // 
             // label3
@@ -233,7 +234,7 @@ namespace Soft_Team
             this.maquinasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.maquinasBindingNavigator.Name = "maquinasBindingNavigator";
             this.maquinasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.maquinasBindingNavigator.Size = new System.Drawing.Size(968, 25);
+            this.maquinasBindingNavigator.Size = new System.Drawing.Size(1077, 25);
             this.maquinasBindingNavigator.TabIndex = 6;
             this.maquinasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -377,6 +378,17 @@ namespace Soft_Team
             this.toolStripButton5.Text = "Usuarios";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButton6.ToolTipText = "Operadores";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
@@ -414,13 +426,14 @@ namespace Soft_Team
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
+            this.dataGridViewTextBoxColumn13,
+            this.Estado});
             this.maquinasDataGridView.DataSource = this.maquinasBindingSource;
             this.maquinasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.maquinasDataGridView.Location = new System.Drawing.Point(0, 67);
             this.maquinasDataGridView.Name = "maquinasDataGridView";
             this.maquinasDataGridView.ReadOnly = true;
-            this.maquinasDataGridView.Size = new System.Drawing.Size(968, 437);
+            this.maquinasDataGridView.Size = new System.Drawing.Size(1077, 437);
             this.maquinasDataGridView.TabIndex = 6;
             this.maquinasDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.maquinasDataGridView_CellClick);
             this.maquinasDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.maquinasDataGridView_CellContentClick);
@@ -517,23 +530,19 @@ namespace Soft_Team
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
-            // toolStripButton6
+            // Estado
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton6";
-            this.toolStripButton6.ToolTipText = "Operadores";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // Maquinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(968, 549);
+            this.ClientSize = new System.Drawing.Size(1077, 549);
             this.Controls.Add(this.maquinasDataGridView);
             this.Controls.Add(this.maquinasBindingNavigator);
             this.Controls.Add(this.panel1);
@@ -614,5 +623,6 @@ namespace Soft_Team
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }
