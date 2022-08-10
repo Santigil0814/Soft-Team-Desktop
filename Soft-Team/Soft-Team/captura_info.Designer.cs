@@ -33,12 +33,12 @@ namespace Soft_Team
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(captura_info));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.fichaOperadorTextBox = new System.Windows.Forms.TextBox();
-            this.operadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.label17 = new System.Windows.Forms.Label();
             this.fecha_hora_salidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.fecha_hora_ingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.seccion_1ComboBox = new System.Windows.Forms.ComboBox();
@@ -72,11 +72,15 @@ namespace Soft_Team
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.operadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajustesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maquinaria_mantenimientoTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.maquinaria_mantenimientoTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             this.maquinasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -85,17 +89,19 @@ namespace Soft_Team
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.operadoresTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.OperadoresTableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.fichaOperadorTextBox);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.fecha_hora_salidaDateTimePicker);
@@ -114,13 +120,25 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(16, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 431);
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(23, 55);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 26);
+            this.button2.TabIndex = 70;
+            this.button2.Text = "Generar reporte";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // fichaOperadorTextBox
             // 
@@ -130,16 +148,6 @@ namespace Soft_Team
             this.fichaOperadorTextBox.TabIndex = 8;
             this.fichaOperadorTextBox.TextChanged += new System.EventHandler(this.fichaOperadorTextBox_TextChanged_1);
             this.fichaOperadorTextBox.Validated += new System.EventHandler(this.fichaOperadorTextBox_Validated);
-            // 
-            // operadoresBindingSource
-            // 
-            this.operadoresBindingSource.DataMember = "Operadores";
-            this.operadoresBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label17
             // 
@@ -165,6 +173,11 @@ namespace Soft_Team
             // 
             this.maquinaria_mantenimientoBindingSource.DataMember = "maquinaria_mantenimiento";
             this.maquinaria_mantenimientoBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fecha_hora_ingresoDateTimePicker
             // 
@@ -545,21 +558,6 @@ namespace Soft_Team
             this.label2.Text = "Número interno:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(23, 53);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 26);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Inventario";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -576,11 +574,17 @@ namespace Soft_Team
             this.button1.Text = "Capturar info.";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // operadoresBindingSource
+            // 
+            this.operadoresBindingSource.DataMember = "Operadores";
+            this.operadoresBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.ForestGreen;
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.menuStrip1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -613,6 +617,49 @@ namespace Soft_Team
             this.label18.Size = new System.Drawing.Size(223, 26);
             this.label18.TabIndex = 0;
             this.label18.Text = "Mecánico Recepcionista";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajustesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(612, 3);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(168, 27);
+            this.menuStrip1.TabIndex = 71;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
+            // 
+            // ajustesToolStripMenuItem
+            // 
+            this.ajustesToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.ajustesToolStripMenuItem.AutoSize = false;
+            this.ajustesToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ajustesToolStripMenuItem.BackgroundImage")));
+            this.ajustesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajustesToolStripMenuItem1,
+            this.salirToolStripMenuItem});
+            this.ajustesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ajustesToolStripMenuItem.Image")));
+            this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
+            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.ajustesToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.ajustesToolStripMenuItem.ToolTipText = "MENU";
+            // 
+            // ajustesToolStripMenuItem1
+            // 
+            this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajustesToolStripMenuItem1.Text = "Ajustes";
+            this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // maquinaria_mantenimientoTableAdapter
             // 
@@ -659,6 +706,7 @@ namespace Soft_Team
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "captura_info";
@@ -667,13 +715,15 @@ namespace Soft_Team
             this.Load += new System.EventHandler(this.captura_info_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoresBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -691,7 +741,6 @@ namespace Soft_Team
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private _Soft_Team1DataSet _Soft_Team1DataSet;
         private System.Windows.Forms.BindingSource maquinaria_mantenimientoBindingSource;
@@ -734,5 +783,10 @@ namespace Soft_Team
         private System.Windows.Forms.BindingSource operadoresBindingSource;
         private _Soft_Team1DataSetTableAdapters.OperadoresTableAdapter operadoresTableAdapter;
         private System.Windows.Forms.TextBox fichaOperadorTextBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

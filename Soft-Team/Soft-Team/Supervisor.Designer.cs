@@ -59,10 +59,15 @@ namespace Soft_Team
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajustesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -333,6 +338,7 @@ namespace Soft_Team
             this.panel2.BackColor = System.Drawing.Color.ForestGreen;
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.menuStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -366,6 +372,48 @@ namespace Soft_Team
             this.label6.TabIndex = 0;
             this.label6.Text = "Supervisor";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajustesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(614, 2);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(168, 27);
+            this.menuStrip1.TabIndex = 56;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
+            // 
+            // ajustesToolStripMenuItem
+            // 
+            this.ajustesToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.ajustesToolStripMenuItem.AutoSize = false;
+            this.ajustesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajustesToolStripMenuItem1,
+            this.salirToolStripMenuItem});
+            this.ajustesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ajustesToolStripMenuItem.Image")));
+            this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
+            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(28, 23);
+            this.ajustesToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.ajustesToolStripMenuItem.ToolTipText = "MENU";
+            // 
+            // ajustesToolStripMenuItem1
+            // 
+            this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajustesToolStripMenuItem1.Text = "Ajustes";
+            this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // Supervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +424,7 @@ namespace Soft_Team
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Supervisor";
@@ -391,6 +440,8 @@ namespace Soft_Team
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +477,9 @@ namespace Soft_Team
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label rechazado;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

@@ -130,3 +130,6 @@ C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.csproj.CopyComplete
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.exe
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft-Team.pdb
 C:\Soft-Team-Desktop\Soft-Team\Soft-Team\bin\Debug\Soft-Team.pdb
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.Generar_reporte.resources
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.ReportePorFecha.resources
+C:\Soft-Team-Desktop\Soft-Team\Soft-Team\obj\Debug\Soft_Team.CambiarContrasena.resources

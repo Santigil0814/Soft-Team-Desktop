@@ -171,9 +171,10 @@ namespace Soft_Team
 
         private void id_MaquinaTextBox_Validated(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((string)this.maquinasTableAdapter.VerificarN_Interno(this.id_MaquinaTextBox.Text)))
+            General.EstadoMaq = (string)this.maquinasTableAdapter.Verificar_Estado(this.id_MaquinaTextBox.Text);
+            if (string.IsNullOrEmpty((string)this.maquinasTableAdapter.VerificarN_Interno(this.id_MaquinaTextBox.Text)) || (General.EstadoMaq == "Inhabilitado"))
             {
-                MessageBox.Show("El Número Interno ingresado no existe. Por favor, digite un Número Interno existente", "Alerta");
+                MessageBox.Show("El Número Interno ingresado no existe o se encuentra inhabilitado. Por favor, digite un Número Interno existente", "Alerta");
                 this.id_MaquinaTextBox.Focus();
                 this.id_MaquinaTextBox.Text = string.Empty;
             }
@@ -188,7 +189,7 @@ namespace Soft_Team
         {
             if (string.IsNullOrEmpty((string)this.operadoresTableAdapter.RevisarFichaOperador(this.fichaOperadorTextBox.Text)))
             {
-                MessageBox.Show("La ficha de operador ingresado no existe. Por favor, digite una ficha de operador existente", "Alerta");
+                MessageBox.Show("La ficha de operador ingresado no existe o se encuentra inhabilitado. Por favor, digite una ficha de operador nuevamente", "Alerta");
                 this.fichaOperadorTextBox.Focus();
                 this.fichaOperadorTextBox.Text = string.Empty;
             }
@@ -197,6 +198,23 @@ namespace Soft_Team
         private void fichaOperadorTextBox_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ajustesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ajustes A = new Ajustes();
+            A.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Generar_reporte Gr = new Generar_reporte();
+            Gr.ShowDialog();
         }
     }
 }

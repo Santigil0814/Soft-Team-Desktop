@@ -66,11 +66,11 @@ namespace Soft_Team
                         }
                         else
                         {
+                            General.UsuUsuario = this.Txtusuario.Text;
                             General.NomUsuario = this.Txtusuario.Text;
                             if (this.Txtcontrasena.Text == Encriptar.descencriptar1(this.usuarioTableAdapter.TraerContraseña(this.Txtusuario.Text)))
                             {
-                                this.Visible = false;
-                                this.Enabled = false;
+                                General.UsuUsuario = (string)this.usuarioTableAdapter.TraerUsuario(this.Txtusuario.Text);
                                 General.DatoRol = (string)this.usuarioTableAdapter.TraerRol(this.Txtusuario.Text);
                                 General.EstadoUsu = (string)this.usuarioTableAdapter.TraerEstado(this.Txtusuario.Text);
                                 if(General.DatoRol == "Administrador" && General.EstadoUsu == "Habilitado")
@@ -78,6 +78,8 @@ namespace Soft_Team
                                     this.Visible = false;
                                     Administrador m = new Administrador();
                                     m.ShowDialog();
+                                    this.usuarioTableAdapter.Fill(this._Soft_Team1DataSet.Usuario);
+                                    General.UsuUsuario = string.Empty;
                                 }
                                 else
                                 {

@@ -47,9 +47,10 @@ namespace Soft_Team
             }
             else
             {
-                if (string.IsNullOrEmpty((string)this.usuarioTableAdapter.LlamarPorCorreo(this.correoTextBox.Text)))
+                General.EstadoUsu = (string)this.usuarioTableAdapter.LlamarPorCorreo(this.correoTextBox.Text);
+                if (string.IsNullOrEmpty((string)this.usuarioTableAdapter.LlamarPorCorreo(this.correoTextBox.Text)) && (General.EstadoUsu == "Inhabilitado"))
                 {
-                    MessageBox.Show("El correo no se encuentra registrado.", "Alerta");
+                    MessageBox.Show("El correo electrónico digitado no se encuentra registrado o se encuentra inhabilitado.", "Alerta");
                     this.correoTextBox.Focus();
                 }
                 else
@@ -76,7 +77,7 @@ namespace Soft_Team
                         client.UseDefaultCredentials = true;
                         // nos autenticamos con nuestra cuenta de gmail
                         client.Credentials = new System.Net.NetworkCredential(correoqueenvia, "kusekinggmypcaka");
-                        MailMessage mail = new MailMessage(correoqueenvia, msjContra + correoquerecibe, this.TxtAsunto.Text, this.suContraEs.Text + this.contrasenaTextBox.Text);
+                        MailMessage mail = new MailMessage(correoqueenvia, msjContra + correoquerecibe, this.TxtAsunto.Text, this.suContraEs.Text + this.contrasenaTextBox.Text + this.aviso.Text);
                         mail.BodyEncoding = UTF8Encoding.UTF8;
                         mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
@@ -92,6 +93,11 @@ namespace Soft_Team
                     }
                 }
             }
+        }
+
+        private void contrasenaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

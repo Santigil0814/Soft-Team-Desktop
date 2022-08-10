@@ -110,5 +110,16 @@ namespace Soft_Team
         {
 
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ajustesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Ajustes A = new Ajustes();
+            A.ShowDialog();
+        }
     }
 }

@@ -293,6 +293,9 @@ namespace Soft_Team
             // 
             this.estadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Estado", true));
             this.estadoComboBox.FormattingEnabled = true;
+            this.estadoComboBox.Items.AddRange(new object[] {
+            "Habilitado",
+            "Inhabilitado"});
             this.estadoComboBox.Location = new System.Drawing.Point(350, 175);
             this.estadoComboBox.Name = "estadoComboBox";
             this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
@@ -334,6 +337,8 @@ namespace Soft_Team
             // 
             this.marcaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Marca", true));
             this.marcaComboBox.FormattingEnabled = true;
+            this.marcaComboBox.Items.AddRange(new object[] {
+            "Yamaha"});
             this.marcaComboBox.Location = new System.Drawing.Point(351, 370);
             this.marcaComboBox.Name = "marcaComboBox";
             this.marcaComboBox.Size = new System.Drawing.Size(183, 21);

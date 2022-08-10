@@ -145,6 +145,12 @@
     <Compile Include="Ajustes.Designer.cs">
       <DependentUpon>Ajustes.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambiarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarContrasena.Designer.cs">
+      <DependentUpon>CambiarContrasena.cs</DependentUpon>
+    </Compile>
     <Compile Include="captura_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalOperadores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReporteFecha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReporteFecha.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalUsuarios.cs">
@@ -230,6 +242,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generar_reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generar_reporte.Designer.cs">
+      <DependentUpon>Generar_reporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteOperadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +305,12 @@
     <Compile Include="ReporteMaquinaria.Designer.cs">
       <DependentUpon>ReporteMaquinaria.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportePorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePorFecha.Designer.cs">
+      <DependentUpon>ReportePorFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +323,9 @@
     </Compile>
     <Compile Include="Supervisor.Designer.cs">
       <DependentUpon>Supervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Soft_Team1DataSet.cs">
+      <DependentUpon>_Soft_Team1DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="_Soft_Team1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -338,6 +365,9 @@
     <EmbeddedResource Include="Ajustes.resx">
       <DependentUpon>Ajustes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambiarContrasena.resx">
+      <DependentUpon>CambiarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="captura_info.resx">
       <DependentUpon>captura_info.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +378,10 @@
     <EmbeddedResource Include="CrystalOperadores.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalOperadores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReporteFecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReporteFecha.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -382,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generar_reporte.resx">
+      <DependentUpon>Generar_reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
@@ -418,6 +455,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteOperadores.resx">
       <DependentUpon>ReporteOperadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePorFecha.resx">
+      <DependentUpon>ReportePorFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteUsuarios.resx">
       <DependentUpon>ReporteUsuarios.cs</DependentUpon>

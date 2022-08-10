@@ -34,27 +34,28 @@ namespace Soft_Team
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recuperar_contraseña));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.aviso = new System.Windows.Forms.Label();
             this.suContraEs = new System.Windows.Forms.Label();
             this.TxtAsunto = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.RecuperaciónTxT = new System.Windows.Forms.Label();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             contrasenaLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contrasenaLabel
@@ -82,6 +83,7 @@ namespace Soft_Team
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.aviso);
             this.panel2.Controls.Add(this.suContraEs);
             this.panel2.Controls.Add(this.TxtAsunto);
             this.panel2.Controls.Add(this.label5);
@@ -90,8 +92,17 @@ namespace Soft_Team
             this.panel2.Controls.Add(this.contrasenaTextBox);
             this.panel2.Location = new System.Drawing.Point(22, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 166);
+            this.panel2.Size = new System.Drawing.Size(243, 196);
             this.panel2.TabIndex = 45;
+            // 
+            // aviso
+            // 
+            this.aviso.AutoSize = true;
+            this.aviso.Location = new System.Drawing.Point(15, 170);
+            this.aviso.Name = "aviso";
+            this.aviso.Size = new System.Drawing.Size(349, 13);
+            this.aviso.TabIndex = 14;
+            this.aviso.Text = ". Recuerde actualizar su contraseña al momento de ingresar al aplicativo";
             // 
             // suContraEs
             // 
@@ -132,20 +143,12 @@ namespace Soft_Team
             // contrasenaTextBox
             // 
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "contrasena", true));
+            this.contrasenaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contrasenaTextBox.Location = new System.Drawing.Point(84, 9);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.Size = new System.Drawing.Size(149, 20);
             this.contrasenaTextBox.TabIndex = 1;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.contrasenaTextBox.TextChanged += new System.EventHandler(this.contrasenaTextBox_TextChanged);
             // 
             // correoTextBox
             // 
@@ -214,6 +217,16 @@ namespace Soft_Team
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
@@ -223,6 +236,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
@@ -243,9 +257,9 @@ namespace Soft_Team
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +283,6 @@ namespace Soft_Team
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label RecuperaciónTxT;
         private System.Windows.Forms.TextBox contrasenaTextBox;
+        private System.Windows.Forms.Label aviso;
     }
 }
