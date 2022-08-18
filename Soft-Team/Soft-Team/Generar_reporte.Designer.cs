@@ -65,7 +65,7 @@ namespace Soft_Team
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(800, 31);
+            this.panel3.Size = new System.Drawing.Size(849, 31);
             this.panel3.TabIndex = 42;
             // 
             // button5
@@ -76,7 +76,7 @@ namespace Soft_Team
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(759, 0);
+            this.button5.Location = new System.Drawing.Point(808, 0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(29, 30);
             this.button5.TabIndex = 1;
@@ -103,7 +103,7 @@ namespace Soft_Team
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajustesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(588, 3);
+            this.menuStrip1.Location = new System.Drawing.Point(637, 3);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(168, 27);
             this.menuStrip1.TabIndex = 71;
@@ -140,30 +140,34 @@ namespace Soft_Team
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(81, 168);
+            this.button1.BackColor = System.Drawing.Color.Orange;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(53)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.Location = new System.Drawing.Point(105, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(278, 114);
             this.button1.TabIndex = 43;
             this.button1.Text = "Generar reporte por fecha";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 71);
+            this.label1.Location = new System.Drawing.Point(125, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(487, 13);
+            this.label1.Size = new System.Drawing.Size(250, 26);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Por favor seleccione el rango desde la fecha inicial a la fecha final de la que d" +
-    "esea generar el reporte.";
+            this.label1.Text = "Por favor seleccione el rango desde la fecha inicial \r\na la fecha final de la que" +
+    " desea generar el reporte.";
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.Fecha2);
             this.panel1.Controls.Add(this.Fecha1);
-            this.panel1.Location = new System.Drawing.Point(91, 179);
+            this.panel1.Location = new System.Drawing.Point(115, 192);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(254, 74);
             this.panel1.TabIndex = 45;
@@ -171,7 +175,7 @@ namespace Soft_Team
             // Fecha2
             // 
             this.Fecha2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Fecha2.Location = new System.Drawing.Point(138, 29);
+            this.Fecha2.Location = new System.Drawing.Point(138, 27);
             this.Fecha2.Name = "Fecha2";
             this.Fecha2.Size = new System.Drawing.Size(104, 20);
             this.Fecha2.TabIndex = 50;
@@ -179,24 +183,25 @@ namespace Soft_Team
             // Fecha1
             // 
             this.Fecha1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Fecha1.Location = new System.Drawing.Point(13, 29);
+            this.Fecha1.Location = new System.Drawing.Point(13, 27);
             this.Fecha1.Name = "Fecha1";
             this.Fecha1.Size = new System.Drawing.Size(104, 20);
             this.Fecha1.TabIndex = 49;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Orange;
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.dateTime2);
             this.panel2.Controls.Add(this.dateTime1);
-            this.panel2.Location = new System.Drawing.Point(452, 179);
+            this.panel2.Location = new System.Drawing.Point(476, 192);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(254, 74);
             this.panel2.TabIndex = 47;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 45);
+            this.textBox1.Location = new System.Drawing.Point(59, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 20);
             this.textBox1.TabIndex = 51;
@@ -204,7 +209,7 @@ namespace Soft_Team
             // dateTime2
             // 
             this.dateTime2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTime2.Location = new System.Drawing.Point(138, 18);
+            this.dateTime2.Location = new System.Drawing.Point(137, 14);
             this.dateTime2.Name = "dateTime2";
             this.dateTime2.Size = new System.Drawing.Size(104, 20);
             this.dateTime2.TabIndex = 50;
@@ -212,20 +217,23 @@ namespace Soft_Team
             // dateTime1
             // 
             this.dateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTime1.Location = new System.Drawing.Point(14, 18);
+            this.dateTime1.Location = new System.Drawing.Point(13, 14);
             this.dateTime1.Name = "dateTime1";
             this.dateTime1.Size = new System.Drawing.Size(104, 20);
             this.dateTime1.TabIndex = 49;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(442, 168);
+            this.button2.BackColor = System.Drawing.Color.Orange;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(139)))), ((int)(((byte)(53)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.Location = new System.Drawing.Point(466, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(278, 114);
             this.button2.TabIndex = 46;
             this.button2.Text = "Generar reporte por Número interno";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // toolTip1
@@ -235,18 +243,18 @@ namespace Soft_Team
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(463, 114);
+            this.label2.Location = new System.Drawing.Point(487, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(243, 39);
             this.label2.TabIndex = 48;
-            this.label2.Text = "Por favor seleccione tantno: el rango desde la\r\nfecha inicial a la fecha final y " +
-    "el Número Interno\r\nde la máquina de la cual desea generar el reporte.";
+            this.label2.Text = "Por favor seleccione tantno: el rango desde la \r\nfecha inicial a la fecha final y" +
+    " el Número Interno \r\nde la máquina de la cual desea generar el reporte.";
             // 
             // Generar_reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(849, 491);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
@@ -257,6 +265,7 @@ namespace Soft_Team
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Generar_reporte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar_reporte";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

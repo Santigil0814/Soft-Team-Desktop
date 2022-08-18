@@ -45,7 +45,7 @@ namespace Soft_Team
                     }
                     else
                     {
-                        if (this.TxtRepetirContra.Text == Encriptar.descencriptar1(this.usuarioTableAdapter.TraerContrasena(this.TxtRepetirContra.Text)))
+                        if (this.TxtContrasena.Text == Encriptar.descencriptar1(this.usuarioTableAdapter.TraerContrasena(this.TxtContrasena.Text)))
                         {
                             if (this.TxtRepetirContra.Text == this.TxtNuevaContra.Text)
                             {

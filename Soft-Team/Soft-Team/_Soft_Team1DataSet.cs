@@ -7,9 +7,12 @@
     }
 }
 
-namespace Soft_Team._Soft_Team1DataSetTableAdapters {
-    
-    
+namespace Soft_Team._Soft_Team1DataSetTableAdapters
+{
+    partial class maquinaria_mantenimientoTableAdapter
+    {
+    }
+
     public partial class UsuarioTableAdapter {
     }
 }

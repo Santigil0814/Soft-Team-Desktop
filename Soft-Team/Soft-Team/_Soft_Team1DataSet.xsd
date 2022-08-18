@@ -370,7 +370,7 @@ VALUES        (@nom_1,@nom_2,@ape_1,@ape_2,@rol,@usuario,@contrasena,@correo, @e
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CambiarContra" Modifier="Public" Name="CambiarContra" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy18" UserSourceName="CambiarContra">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CambiarContra" Modifier="Public" Name="CambiarContra" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="CambiarContra">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE       Usuario
@@ -383,7 +383,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Eliminar_Usuario" Modifier="Public" Name="Eliminar_Usuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Eliminar_Usuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Eliminar_Usuario" Modifier="Public" Name="Eliminar_Usuario" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Eliminar_Usuario">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM Usuario
@@ -394,7 +394,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Llamarid_usuario" Modifier="Public" Name="Llamarid_usuario" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="Llamarid_usuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Llamarid_usuario" Modifier="Public" Name="Llamarid_usuario" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="Llamarid_usuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT id_Usuario, estado FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -404,7 +404,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarPorCorreo" Modifier="Public" Name="LlamarPorCorreo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="LlamarPorCorreo">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarPorCorreo" Modifier="Public" Name="LlamarPorCorreo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="LlamarPorCorreo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        correo, contrasena, estado
@@ -416,7 +416,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarRol" Modifier="Public" Name="LlamarRol" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="LlamarRol">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="LlamarRol" Modifier="Public" Name="LlamarRol" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="LlamarRol">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT rol, contrasena, correo, estado FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -426,7 +426,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="LlamarUnUsuario" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="LlamarUnUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="LlamarUnUsuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="LlamarUnUsuario" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="LlamarUnUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="LlamarUnUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT nom_1, nom_2, ape_1, ape_2, rol, usuario, contrasena, correo, estado FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -436,7 +436,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="RecuperarContra" Modifier="Public" Name="RecuperarContra" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="RecuperarContra">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="RecuperarContra" Modifier="Public" Name="RecuperarContra" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="RecuperarContra">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        contrasena, estado
@@ -448,7 +448,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="RevisarCorreoRecuperacion" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="RevisarCorreoRecuperacion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="RevisarCorreoRecuperacion">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="RevisarCorreoRecuperacion" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="RevisarCorreoRecuperacion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="RevisarCorreoRecuperacion">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT contrasena, estado FROM Usuario WHERE (correo = @correo)</CommandText>
@@ -458,7 +458,7 @@ WHERE        (correo = @correo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerContrasena" Modifier="Public" Name="TraerContrasena" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy17" UserSourceName="TraerContrasena">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerContrasena" Modifier="Public" Name="TraerContrasena" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="TraerContrasena">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        contrasena
@@ -470,7 +470,7 @@ WHERE        (contrasena = @contrasena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerContraseña" Modifier="Public" Name="TraerContraseña" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="TraerContraseña">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerContraseña" Modifier="Public" Name="TraerContraseña" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="TraerContraseña">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT contrasena, correo, estado FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -480,7 +480,7 @@ WHERE        (contrasena = @contrasena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerEstado" Modifier="Public" Name="TraerEstado" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="TraerEstado">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerEstado" Modifier="Public" Name="TraerEstado" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="TraerEstado">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        estado
@@ -492,7 +492,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerRol" Modifier="Public" Name="TraerRol" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="TraerRol">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerRol" Modifier="Public" Name="TraerRol" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="TraerRol">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        rol
@@ -504,7 +504,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerUsuario" Modifier="Public" Name="TraerUsuario" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="TraerUsuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerUsuario" Modifier="Public" Name="TraerUsuario" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="TraerUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        usuario
@@ -516,7 +516,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificarContra" Modifier="Public" Name="VerificarContra" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="VerificarContra">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificarContra" Modifier="Public" Name="VerificarContra" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy16" UserSourceName="VerificarContra">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT contrasena, estado FROM Usuario WHERE (contrasena = @contrasena)</CommandText>
@@ -526,7 +526,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificarCorreo" Modifier="Public" Name="VerificarCorreo" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="VerificarCorreo">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificarCorreo" Modifier="Public" Name="VerificarCorreo" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy17" UserSourceName="VerificarCorreo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT correo, estado FROM Usuario WHERE (correo = @correo)</CommandText>
@@ -536,7 +536,7 @@ WHERE        (usuario = @usuario)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificaUsuario" Modifier="Public" Name="VerificaUsuario" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy16" UserSourceName="VerificaUsuario">
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.Usuario" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="VerificaUsuario" Modifier="Public" Name="VerificaUsuario" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy18" UserSourceName="VerificaUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT usuario, contrasena, correo, estado FROM Usuario WHERE (usuario = @usuario)</CommandText>
@@ -698,17 +698,15 @@ SELECT id_maquinaria_mantenimiento, id_usuario, fecha_hora_salida, horometro_act
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO maquinaria_mantenimiento
-                         (id_Maquina, id_usuario, fecha_hora_ingreso, fecha_hora_salida, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5, seccion_6, seccion_7, 
-                         seccion_8, seccion_9)
-VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@observaciones,@ficha_operador,@horometro_actual,@tipo_mantenimiento,@seccion_1,@seccion_2,@seccion_3,@seccion_4,@seccion_5,@seccion_6,@seccion_7,@seccion_8,@seccion_9);   
+                         (id_maquina, id_usuario, fecha_hora_ingreso, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5, seccion_6, seccion_7, seccion_8, seccion_9)
+VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@observaciones,@ficha_operador,@horometro_actual,@tipo_mantenimiento,@seccion_1,@seccion_2,@seccion_3,@seccion_4,@seccion_5,@seccion_6,@seccion_7,@seccion_8,@seccion_9);      
 </CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="id_Maquina" ColumnName="id_Maquina" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_Maquina" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_Maquina" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_Maquina" ColumnName="id_maquina" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_Maquina" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_maquina" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="id_usuario" ColumnName="id_usuario" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_usuario" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="fecha_hora_ingreso" ColumnName="fecha_hora_ingreso" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fecha_hora_ingreso" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="fecha_hora_ingreso" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="fecha_hora_salida" ColumnName="fecha_hora_salida" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fecha_hora_salida" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="fecha_hora_salida" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="observaciones" ColumnName="observaciones" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@observaciones" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="ficha_operador" ColumnName="ficha_operador" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ficha_operador" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="ficha_operador" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ficha_operador" ColumnName="ficha_operador" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ficha_operador" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ficha_operador" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="horometro_actual" ColumnName="horometro_actual" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@horometro_actual" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="horometro_actual" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="tipo_mantenimiento" ColumnName="tipo_mantenimiento" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@tipo_mantenimiento" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="tipo_mantenimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="seccion_1" ColumnName="seccion_1" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_1" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_1" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -723,6 +721,46 @@ VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@o
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgrgarSalidaMaquina" Modifier="Public" Name="AgrgarSalidaMaquina" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="AgrgarSalidaMaquina">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       maquinaria_mantenimiento
+SET                id_maquina=@id_Maquina, id_usuario=@id_usuario, fecha_hora_ingreso=@fecha_hora_ingreso, observaciones=@observaciones, ficha_operador=@ficha_operador, horometro_actual=@horometro_actual, tipo_mantenimiento=@tipo_mantenimiento, seccion_1=@seccion_1, seccion_2=@seccion_2, seccion_3=@seccion_3, seccion_4=@seccion_4, seccion_5=@seccion_5, seccion_6=@seccion_6, seccion_7=@seccion_7, seccion_8=@seccion_8, seccion_9@seccion_9
+WHERE        (maquinaria_mantenimiento = @usuario)   
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_Maquina" ColumnName="id_maquina" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_Maquina" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_maquina" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_usuario" ColumnName="id_usuario" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_usuario" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="fecha_hora_ingreso" ColumnName="fecha_hora_ingreso" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fecha_hora_ingreso" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="fecha_hora_ingreso" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="observaciones" ColumnName="observaciones" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="nvarchar(100)" DbType="String" Direction="Input" ParameterName="@observaciones" Precision="0" ProviderType="NVarChar" Scale="0" Size="100" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ficha_operador" ColumnName="ficha_operador" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ficha_operador" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ficha_operador" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="horometro_actual" ColumnName="horometro_actual" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@horometro_actual" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="horometro_actual" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="tipo_mantenimiento" ColumnName="tipo_mantenimiento" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@tipo_mantenimiento" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="tipo_mantenimiento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_1" ColumnName="seccion_1" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_1" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_2" ColumnName="seccion_2" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_2" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_3" ColumnName="seccion_3" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_3" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_4" ColumnName="seccion_4" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_4" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_5" ColumnName="seccion_5" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_5" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_6" ColumnName="seccion_6" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_6" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_7" ColumnName="seccion_7" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_7" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_7" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="seccion_8" ColumnName="seccion_8" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@seccion_8" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="seccion_8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="usuario" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Object" Direction="Input" ParameterName="@usuario" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Soft_Team1ConnectionString (Settings)" DbObjectName="[Soft-Team1].dbo.maquinaria_mantenimiento" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="TraerDatosMaquina" Modifier="Public" Name="TraerDatosMaquina" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="TraerDatosMaquina">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id_maquinaria_mantenimiento, id_maquina, id_usuario, fecha_hora_ingreso, fecha_hora_salida, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5,  seccion_6, seccion_7, seccion_8, seccion_9
+FROM            maquinaria_mantenimiento
+WHERE        (id_maquina = @id_maquina)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id_maquina" ColumnName="id_maquina" DataSourceName="[Soft-Team1].dbo.maquinaria_mantenimiento" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_maquina" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id_maquina" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -886,7 +924,7 @@ WHERE (FichaOperador = @FichaOperador)</CommandText>
   <xs:element name="_Soft_Team1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_Soft_Team1DataSet" msprop:Generator_UserDSName="_Soft_Team1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Maquinas" msprop:Generator_TableClassName="MaquinasDataTable" msprop:Generator_TableVarName="tableMaquinas" msprop:Generator_RowChangedName="MaquinasRowChanged" msprop:Generator_TablePropName="Maquinas" msprop:Generator_RowDeletingName="MaquinasRowDeleting" msprop:Generator_RowChangingName="MaquinasRowChanging" msprop:Generator_RowEvHandlerName="MaquinasRowChangeEventHandler" msprop:Generator_RowDeletedName="MaquinasRowDeleted" msprop:Generator_RowClassName="MaquinasRow" msprop:Generator_UserTableName="Maquinas" msprop:Generator_RowEvArgName="MaquinasRowChangeEvent">
+        <xs:element name="Maquinas" msprop:Generator_TableClassName="MaquinasDataTable" msprop:Generator_TableVarName="tableMaquinas" msprop:Generator_TablePropName="Maquinas" msprop:Generator_RowDeletingName="MaquinasRowDeleting" msprop:Generator_RowChangingName="MaquinasRowChanging" msprop:Generator_RowEvHandlerName="MaquinasRowChangeEventHandler" msprop:Generator_RowDeletedName="MaquinasRowDeleted" msprop:Generator_UserTableName="Maquinas" msprop:Generator_RowChangedName="MaquinasRowChanged" msprop:Generator_RowEvArgName="MaquinasRowChangeEvent" msprop:Generator_RowClassName="MaquinasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_Maquina" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Maquina" msprop:Generator_ColumnPropNameInRow="id_Maquina" msprop:Generator_ColumnPropNameInTable="id_MaquinaColumn" msprop:Generator_UserColumnName="id_Maquina" type="xs:int" />
@@ -977,7 +1015,7 @@ WHERE (FichaOperador = @FichaOperador)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_RowClassName="UsuarioRow" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent">
+        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_Usuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Usuario" msprop:Generator_ColumnPropNameInRow="id_Usuario" msprop:Generator_ColumnPropNameInTable="id_UsuarioColumn" msprop:Generator_UserColumnName="id_Usuario" type="xs:int" />
@@ -1047,7 +1085,7 @@ WHERE (FichaOperador = @FichaOperador)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="maquinaria_mantenimiento" msprop:Generator_TableClassName="maquinaria_mantenimientoDataTable" msprop:Generator_TableVarName="tablemaquinaria_mantenimiento" msprop:Generator_RowChangedName="maquinaria_mantenimientoRowChanged" msprop:Generator_TablePropName="maquinaria_mantenimiento" msprop:Generator_RowDeletingName="maquinaria_mantenimientoRowDeleting" msprop:Generator_RowChangingName="maquinaria_mantenimientoRowChanging" msprop:Generator_RowEvHandlerName="maquinaria_mantenimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="maquinaria_mantenimientoRowDeleted" msprop:Generator_RowClassName="maquinaria_mantenimientoRow" msprop:Generator_UserTableName="maquinaria_mantenimiento" msprop:Generator_RowEvArgName="maquinaria_mantenimientoRowChangeEvent">
+        <xs:element name="maquinaria_mantenimiento" msprop:Generator_TableClassName="maquinaria_mantenimientoDataTable" msprop:Generator_TableVarName="tablemaquinaria_mantenimiento" msprop:Generator_TablePropName="maquinaria_mantenimiento" msprop:Generator_RowDeletingName="maquinaria_mantenimientoRowDeleting" msprop:Generator_RowChangingName="maquinaria_mantenimientoRowChanging" msprop:Generator_RowEvHandlerName="maquinaria_mantenimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="maquinaria_mantenimientoRowDeleted" msprop:Generator_UserTableName="maquinaria_mantenimiento" msprop:Generator_RowChangedName="maquinaria_mantenimientoRowChanged" msprop:Generator_RowEvArgName="maquinaria_mantenimientoRowChangeEvent" msprop:Generator_RowClassName="maquinaria_mantenimientoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_maquinaria_mantenimiento" msprop:Generator_ColumnVarNameInTable="columnid_maquinaria_mantenimiento" msprop:Generator_ColumnPropNameInRow="id_maquinaria_mantenimiento" msprop:Generator_ColumnPropNameInTable="id_maquinaria_mantenimientoColumn" msprop:Generator_UserColumnName="id_maquinaria_mantenimiento" type="xs:int" />
@@ -1143,7 +1181,7 @@ WHERE (FichaOperador = @FichaOperador)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Operadores" msprop:Generator_TableClassName="OperadoresDataTable" msprop:Generator_TableVarName="tableOperadores" msprop:Generator_RowChangedName="OperadoresRowChanged" msprop:Generator_TablePropName="Operadores" msprop:Generator_RowDeletingName="OperadoresRowDeleting" msprop:Generator_RowChangingName="OperadoresRowChanging" msprop:Generator_RowEvHandlerName="OperadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="OperadoresRowDeleted" msprop:Generator_RowClassName="OperadoresRow" msprop:Generator_UserTableName="Operadores" msprop:Generator_RowEvArgName="OperadoresRowChangeEvent">
+        <xs:element name="Operadores" msprop:Generator_TableClassName="OperadoresDataTable" msprop:Generator_TableVarName="tableOperadores" msprop:Generator_TablePropName="Operadores" msprop:Generator_RowDeletingName="OperadoresRowDeleting" msprop:Generator_RowChangingName="OperadoresRowChanging" msprop:Generator_RowEvHandlerName="OperadoresRowChangeEventHandler" msprop:Generator_RowDeletedName="OperadoresRowDeleted" msprop:Generator_UserTableName="Operadores" msprop:Generator_RowChangedName="OperadoresRowChanged" msprop:Generator_RowEvArgName="OperadoresRowChangeEvent" msprop:Generator_RowClassName="OperadoresRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_Operador" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Operador" msprop:Generator_ColumnPropNameInRow="id_Operador" msprop:Generator_ColumnPropNameInTable="id_OperadorColumn" msprop:Generator_UserColumnName="id_Operador" type="xs:int" />
@@ -1206,8 +1244,8 @@ WHERE (FichaOperador = @FichaOperador)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_maquinaria_mantenimiento_Usuario" msdata:parent="Usuario" msdata:child="maquinaria_mantenimiento" msdata:parentkey="id_Usuario" msdata:childkey="id_usuario" msprop:Generator_UserChildTable="maquinaria_mantenimiento" msprop:Generator_ChildPropName="Getmaquinaria_mantenimientoRows" msprop:Generator_UserRelationName="FK_maquinaria_mantenimiento_Usuario" msprop:Generator_RelationVarName="relationFK_maquinaria_mantenimiento_Usuario" msprop:Generator_UserParentTable="Usuario" msprop:Generator_ParentPropName="UsuarioRow" />
-      <msdata:Relationship name="FK_maquinaria_mantenimiento_Maquinas" msdata:parent="Maquinas" msdata:child="maquinaria_mantenimiento" msdata:parentkey="id_Maquina" msdata:childkey="id_maquina" msprop:Generator_UserChildTable="maquinaria_mantenimiento" msprop:Generator_ChildPropName="Getmaquinaria_mantenimientoRows" msprop:Generator_UserRelationName="FK_maquinaria_mantenimiento_Maquinas" msprop:Generator_ParentPropName="MaquinasRow" msprop:Generator_RelationVarName="relationFK_maquinaria_mantenimiento_Maquinas" msprop:Generator_UserParentTable="Maquinas" />
+      <msdata:Relationship name="FK_maquinaria_mantenimiento_Usuario" msdata:parent="Usuario" msdata:child="maquinaria_mantenimiento" msdata:parentkey="id_Usuario" msdata:childkey="id_usuario" msprop:Generator_UserChildTable="maquinaria_mantenimiento" msprop:Generator_ChildPropName="Getmaquinaria_mantenimientoRows" msprop:Generator_UserRelationName="FK_maquinaria_mantenimiento_Usuario" msprop:Generator_ParentPropName="UsuarioRow" msprop:Generator_RelationVarName="relationFK_maquinaria_mantenimiento_Usuario" msprop:Generator_UserParentTable="Usuario" />
+      <msdata:Relationship name="FK_maquinaria_mantenimiento_Maquinas" msdata:parent="Maquinas" msdata:child="maquinaria_mantenimiento" msdata:parentkey="id_Maquina" msdata:childkey="id_maquina" msprop:Generator_UserChildTable="maquinaria_mantenimiento" msprop:Generator_ChildPropName="Getmaquinaria_mantenimientoRows" msprop:Generator_UserRelationName="FK_maquinaria_mantenimiento_Maquinas" msprop:Generator_RelationVarName="relationFK_maquinaria_mantenimiento_Maquinas" msprop:Generator_UserParentTable="Maquinas" msprop:Generator_ParentPropName="MaquinasRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

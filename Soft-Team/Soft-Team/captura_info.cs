@@ -94,7 +94,7 @@ namespace Soft_Team
                                 {
                                     string id_ma = this.maquinasTableAdapter.Traerid_maquina(id_MaquinaTextBox.Text).ToString();
                                     string id_us = this.usuarioTableAdapter.Llamarid_usuario(General.NomUsuario).ToString();
-                                    this.maquinaria_mantenimientoTableAdapter.AgregarMantenimiento(Convert.ToInt32(id_ma), Convert.ToInt32(id_us), Convert.ToDateTime(fecha_hora_ingresoDateTimePicker.Value), Convert.ToDateTime(fecha_hora_salidaDateTimePicker.Value), this.observacionesTextBox.Text, this.fichaOperadorTextBox.Text, Convert.ToInt32(horometro_actualTextBox.Text), this.tipo_mantenimientoComboBox.Text, this.seccion_1ComboBox.Text, this.seccion_2ComboBox.Text, this.seccion_3ComboBox.Text, this.seccion_4ComboBox.Text, this.seccion_5ComboBox.Text, this.seccion_6ComboBox.Text, this.seccion_7ComboBox.Text, this.seccion_8ComboBox.Text, this.seccion_9ComboBox.Text);
+                                    this.maquinaria_mantenimientoTableAdapter.AgregarMantenimiento(Convert.ToInt32(id_ma), Convert.ToInt32(id_us), Convert.ToDateTime(fecha_hora_ingresoDateTimePicker.Value), this.observacionesTextBox.Text, this.fichaOperadorTextBox.Text, Convert.ToInt32(horometro_actualTextBox.Text), this.tipo_mantenimientoComboBox.Text, this.seccion_1ComboBox.Text, this.seccion_2ComboBox.Text, this.seccion_3ComboBox.Text, this.seccion_4ComboBox.Text, this.seccion_5ComboBox.Text, this.seccion_6ComboBox.Text, this.seccion_7ComboBox.Text, this.seccion_8ComboBox.Text, this.seccion_9ComboBox.Text);
                                     MessageBox.Show("Matenimiento insertado con éxito", "¡Felicidades!");
                                 }
                                 catch (Exception x)
@@ -215,6 +215,23 @@ namespace Soft_Team
         {
             Generar_reporte Gr = new Generar_reporte();
             Gr.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SalidaMaquina Sm = new SalidaMaquina();
+            Sm.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            captura_info Ci = new captura_info();
+            Ci.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,5 +16,7 @@ namespace Soft_Team
         static public string OpeOperador = string.Empty;
         static public string EstadoUsu = string.Empty;
         static public string EstadoMaq = string.Empty;
+
+        static public string idMaquina = string.Empty;
     }
 }

@@ -317,6 +317,12 @@
     <Compile Include="ReporteUsuarios.Designer.cs">
       <DependentUpon>ReporteUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalidaMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaMaquina.Designer.cs">
+      <DependentUpon>SalidaMaquina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Supervisor.cs">
       <SubType>Form</SubType>
@@ -461,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteUsuarios.resx">
       <DependentUpon>ReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalidaMaquina.resx">
+      <DependentUpon>SalidaMaquina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supervisor.resx">
       <DependentUpon>Supervisor.cs</DependentUpon>

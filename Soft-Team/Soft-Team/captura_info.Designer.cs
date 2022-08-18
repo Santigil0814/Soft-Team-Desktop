@@ -33,13 +33,12 @@ namespace Soft_Team
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(captura_info));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.fichaOperadorTextBox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.fecha_hora_salidaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.fecha_hora_ingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
-            this.fecha_hora_ingresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.seccion_1ComboBox = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -101,10 +100,9 @@ namespace Soft_Team
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.fichaOperadorTextBox);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.fecha_hora_salidaDateTimePicker);
             this.panel1.Controls.Add(this.fecha_hora_ingresoDateTimePicker);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
@@ -127,6 +125,19 @@ namespace Soft_Team
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(23, 88);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(98, 26);
+            this.button6.TabIndex = 71;
+            this.button6.Text = "Salida máquina";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
@@ -142,32 +153,21 @@ namespace Soft_Team
             // 
             // fichaOperadorTextBox
             // 
-            this.fichaOperadorTextBox.Location = new System.Drawing.Point(268, 151);
+            this.fichaOperadorTextBox.Location = new System.Drawing.Point(268, 132);
             this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
             this.fichaOperadorTextBox.Size = new System.Drawing.Size(229, 20);
             this.fichaOperadorTextBox.TabIndex = 8;
             this.fichaOperadorTextBox.TextChanged += new System.EventHandler(this.fichaOperadorTextBox_TextChanged_1);
             this.fichaOperadorTextBox.Validated += new System.EventHandler(this.fichaOperadorTextBox_Validated);
             // 
-            // label17
+            // fecha_hora_ingresoDateTimePicker
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label17.Location = new System.Drawing.Point(150, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(108, 14);
-            this.label17.TabIndex = 69;
-            this.label17.Text = "Fecha/Hora salida:";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // fecha_hora_salidaDateTimePicker
-            // 
-            this.fecha_hora_salidaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.maquinaria_mantenimientoBindingSource, "fecha_hora_salida", true));
-            this.fecha_hora_salidaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha_hora_salidaDateTimePicker.Location = new System.Drawing.Point(268, 107);
-            this.fecha_hora_salidaDateTimePicker.Name = "fecha_hora_salidaDateTimePicker";
-            this.fecha_hora_salidaDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_salidaDateTimePicker.TabIndex = 6;
+            this.fecha_hora_ingresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.maquinaria_mantenimientoBindingSource, "fecha_hora_ingreso", true));
+            this.fecha_hora_ingresoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_hora_ingresoDateTimePicker.Location = new System.Drawing.Point(268, 85);
+            this.fecha_hora_ingresoDateTimePicker.Name = "fecha_hora_ingresoDateTimePicker";
+            this.fecha_hora_ingresoDateTimePicker.Size = new System.Drawing.Size(229, 20);
+            this.fecha_hora_ingresoDateTimePicker.TabIndex = 5;
             // 
             // maquinaria_mantenimientoBindingSource
             // 
@@ -178,15 +178,6 @@ namespace Soft_Team
             // 
             this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
             this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fecha_hora_ingresoDateTimePicker
-            // 
-            this.fecha_hora_ingresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.maquinaria_mantenimientoBindingSource, "fecha_hora_ingreso", true));
-            this.fecha_hora_ingresoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha_hora_ingresoDateTimePicker.Location = new System.Drawing.Point(268, 85);
-            this.fecha_hora_ingresoDateTimePicker.Name = "fecha_hora_ingresoDateTimePicker";
-            this.fecha_hora_ingresoDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_ingresoDateTimePicker.TabIndex = 5;
             // 
             // panel2
             // 
@@ -219,7 +210,7 @@ namespace Soft_Team
             this.seccion_1ComboBox.FormattingEnabled = true;
             this.seccion_1ComboBox.Items.AddRange(new object[] {
             "SERVITECA"});
-            this.seccion_1ComboBox.Location = new System.Drawing.Point(59, 16);
+            this.seccion_1ComboBox.Location = new System.Drawing.Point(108, 16);
             this.seccion_1ComboBox.Name = "seccion_1ComboBox";
             this.seccion_1ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_1ComboBox.TabIndex = 12;
@@ -229,31 +220,31 @@ namespace Soft_Team
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label16.Location = new System.Drawing.Point(11, 46);
+            this.label16.Location = new System.Drawing.Point(11, 50);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 14);
+            this.label16.Size = new System.Drawing.Size(55, 14);
             this.label16.TabIndex = 65;
-            this.label16.Text = "TA05:";
+            this.label16.Text = "DIESEL:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label6.Location = new System.Drawing.Point(11, 19);
+            this.label6.Location = new System.Drawing.Point(11, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 14);
+            this.label6.Size = new System.Drawing.Size(82, 14);
             this.label6.TabIndex = 49;
-            this.label6.Text = "TA02:";
+            this.label6.Text = "SERVITECA:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label15.Location = new System.Drawing.Point(11, 73);
+            this.label15.Location = new System.Drawing.Point(11, 74);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 14);
+            this.label15.Size = new System.Drawing.Size(96, 14);
             this.label15.TabIndex = 64;
-            this.label15.Text = "TA03:";
+            this.label15.Text = "AUTOMOTRIZ:";
             // 
             // seccion_2ComboBox
             // 
@@ -261,7 +252,7 @@ namespace Soft_Team
             this.seccion_2ComboBox.FormattingEnabled = true;
             this.seccion_2ComboBox.Items.AddRange(new object[] {
             "DIESEL"});
-            this.seccion_2ComboBox.Location = new System.Drawing.Point(59, 43);
+            this.seccion_2ComboBox.Location = new System.Drawing.Point(108, 46);
             this.seccion_2ComboBox.Name = "seccion_2ComboBox";
             this.seccion_2ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_2ComboBox.TabIndex = 15;
@@ -271,11 +262,11 @@ namespace Soft_Team
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label14.Location = new System.Drawing.Point(282, 19);
+            this.label14.Location = new System.Drawing.Point(251, 13);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 14);
+            this.label14.Size = new System.Drawing.Size(73, 28);
             this.label14.TabIndex = 63;
-            this.label14.Text = "TA10:";
+            this.label14.Text = "LAMINA Y \r\nPINTURA:";
             // 
             // seccion_3ComboBox
             // 
@@ -283,7 +274,7 @@ namespace Soft_Team
             this.seccion_3ComboBox.FormattingEnabled = true;
             this.seccion_3ComboBox.Items.AddRange(new object[] {
             "AUTOMOTRIZ"});
-            this.seccion_3ComboBox.Location = new System.Drawing.Point(59, 70);
+            this.seccion_3ComboBox.Location = new System.Drawing.Point(108, 71);
             this.seccion_3ComboBox.Name = "seccion_3ComboBox";
             this.seccion_3ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_3ComboBox.TabIndex = 18;
@@ -293,11 +284,11 @@ namespace Soft_Team
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label13.Location = new System.Drawing.Point(282, 46);
+            this.label13.Location = new System.Drawing.Point(251, 50);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 14);
+            this.label13.Size = new System.Drawing.Size(90, 14);
             this.label13.TabIndex = 62;
-            this.label13.Text = "TA04:";
+            this.label13.Text = "ELECTRICOS:";
             // 
             // seccion_4ComboBox
             // 
@@ -305,7 +296,7 @@ namespace Soft_Team
             this.seccion_4ComboBox.FormattingEnabled = true;
             this.seccion_4ComboBox.Items.AddRange(new object[] {
             "LAMINA Y PINTURA"});
-            this.seccion_4ComboBox.Location = new System.Drawing.Point(330, 16);
+            this.seccion_4ComboBox.Location = new System.Drawing.Point(347, 15);
             this.seccion_4ComboBox.Name = "seccion_4ComboBox";
             this.seccion_4ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_4ComboBox.TabIndex = 13;
@@ -315,11 +306,11 @@ namespace Soft_Team
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label12.Location = new System.Drawing.Point(282, 73);
+            this.label12.Location = new System.Drawing.Point(251, 74);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 14);
+            this.label12.Size = new System.Drawing.Size(89, 14);
             this.label12.TabIndex = 61;
-            this.label12.Text = "TA06:";
+            this.label12.Text = "SOLDADURA:";
             // 
             // seccion_5ComboBox
             // 
@@ -327,7 +318,7 @@ namespace Soft_Team
             this.seccion_5ComboBox.FormattingEnabled = true;
             this.seccion_5ComboBox.Items.AddRange(new object[] {
             "ELECTRICOS"});
-            this.seccion_5ComboBox.Location = new System.Drawing.Point(330, 43);
+            this.seccion_5ComboBox.Location = new System.Drawing.Point(347, 46);
             this.seccion_5ComboBox.Name = "seccion_5ComboBox";
             this.seccion_5ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_5ComboBox.TabIndex = 16;
@@ -337,11 +328,11 @@ namespace Soft_Team
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label11.Location = new System.Drawing.Point(556, 16);
+            this.label11.Location = new System.Drawing.Point(482, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 14);
+            this.label11.Size = new System.Drawing.Size(55, 14);
             this.label11.TabIndex = 60;
-            this.label11.Text = "TA07:";
+            this.label11.Text = "TORNO:";
             // 
             // seccion_6ComboBox
             // 
@@ -349,7 +340,7 @@ namespace Soft_Team
             this.seccion_6ComboBox.FormattingEnabled = true;
             this.seccion_6ComboBox.Items.AddRange(new object[] {
             "SOLDADURA"});
-            this.seccion_6ComboBox.Location = new System.Drawing.Point(330, 70);
+            this.seccion_6ComboBox.Location = new System.Drawing.Point(346, 71);
             this.seccion_6ComboBox.Name = "seccion_6ComboBox";
             this.seccion_6ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_6ComboBox.TabIndex = 19;
@@ -359,11 +350,11 @@ namespace Soft_Team
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label10.Location = new System.Drawing.Point(556, 43);
+            this.label10.Location = new System.Drawing.Point(482, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 14);
+            this.label10.Size = new System.Drawing.Size(116, 14);
             this.label10.TabIndex = 59;
-            this.label10.Text = "TA08:";
+            this.label10.Text = "MONTALLANTAS:";
             // 
             // seccion_7ComboBox
             // 
@@ -371,7 +362,7 @@ namespace Soft_Team
             this.seccion_7ComboBox.FormattingEnabled = true;
             this.seccion_7ComboBox.Items.AddRange(new object[] {
             "TORNO"});
-            this.seccion_7ComboBox.Location = new System.Drawing.Point(604, 13);
+            this.seccion_7ComboBox.Location = new System.Drawing.Point(604, 16);
             this.seccion_7ComboBox.Name = "seccion_7ComboBox";
             this.seccion_7ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_7ComboBox.TabIndex = 14;
@@ -381,11 +372,11 @@ namespace Soft_Team
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label8.Location = new System.Drawing.Point(556, 70);
+            this.label8.Location = new System.Drawing.Point(482, 69);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 14);
+            this.label8.Size = new System.Drawing.Size(83, 28);
             this.label8.TabIndex = 58;
-            this.label8.Text = "TA01:";
+            this.label8.Text = "MECANICOS\r\nCAMPO:";
             // 
             // seccion_8ComboBox
             // 
@@ -393,7 +384,7 @@ namespace Soft_Team
             this.seccion_8ComboBox.FormattingEnabled = true;
             this.seccion_8ComboBox.Items.AddRange(new object[] {
             "MONTALLANTAS"});
-            this.seccion_8ComboBox.Location = new System.Drawing.Point(604, 40);
+            this.seccion_8ComboBox.Location = new System.Drawing.Point(604, 46);
             this.seccion_8ComboBox.Name = "seccion_8ComboBox";
             this.seccion_8ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_8ComboBox.TabIndex = 17;
@@ -405,7 +396,7 @@ namespace Soft_Team
             this.seccion_9ComboBox.FormattingEnabled = true;
             this.seccion_9ComboBox.Items.AddRange(new object[] {
             "MECANICOS CAMPO"});
-            this.seccion_9ComboBox.Location = new System.Drawing.Point(604, 67);
+            this.seccion_9ComboBox.Location = new System.Drawing.Point(604, 71);
             this.seccion_9ComboBox.Name = "seccion_9ComboBox";
             this.seccion_9ComboBox.Size = new System.Drawing.Size(121, 21);
             this.seccion_9ComboBox.TabIndex = 20;
@@ -439,7 +430,7 @@ namespace Soft_Team
             "Predictivo",
             "Correctivo",
             "Proactivo"});
-            this.tipo_mantenimientoComboBox.Location = new System.Drawing.Point(268, 128);
+            this.tipo_mantenimientoComboBox.Location = new System.Drawing.Point(268, 109);
             this.tipo_mantenimientoComboBox.Name = "tipo_mantenimientoComboBox";
             this.tipo_mantenimientoComboBox.Size = new System.Drawing.Size(229, 21);
             this.tipo_mantenimientoComboBox.TabIndex = 7;
@@ -477,6 +468,7 @@ namespace Soft_Team
             this.button4.TabIndex = 11;
             this.button4.Text = "Generar correo";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -507,7 +499,7 @@ namespace Soft_Team
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label7.Location = new System.Drawing.Point(166, 154);
+            this.label7.Location = new System.Drawing.Point(166, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 14);
             this.label7.TabIndex = 30;
@@ -518,7 +510,7 @@ namespace Soft_Team
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Italic);
-            this.label5.Location = new System.Drawing.Point(120, 132);
+            this.label5.Location = new System.Drawing.Point(120, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 14);
             this.label5.TabIndex = 28;
@@ -573,6 +565,7 @@ namespace Soft_Team
             this.button1.TabIndex = 1;
             this.button1.Text = "Capturar info.";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // operadoresBindingSource
             // 
@@ -650,14 +643,14 @@ namespace Soft_Team
             // ajustesToolStripMenuItem1
             // 
             this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
-            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.ajustesToolStripMenuItem1.Text = "Ajustes";
             this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -775,8 +768,6 @@ namespace Soft_Team
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private _Soft_Team1DataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.DateTimePicker fecha_hora_ingresoDateTimePicker;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker fecha_hora_salidaDateTimePicker;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label18;
@@ -788,5 +779,6 @@ namespace Soft_Team
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button button6;
     }
 }

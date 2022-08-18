@@ -6022,7 +6022,7 @@ SELECT id_maquinaria_mantenimiento, id_usuario, fecha_hora_salida, horometro_act
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT id_maquinaria_mantenimiento, id_usuario, fecha_hora_salida, horometro_actual, observaciones, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5, seccion_6, seccion_7, seccion_8, seccion_9, fecha_hora_ingreso, id_maquina, ficha_operador FROM maquinaria_mantenimiento";
@@ -6030,17 +6030,15 @@ SELECT id_maquinaria_mantenimiento, id_usuario, fecha_hora_salida, horometro_act
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = @"INSERT INTO maquinaria_mantenimiento
-                         (id_Maquina, id_usuario, fecha_hora_ingreso, fecha_hora_salida, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5, seccion_6, seccion_7, 
-                         seccion_8, seccion_9)
-VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@observaciones,@ficha_operador,@horometro_actual,@tipo_mantenimiento,@seccion_1,@seccion_2,@seccion_3,@seccion_4,@seccion_5,@seccion_6,@seccion_7,@seccion_8,@seccion_9);   
+                         (id_maquina, id_usuario, fecha_hora_ingreso, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5, seccion_6, seccion_7, seccion_8, seccion_9)
+VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@observaciones,@ficha_operador,@horometro_actual,@tipo_mantenimiento,@seccion_1,@seccion_2,@seccion_3,@seccion_4,@seccion_5,@seccion_6,@seccion_7,@seccion_8,@seccion_9);      
 ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_Maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hora_ingreso", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_hora_ingreso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hora_salida", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_hora_salida", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@observaciones", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "observaciones", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ficha_operador", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ficha_operador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ficha_operador", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ficha_operador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horometro_actual", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "horometro_actual", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_mantenimiento", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_mantenimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_1", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6052,6 +6050,36 @@ VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@o
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_7", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_7", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_8", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_8", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_9", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_9", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"UPDATE       maquinaria_mantenimiento
+SET                id_maquina=@id_Maquina, id_usuario=@id_usuario, fecha_hora_ingreso=@fecha_hora_ingreso, observaciones=@observaciones, ficha_operador=@ficha_operador, horometro_actual=@horometro_actual, tipo_mantenimiento=@tipo_mantenimiento, seccion_1=@seccion_1, seccion_2=@seccion_2, seccion_3=@seccion_3, seccion_4=@seccion_4, seccion_5=@seccion_5, seccion_6=@seccion_6, seccion_7=@seccion_7, seccion_8=@seccion_8, seccion_9@seccion_9
+WHERE        (maquinaria_mantenimiento = @usuario)   
+";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha_hora_ingreso", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "fecha_hora_ingreso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@observaciones", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "observaciones", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ficha_operador", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ficha_operador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horometro_actual", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "horometro_actual", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_mantenimiento", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_mantenimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_1", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_2", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_3", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_4", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_5", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_6", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_6", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_7", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_7", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seccion_8", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "seccion_8", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT        id_maquinaria_mantenimiento, id_maquina, id_usuario, fecha_hora_ingreso, fecha_hora_salida, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5,  seccion_6, seccion_7, seccion_8, seccion_9
+FROM            maquinaria_mantenimiento
+WHERE        (id_maquina = @id_maquina)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6643,7 +6671,6 @@ VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@o
                     int id_Maquina, 
                     int id_usuario, 
                     System.DateTime fecha_hora_ingreso, 
-                    global::System.Nullable<global::System.DateTime> fecha_hora_salida, 
                     string observaciones, 
                     string ficha_operador, 
                     int horometro_actual, 
@@ -6661,84 +6688,78 @@ VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@o
             command.Parameters[0].Value = ((int)(id_Maquina));
             command.Parameters[1].Value = ((int)(id_usuario));
             command.Parameters[2].Value = ((System.DateTime)(fecha_hora_ingreso));
-            if ((fecha_hora_salida.HasValue == true)) {
-                command.Parameters[3].Value = ((System.DateTime)(fecha_hora_salida.Value));
-            }
-            else {
+            if ((observaciones == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((observaciones == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
             else {
-                command.Parameters[4].Value = ((string)(observaciones));
+                command.Parameters[3].Value = ((string)(observaciones));
             }
             if ((ficha_operador == null)) {
                 throw new global::System.ArgumentNullException("ficha_operador");
             }
             else {
-                command.Parameters[5].Value = ((string)(ficha_operador));
+                command.Parameters[4].Value = ((string)(ficha_operador));
             }
-            command.Parameters[6].Value = ((int)(horometro_actual));
+            command.Parameters[5].Value = ((int)(horometro_actual));
             if ((tipo_mantenimiento == null)) {
                 throw new global::System.ArgumentNullException("tipo_mantenimiento");
             }
             else {
-                command.Parameters[7].Value = ((string)(tipo_mantenimiento));
+                command.Parameters[6].Value = ((string)(tipo_mantenimiento));
             }
             if ((seccion_1 == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(seccion_1));
+            }
+            if ((seccion_2 == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(seccion_1));
+                command.Parameters[8].Value = ((string)(seccion_2));
             }
-            if ((seccion_2 == null)) {
+            if ((seccion_3 == null)) {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[9].Value = ((string)(seccion_2));
+                command.Parameters[9].Value = ((string)(seccion_3));
             }
-            if ((seccion_3 == null)) {
+            if ((seccion_4 == null)) {
                 command.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[10].Value = ((string)(seccion_3));
+                command.Parameters[10].Value = ((string)(seccion_4));
             }
-            if ((seccion_4 == null)) {
+            if ((seccion_5 == null)) {
                 command.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[11].Value = ((string)(seccion_4));
+                command.Parameters[11].Value = ((string)(seccion_5));
             }
-            if ((seccion_5 == null)) {
+            if ((seccion_6 == null)) {
                 command.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[12].Value = ((string)(seccion_5));
+                command.Parameters[12].Value = ((string)(seccion_6));
             }
-            if ((seccion_6 == null)) {
+            if ((seccion_7 == null)) {
                 command.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[13].Value = ((string)(seccion_6));
+                command.Parameters[13].Value = ((string)(seccion_7));
             }
-            if ((seccion_7 == null)) {
+            if ((seccion_8 == null)) {
                 command.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[14].Value = ((string)(seccion_7));
+                command.Parameters[14].Value = ((string)(seccion_8));
             }
-            if ((seccion_8 == null)) {
+            if ((seccion_9 == null)) {
                 command.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[15].Value = ((string)(seccion_8));
-            }
-            if ((seccion_9 == null)) {
-                command.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[16].Value = ((string)(seccion_9));
+                command.Parameters[15].Value = ((string)(seccion_9));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6755,6 +6776,150 @@ VALUES        (@id_Maquina,@id_usuario,@fecha_hora_ingreso,@fecha_hora_salida,@o
                 }
             }
             return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int AgrgarSalidaMaquina(
+                    int id_Maquina, 
+                    int id_usuario, 
+                    System.DateTime fecha_hora_ingreso, 
+                    string observaciones, 
+                    string ficha_operador, 
+                    int horometro_actual, 
+                    string tipo_mantenimiento, 
+                    string seccion_1, 
+                    string seccion_2, 
+                    string seccion_3, 
+                    string seccion_4, 
+                    string seccion_5, 
+                    string seccion_6, 
+                    string seccion_7, 
+                    string seccion_8, 
+                    object usuario) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((int)(id_Maquina));
+            command.Parameters[1].Value = ((int)(id_usuario));
+            command.Parameters[2].Value = ((System.DateTime)(fecha_hora_ingreso));
+            if ((observaciones == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(observaciones));
+            }
+            if ((ficha_operador == null)) {
+                throw new global::System.ArgumentNullException("ficha_operador");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(ficha_operador));
+            }
+            command.Parameters[5].Value = ((int)(horometro_actual));
+            if ((tipo_mantenimiento == null)) {
+                throw new global::System.ArgumentNullException("tipo_mantenimiento");
+            }
+            else {
+                command.Parameters[6].Value = ((string)(tipo_mantenimiento));
+            }
+            if ((seccion_1 == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(seccion_1));
+            }
+            if ((seccion_2 == null)) {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[8].Value = ((string)(seccion_2));
+            }
+            if ((seccion_3 == null)) {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[9].Value = ((string)(seccion_3));
+            }
+            if ((seccion_4 == null)) {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[10].Value = ((string)(seccion_4));
+            }
+            if ((seccion_5 == null)) {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[11].Value = ((string)(seccion_5));
+            }
+            if ((seccion_6 == null)) {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[12].Value = ((string)(seccion_6));
+            }
+            if ((seccion_7 == null)) {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[13].Value = ((string)(seccion_7));
+            }
+            if ((seccion_8 == null)) {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[14].Value = ((string)(seccion_8));
+            }
+            if ((usuario == null)) {
+                throw new global::System.ArgumentNullException("usuario");
+            }
+            else {
+                command.Parameters[15].Value = ((object)(usuario));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> TraerDatosMaquina(int id_maquina) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(id_maquina));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
         }
     }
     
