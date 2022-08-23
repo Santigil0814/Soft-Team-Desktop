@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,15 +27,52 @@ namespace Soft_Team
             }
             else
             {
-                if (string.IsNullOrEmpty((string)this.usuarioTableAdapter.LlamarPorCorreo(this.correoTextBox.Text)))
+                General.EstadoUsu = (string)this.usuarioTableAdapter.LlamarPorCorreo(this.correoTextBox.Text);
+                if (string.IsNullOrEmpty((string)this.usuarioTableAdapter.LlamarPorCorreo(this.correoTextBox.Text)) && (General.EstadoUsu == "Inhabilitado"))
                 {
-                    MessageBox.Show("El correo no se encuentra registrado.", "Alerta");
+                    MessageBox.Show("El correo electrónico digitado no se encuentra registrado o se encuentra inhabilitado.", "Alerta");
                     this.correoTextBox.Focus();
                 }
                 else
                 {
-                    MessageBox.Show("Se ha enviado su usuario al correo digitado.", "Alerta");
-                    this.correoTextBox.Text = string.Empty;
+                    this.usuarioTextBox.Text = Encriptar.descencriptar1(this.usuarioTextBox.Text);
+                    usuarioTableAdapter.RecuperarUsuario(
+                    this.usuarioTextBox.Text
+                    );
+
+                    try
+                    {
+                        General.Idusuario = this.usuarioTableAdapter.TraerUnId(this.correoTextBox.Text).ToString();
+                        General.Tusuario = (string)this.usuarioTableAdapter.TraerUnUsuario(Convert.ToInt32(General.Idusuario));
+                        string correoqueenvia = "soft.team2001@gmail.com";
+                        string correoquerecibe = this.correoTextBox.Text;
+                        string msjContra = this.suContraEs.Text;
+
+                        SmtpClient client = new SmtpClient();
+                        client.Port = 587;
+                        //client.Port = 25;
+                        // utilizamos el servidor SMTP de gmail
+                        client.Host = "smtp.gmail.com";
+                        client.EnableSsl = true;
+                        client.Timeout = 10000;
+                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        client.UseDefaultCredentials = true;
+                        // nos autenticamos con nuestra cuenta de gmail
+                        client.Credentials = new System.Net.NetworkCredential(correoqueenvia, "kusekinggmypcaka");
+                        MailMessage mail = new MailMessage(correoqueenvia, msjContra + correoquerecibe, this.TxtAsunto.Text, this.suContraEs.Text + General.Tusuario + this.aviso.Text);
+                        mail.BodyEncoding = UTF8Encoding.UTF8;
+                        mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+
+                        client.Send(mail);
+                        MessageBox.Show("Se ha enviado su usuario al correo digitado", "Felicitaciones");
+                        this.correoTextBox.Focus();
+                        this.correoTextBox.Text = string.Empty;
+                        this.correoTextBox.Text = string.Empty;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Correo No Enviado " + ex.ToString(), "Error");
+                    }
                 }
             }
         }

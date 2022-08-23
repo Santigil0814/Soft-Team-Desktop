@@ -61,7 +61,9 @@ namespace Soft_Team
                     );
 
                     try
-                    {                        
+                    {
+                        General.Idusuario = this.usuarioTableAdapter.TraerUnId(this.correoTextBox.Text).ToString();
+                        General.Tcontrasena = (string)this.usuarioTableAdapter.TraerLaContrasena(Convert.ToInt32(General.Idusuario));
                         string correoqueenvia = "soft.team2001@gmail.com";
                         string correoquerecibe = this.correoTextBox.Text;
                         string msjContra = this.suContraEs.Text;
@@ -77,7 +79,7 @@ namespace Soft_Team
                         client.UseDefaultCredentials = true;
                         // nos autenticamos con nuestra cuenta de gmail
                         client.Credentials = new System.Net.NetworkCredential(correoqueenvia, "kusekinggmypcaka");
-                        MailMessage mail = new MailMessage(correoqueenvia, msjContra + correoquerecibe, this.TxtAsunto.Text, this.suContraEs.Text + this.contrasenaTextBox.Text + this.aviso.Text);
+                        MailMessage mail = new MailMessage(correoqueenvia, msjContra + correoquerecibe, this.TxtAsunto.Text, this.suContraEs.Text + Encriptar.descencriptar1(General.Tcontrasena) + this.aviso.Text);
                         mail.BodyEncoding = UTF8Encoding.UTF8;
                         mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 

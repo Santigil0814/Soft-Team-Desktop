@@ -68,12 +68,15 @@ namespace Soft_Team
                         {
                             General.UsuUsuario = this.Txtusuario.Text;
                             General.NomUsuario = this.Txtusuario.Text;
+                            General.Tcontrasena = (string)this.usuarioTableAdapter.TraerUnaContrasena(this.Txtusuario.Text);
+                            General.Idusuario = (this.usuarioTableAdapter.TraerId(General.Tcontrasena, this.Txtusuario.Text).ToString());
                             if (this.Txtcontrasena.Text == Encriptar.descencriptar1(this.usuarioTableAdapter.TraerContraseña(this.Txtusuario.Text)))
                             {
                                 General.UsuUsuario = (string)this.usuarioTableAdapter.TraerUsuario(this.Txtusuario.Text);
                                 General.DatoRol = (string)this.usuarioTableAdapter.TraerRol(this.Txtusuario.Text);
                                 General.EstadoUsu = (string)this.usuarioTableAdapter.TraerEstado(this.Txtusuario.Text);
-                                if(General.DatoRol == "Administrador" && General.EstadoUsu == "Habilitado")
+                                General.Tcontrasena = this.Txtcontrasena.Text;
+                                if (General.DatoRol == "Administrador" && General.EstadoUsu == "Habilitado")
                                 {
                                     this.Visible = false;
                                     Administrador m = new Administrador();

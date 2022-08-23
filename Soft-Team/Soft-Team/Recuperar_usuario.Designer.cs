@@ -30,26 +30,46 @@ namespace Soft_Team
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label contrasenaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recuperar_usuario));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.aviso = new System.Windows.Forms.Label();
+            this.suContraEs = new System.Windows.Forms.Label();
+            this.TxtAsunto = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.RecuperaciónTxT = new System.Windows.Forms.Label();
+            this.usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
             this.usuarioTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.UsuarioTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
+            contrasenaLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // contrasenaLabel
+            // 
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.Location = new System.Drawing.Point(15, 12);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(44, 13);
+            contrasenaLabel.TabIndex = 0;
+            contrasenaLabel.Text = "usuario:";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.correoTextBox);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -60,6 +80,84 @@ namespace Soft_Team
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 425);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.aviso);
+            this.panel2.Controls.Add(this.suContraEs);
+            this.panel2.Controls.Add(this.TxtAsunto);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.RecuperaciónTxT);
+            this.panel2.Controls.Add(contrasenaLabel);
+            this.panel2.Controls.Add(this.usuarioTextBox);
+            this.panel2.Location = new System.Drawing.Point(14, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 10);
+            this.panel2.TabIndex = 46;
+            // 
+            // aviso
+            // 
+            this.aviso.AutoSize = true;
+            this.aviso.Location = new System.Drawing.Point(15, 170);
+            this.aviso.Name = "aviso";
+            this.aviso.Size = new System.Drawing.Size(164, 13);
+            this.aviso.TabIndex = 14;
+            this.aviso.Text = ". No olvide su usuario de ingreso.";
+            // 
+            // suContraEs
+            // 
+            this.suContraEs.AutoSize = true;
+            this.suContraEs.Location = new System.Drawing.Point(18, 130);
+            this.suContraEs.Name = "suContraEs";
+            this.suContraEs.Size = new System.Drawing.Size(77, 13);
+            this.suContraEs.TabIndex = 13;
+            this.suContraEs.Text = "Su usuario es: ";
+            // 
+            // TxtAsunto
+            // 
+            this.TxtAsunto.AutoSize = true;
+            this.TxtAsunto.Location = new System.Drawing.Point(15, 104);
+            this.TxtAsunto.Name = "TxtAsunto";
+            this.TxtAsunto.Size = new System.Drawing.Size(179, 13);
+            this.TxtAsunto.TabIndex = 12;
+            this.TxtAsunto.Text = "Solicitud de recuperacion de usuario";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Asunto:";
+            // 
+            // RecuperaciónTxT
+            // 
+            this.RecuperaciónTxT.AutoSize = true;
+            this.RecuperaciónTxT.Location = new System.Drawing.Point(52, 45);
+            this.RecuperaciónTxT.Name = "RecuperaciónTxT";
+            this.RecuperaciónTxT.Size = new System.Drawing.Size(128, 13);
+            this.RecuperaciónTxT.TabIndex = 2;
+            this.RecuperaciónTxT.Text = "Recuperación de Usuario";
+            // 
+            // usuarioTextBox
+            // 
+            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "contrasena", true));
+            this.usuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioTextBox.Location = new System.Drawing.Point(84, 9);
+            this.usuarioTextBox.Name = "usuarioTextBox";
+            this.usuarioTextBox.Size = new System.Drawing.Size(149, 20);
+            this.usuarioTextBox.TabIndex = 1;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // correoTextBox
             // 
@@ -125,16 +223,6 @@ namespace Soft_Team
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this._Soft_Team1DataSet;
-            // 
-            // _Soft_Team1DataSet
-            // 
-            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
-            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
@@ -144,6 +232,7 @@ namespace Soft_Team
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = null;
             this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = this.usuarioTableAdapter;
             // 
@@ -162,9 +251,11 @@ namespace Soft_Team
             this.Load += new System.EventHandler(this.Recuperar_usuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +273,12 @@ namespace Soft_Team
         private _Soft_Team1DataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private _Soft_Team1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label aviso;
+        private System.Windows.Forms.Label suContraEs;
+        private System.Windows.Forms.Label TxtAsunto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label RecuperaciónTxT;
+        private System.Windows.Forms.TextBox usuarioTextBox;
     }
 }

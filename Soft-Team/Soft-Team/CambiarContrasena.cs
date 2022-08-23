@@ -45,17 +45,14 @@ namespace Soft_Team
                     }
                     else
                     {
-                        if (this.TxtContrasena.Text == Encriptar.descencriptar1(this.usuarioTableAdapter.TraerContrasena(this.TxtContrasena.Text)))
+                        if (this.TxtContrasena.Text == General.Tcontrasena)
                         {
                             if (this.TxtRepetirContra.Text == this.TxtNuevaContra.Text)
                             {
                                 try
                                 {
                                     this.TxtRepetirContra.Text = Encriptar.encriptar1(this.TxtRepetirContra.Text);
-                                    usuarioTableAdapter.CambiarContra(
-                                        this.labelUsuario.Text,
-                                        this.TxtRepetirContra.Text
-                                        );
+                                    usuarioTableAdapter.CambiarContra(this.TxtRepetirContra.Text,Convert.ToInt32(General.Idusuario));
                                     MessageBox.Show("Registro actualizado", "Notificación");
                                     this.Close();
                                 }
@@ -92,8 +89,6 @@ namespace Soft_Team
         private void CambiarContrasena_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla '_Soft_Team1DataSet.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this._Soft_Team1DataSet.Usuario);
-            this.TxtRepetirContra.Text = Encriptar.descencriptar1(this.TxtRepetirContra.Text);
 
             labelUsuario.Text = General.UsuUsuario;
         }
@@ -101,6 +96,11 @@ namespace Soft_Team
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -52,10 +52,10 @@ namespace Soft_Team
             reportePorFecha.SetDataSource(ds1);
 
             // Parametros
-            Fi = Fecha1.ToString().Substring(44, 10) + " 00:00:00";
-            Ff = Fecha2.ToString().Substring(44, 10) + " 23:59:59";
-            reportePorFecha.SetParameterValue("Fecha1", Convert.ToDateTime(Fecha1));
-            reportePorFecha.SetParameterValue("Fecha2", Convert.ToDateTime(Fecha2));
+            Fi = Fecha1.ToString().Substring(44, 10) + " 00:00:00.000";
+            Ff = Fecha2.ToString().Substring(44, 10) + " 23:59:59.000";
+            reportePorFecha.SetParameterValue("Fecha1", Convert.ToDateTime(Fi));
+            reportePorFecha.SetParameterValue("Fecha2", Convert.ToDateTime(Ff));
             //reporte.SetParameterValue("Codigo_Ficha", p.Ficha.Text);
             //reporte.SetParameterValue("Fecha2", Fecha2);
 
