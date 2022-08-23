@@ -71,7 +71,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(506, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 32);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -161,7 +161,7 @@ namespace Soft_Team
             this.button3.Location = new System.Drawing.Point(47, 221);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(180, 36);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 1;
             this.button3.Text = "ACTUALIZAR CONTRASEÑA";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

@@ -129,7 +129,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(371, 314);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
-            this.button1.TabIndex = 11;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -145,7 +145,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(471, 314);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
-            this.button2.TabIndex = 12;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -178,35 +178,35 @@ namespace Soft_Team
             this.nom_1TextBox.Location = new System.Drawing.Point(247, 139);
             this.nom_1TextBox.Name = "nom_1TextBox";
             this.nom_1TextBox.Size = new System.Drawing.Size(378, 20);
-            this.nom_1TextBox.TabIndex = 14;
+            this.nom_1TextBox.TabIndex = 1;
             // 
             // nom_2TextBox
             // 
             this.nom_2TextBox.Location = new System.Drawing.Point(247, 169);
             this.nom_2TextBox.Name = "nom_2TextBox";
             this.nom_2TextBox.Size = new System.Drawing.Size(378, 20);
-            this.nom_2TextBox.TabIndex = 15;
+            this.nom_2TextBox.TabIndex = 2;
             // 
             // ape_1TextBox
             // 
             this.ape_1TextBox.Location = new System.Drawing.Point(247, 199);
             this.ape_1TextBox.Name = "ape_1TextBox";
             this.ape_1TextBox.Size = new System.Drawing.Size(378, 20);
-            this.ape_1TextBox.TabIndex = 16;
+            this.ape_1TextBox.TabIndex = 3;
             // 
             // ape_2TextBox
             // 
             this.ape_2TextBox.Location = new System.Drawing.Point(247, 232);
             this.ape_2TextBox.Name = "ape_2TextBox";
             this.ape_2TextBox.Size = new System.Drawing.Size(378, 20);
-            this.ape_2TextBox.TabIndex = 17;
+            this.ape_2TextBox.TabIndex = 4;
             // 
             // fichaOperadorTextBox
             // 
             this.fichaOperadorTextBox.Location = new System.Drawing.Point(247, 267);
             this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
             this.fichaOperadorTextBox.Size = new System.Drawing.Size(378, 20);
-            this.fichaOperadorTextBox.TabIndex = 18;
+            this.fichaOperadorTextBox.TabIndex = 5;
             this.fichaOperadorTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fichaOperadorTextBox_KeyPress);
             // 
             // Agregar_operador

@@ -133,7 +133,7 @@ namespace Soft_Team
             this.button6.Location = new System.Drawing.Point(23, 88);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(98, 26);
-            this.button6.TabIndex = 71;
+            this.button6.TabIndex = 3;
             this.button6.Text = "Salida máquina";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -146,7 +146,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(23, 55);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 26);
-            this.button2.TabIndex = 70;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Generar reporte";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -167,7 +167,7 @@ namespace Soft_Team
             this.fecha_hora_ingresoDateTimePicker.Location = new System.Drawing.Point(268, 85);
             this.fecha_hora_ingresoDateTimePicker.Name = "fecha_hora_ingresoDateTimePicker";
             this.fecha_hora_ingresoDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_ingresoDateTimePicker.TabIndex = 5;
+            this.fecha_hora_ingresoDateTimePicker.TabIndex = 6;
             // 
             // maquinaria_mantenimientoBindingSource
             // 
@@ -209,6 +209,7 @@ namespace Soft_Team
             this.seccion_1ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_1", true));
             this.seccion_1ComboBox.FormattingEnabled = true;
             this.seccion_1ComboBox.Items.AddRange(new object[] {
+            "",
             "SERVITECA"});
             this.seccion_1ComboBox.Location = new System.Drawing.Point(108, 16);
             this.seccion_1ComboBox.Name = "seccion_1ComboBox";
@@ -251,6 +252,7 @@ namespace Soft_Team
             this.seccion_2ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_2", true));
             this.seccion_2ComboBox.FormattingEnabled = true;
             this.seccion_2ComboBox.Items.AddRange(new object[] {
+            "",
             "DIESEL"});
             this.seccion_2ComboBox.Location = new System.Drawing.Point(108, 46);
             this.seccion_2ComboBox.Name = "seccion_2ComboBox";
@@ -273,6 +275,7 @@ namespace Soft_Team
             this.seccion_3ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_3", true));
             this.seccion_3ComboBox.FormattingEnabled = true;
             this.seccion_3ComboBox.Items.AddRange(new object[] {
+            "",
             "AUTOMOTRIZ"});
             this.seccion_3ComboBox.Location = new System.Drawing.Point(108, 71);
             this.seccion_3ComboBox.Name = "seccion_3ComboBox";
@@ -295,6 +298,7 @@ namespace Soft_Team
             this.seccion_4ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_4", true));
             this.seccion_4ComboBox.FormattingEnabled = true;
             this.seccion_4ComboBox.Items.AddRange(new object[] {
+            "",
             "LAMINA Y PINTURA"});
             this.seccion_4ComboBox.Location = new System.Drawing.Point(347, 15);
             this.seccion_4ComboBox.Name = "seccion_4ComboBox";
@@ -317,6 +321,7 @@ namespace Soft_Team
             this.seccion_5ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_5", true));
             this.seccion_5ComboBox.FormattingEnabled = true;
             this.seccion_5ComboBox.Items.AddRange(new object[] {
+            "",
             "ELECTRICOS"});
             this.seccion_5ComboBox.Location = new System.Drawing.Point(347, 46);
             this.seccion_5ComboBox.Name = "seccion_5ComboBox";
@@ -339,6 +344,7 @@ namespace Soft_Team
             this.seccion_6ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_6", true));
             this.seccion_6ComboBox.FormattingEnabled = true;
             this.seccion_6ComboBox.Items.AddRange(new object[] {
+            "",
             "SOLDADURA"});
             this.seccion_6ComboBox.Location = new System.Drawing.Point(346, 71);
             this.seccion_6ComboBox.Name = "seccion_6ComboBox";
@@ -361,6 +367,7 @@ namespace Soft_Team
             this.seccion_7ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_7", true));
             this.seccion_7ComboBox.FormattingEnabled = true;
             this.seccion_7ComboBox.Items.AddRange(new object[] {
+            "",
             "TORNO"});
             this.seccion_7ComboBox.Location = new System.Drawing.Point(604, 16);
             this.seccion_7ComboBox.Name = "seccion_7ComboBox";
@@ -383,6 +390,7 @@ namespace Soft_Team
             this.seccion_8ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_8", true));
             this.seccion_8ComboBox.FormattingEnabled = true;
             this.seccion_8ComboBox.Items.AddRange(new object[] {
+            "",
             "MONTALLANTAS"});
             this.seccion_8ComboBox.Location = new System.Drawing.Point(604, 46);
             this.seccion_8ComboBox.Name = "seccion_8ComboBox";
@@ -395,6 +403,7 @@ namespace Soft_Team
             this.seccion_9ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_9", true));
             this.seccion_9ComboBox.FormattingEnabled = true;
             this.seccion_9ComboBox.Items.AddRange(new object[] {
+            "",
             "MECANICOS CAMPO"});
             this.seccion_9ComboBox.Location = new System.Drawing.Point(604, 71);
             this.seccion_9ComboBox.Name = "seccion_9ComboBox";
@@ -426,6 +435,7 @@ namespace Soft_Team
             this.tipo_mantenimientoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "tipo_mantenimiento", true));
             this.tipo_mantenimientoComboBox.FormattingEnabled = true;
             this.tipo_mantenimientoComboBox.Items.AddRange(new object[] {
+            "",
             "Preventivo",
             "Predictivo",
             "Correctivo",
@@ -443,7 +453,7 @@ namespace Soft_Team
             this.horometro_actualTextBox.Location = new System.Drawing.Point(268, 63);
             this.horometro_actualTextBox.Name = "horometro_actualTextBox";
             this.horometro_actualTextBox.Size = new System.Drawing.Size(229, 20);
-            this.horometro_actualTextBox.TabIndex = 4;
+            this.horometro_actualTextBox.TabIndex = 5;
             // 
             // id_MaquinaTextBox
             // 
@@ -451,7 +461,7 @@ namespace Soft_Team
             this.id_MaquinaTextBox.Location = new System.Drawing.Point(268, 41);
             this.id_MaquinaTextBox.Name = "id_MaquinaTextBox";
             this.id_MaquinaTextBox.Size = new System.Drawing.Size(229, 20);
-            this.id_MaquinaTextBox.TabIndex = 3;
+            this.id_MaquinaTextBox.TabIndex = 4;
             this.id_MaquinaTextBox.TextChanged += new System.EventHandler(this.id_MaquinaTextBox_TextChanged);
             this.id_MaquinaTextBox.Validated += new System.EventHandler(this.id_MaquinaTextBox_Validated);
             // 

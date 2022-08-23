@@ -196,7 +196,7 @@ namespace Soft_Team
             this.button5.Location = new System.Drawing.Point(610, 136);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 53;
+            this.button5.TabIndex = 9;
             this.button5.Text = "Rechazar";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -208,7 +208,7 @@ namespace Soft_Team
             this.button4.Location = new System.Drawing.Point(314, 136);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 52;
+            this.button4.TabIndex = 8;
             this.button4.Text = "Aprobar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -219,7 +219,7 @@ namespace Soft_Team
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(228, 89);
-            this.textBox7.TabIndex = 51;
+            this.textBox7.TabIndex = 7;
             // 
             // label9
             // 
@@ -236,35 +236,35 @@ namespace Soft_Team
             this.textBox5.Location = new System.Drawing.Point(274, 97);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(229, 20);
-            this.textBox5.TabIndex = 49;
+            this.textBox5.TabIndex = 6;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(274, 75);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(229, 20);
-            this.textBox4.TabIndex = 48;
+            this.textBox4.TabIndex = 5;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(274, 53);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(229, 20);
-            this.textBox3.TabIndex = 47;
+            this.textBox3.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(274, 31);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(229, 20);
-            this.textBox2.TabIndex = 46;
+            this.textBox2.TabIndex = 3;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(274, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 20);
-            this.textBox1.TabIndex = 45;
+            this.textBox1.TabIndex = 2;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label5
@@ -329,7 +329,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(18, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 39;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Capturar info.";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -403,14 +403,14 @@ namespace Soft_Team
             // ajustesToolStripMenuItem1
             // 
             this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
-            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.ajustesToolStripMenuItem1.Text = "Ajustes";
             this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 

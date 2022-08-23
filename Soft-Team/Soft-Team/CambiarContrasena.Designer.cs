@@ -124,7 +124,7 @@ namespace Soft_Team
             this.button3.Location = new System.Drawing.Point(94, 254);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(149, 34);
-            this.button3.TabIndex = 13;
+            this.button3.TabIndex = 4;
             this.button3.Text = "ACTUALIZAR";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -140,7 +140,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(324, 254);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(149, 34);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 5;
             this.button2.Text = "CANCELAR";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -150,7 +150,7 @@ namespace Soft_Team
             this.TxtContrasena.Location = new System.Drawing.Point(185, 131);
             this.TxtContrasena.Name = "TxtContrasena";
             this.TxtContrasena.Size = new System.Drawing.Size(216, 20);
-            this.TxtContrasena.TabIndex = 15;
+            this.TxtContrasena.TabIndex = 1;
             // 
             // label2
             // 
@@ -175,7 +175,7 @@ namespace Soft_Team
             this.TxtNuevaContra.Location = new System.Drawing.Point(185, 167);
             this.TxtNuevaContra.Name = "TxtNuevaContra";
             this.TxtNuevaContra.Size = new System.Drawing.Size(216, 20);
-            this.TxtNuevaContra.TabIndex = 17;
+            this.TxtNuevaContra.TabIndex = 2;
             // 
             // label4
             // 
@@ -225,7 +225,7 @@ namespace Soft_Team
             this.TxtRepetirContra.Location = new System.Drawing.Point(185, 202);
             this.TxtRepetirContra.Name = "TxtRepetirContra";
             this.TxtRepetirContra.Size = new System.Drawing.Size(216, 20);
-            this.TxtRepetirContra.TabIndex = 23;
+            this.TxtRepetirContra.TabIndex = 3;
             // 
             // CambiarContrasena
             // 

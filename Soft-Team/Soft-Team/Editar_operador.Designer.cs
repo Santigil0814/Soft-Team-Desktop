@@ -113,7 +113,7 @@ namespace Soft_Team
             this.fichaOperadorTextBox.Location = new System.Drawing.Point(247, 272);
             this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
             this.fichaOperadorTextBox.Size = new System.Drawing.Size(378, 20);
-            this.fichaOperadorTextBox.TabIndex = 31;
+            this.fichaOperadorTextBox.TabIndex = 5;
             // 
             // operadoresBindingSource
             // 
@@ -131,7 +131,7 @@ namespace Soft_Team
             this.ape_2TextBox.Location = new System.Drawing.Point(247, 237);
             this.ape_2TextBox.Name = "ape_2TextBox";
             this.ape_2TextBox.Size = new System.Drawing.Size(378, 20);
-            this.ape_2TextBox.TabIndex = 30;
+            this.ape_2TextBox.TabIndex = 4;
             // 
             // ape_1TextBox
             // 
@@ -139,7 +139,7 @@ namespace Soft_Team
             this.ape_1TextBox.Location = new System.Drawing.Point(247, 204);
             this.ape_1TextBox.Name = "ape_1TextBox";
             this.ape_1TextBox.Size = new System.Drawing.Size(378, 20);
-            this.ape_1TextBox.TabIndex = 29;
+            this.ape_1TextBox.TabIndex = 3;
             // 
             // nom_2TextBox
             // 
@@ -147,7 +147,7 @@ namespace Soft_Team
             this.nom_2TextBox.Location = new System.Drawing.Point(247, 174);
             this.nom_2TextBox.Name = "nom_2TextBox";
             this.nom_2TextBox.Size = new System.Drawing.Size(378, 20);
-            this.nom_2TextBox.TabIndex = 28;
+            this.nom_2TextBox.TabIndex = 2;
             // 
             // nom_1TextBox
             // 
@@ -155,7 +155,7 @@ namespace Soft_Team
             this.nom_1TextBox.Location = new System.Drawing.Point(247, 144);
             this.nom_1TextBox.Name = "nom_1TextBox";
             this.nom_1TextBox.Size = new System.Drawing.Size(378, 20);
-            this.nom_1TextBox.TabIndex = 27;
+            this.nom_1TextBox.TabIndex = 1;
             // 
             // button2
             // 
@@ -168,7 +168,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(471, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
-            this.button2.TabIndex = 26;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -183,7 +183,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(371, 319);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
-            this.button1.TabIndex = 25;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

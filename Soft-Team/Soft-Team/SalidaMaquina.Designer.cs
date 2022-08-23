@@ -171,14 +171,14 @@ namespace Soft_Team
             // ajustesToolStripMenuItem1
             // 
             this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
-            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajustesToolStripMenuItem1.Text = "Ajustes";
             this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -216,7 +216,7 @@ namespace Soft_Team
             this.button7.Location = new System.Drawing.Point(536, 20);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(222, 23);
-            this.button7.TabIndex = 72;
+            this.button7.TabIndex = 5;
             this.button7.Text = "Buscar";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -229,7 +229,7 @@ namespace Soft_Team
             this.button6.Location = new System.Drawing.Point(23, 88);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(98, 26);
-            this.button6.TabIndex = 71;
+            this.button6.TabIndex = 3;
             this.button6.Text = "Salida máquina";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -242,7 +242,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(23, 55);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 26);
-            this.button2.TabIndex = 70;
+            this.button2.TabIndex = 2;
             this.button2.Text = "Generar reporte";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -253,7 +253,7 @@ namespace Soft_Team
             this.fichaOperadorTextBox.Location = new System.Drawing.Point(268, 161);
             this.fichaOperadorTextBox.Name = "fichaOperadorTextBox";
             this.fichaOperadorTextBox.Size = new System.Drawing.Size(229, 20);
-            this.fichaOperadorTextBox.TabIndex = 8;
+            this.fichaOperadorTextBox.TabIndex = 10;
             // 
             // operadoresBindingSource
             // 
@@ -283,7 +283,7 @@ namespace Soft_Team
             this.fecha_hora_salidaDateTimePicker.Location = new System.Drawing.Point(268, 117);
             this.fecha_hora_salidaDateTimePicker.Name = "fecha_hora_salidaDateTimePicker";
             this.fecha_hora_salidaDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_salidaDateTimePicker.TabIndex = 6;
+            this.fecha_hora_salidaDateTimePicker.TabIndex = 8;
             // 
             // maquinaria_mantenimientoBindingSource
             // 
@@ -297,7 +297,7 @@ namespace Soft_Team
             this.fecha_hora_ingresoDateTimePicker.Location = new System.Drawing.Point(268, 95);
             this.fecha_hora_ingresoDateTimePicker.Name = "fecha_hora_ingresoDateTimePicker";
             this.fecha_hora_ingresoDateTimePicker.Size = new System.Drawing.Size(229, 20);
-            this.fecha_hora_ingresoDateTimePicker.TabIndex = 5;
+            this.fecha_hora_ingresoDateTimePicker.TabIndex = 7;
             // 
             // panel2
             // 
@@ -328,12 +328,14 @@ namespace Soft_Team
             // 
             this.seccion_1ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_1", true));
             this.seccion_1ComboBox.FormattingEnabled = true;
+            this.seccion_1ComboBox.ItemHeight = 13;
             this.seccion_1ComboBox.Items.AddRange(new object[] {
+            "",
             "SERVITECA"});
             this.seccion_1ComboBox.Location = new System.Drawing.Point(108, 16);
             this.seccion_1ComboBox.Name = "seccion_1ComboBox";
             this.seccion_1ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_1ComboBox.TabIndex = 12;
+            this.seccion_1ComboBox.TabIndex = 14;
             // 
             // label16
             // 
@@ -370,11 +372,12 @@ namespace Soft_Team
             this.seccion_2ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_2", true));
             this.seccion_2ComboBox.FormattingEnabled = true;
             this.seccion_2ComboBox.Items.AddRange(new object[] {
+            "",
             "DIESEL"});
             this.seccion_2ComboBox.Location = new System.Drawing.Point(108, 46);
             this.seccion_2ComboBox.Name = "seccion_2ComboBox";
             this.seccion_2ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_2ComboBox.TabIndex = 15;
+            this.seccion_2ComboBox.TabIndex = 17;
             // 
             // label14
             // 
@@ -391,11 +394,12 @@ namespace Soft_Team
             this.seccion_3ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_3", true));
             this.seccion_3ComboBox.FormattingEnabled = true;
             this.seccion_3ComboBox.Items.AddRange(new object[] {
+            "",
             "AUTOMOTRIZ"});
             this.seccion_3ComboBox.Location = new System.Drawing.Point(108, 71);
             this.seccion_3ComboBox.Name = "seccion_3ComboBox";
             this.seccion_3ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_3ComboBox.TabIndex = 18;
+            this.seccion_3ComboBox.TabIndex = 20;
             // 
             // label13
             // 
@@ -411,12 +415,14 @@ namespace Soft_Team
             // 
             this.seccion_4ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_4", true));
             this.seccion_4ComboBox.FormattingEnabled = true;
+            this.seccion_4ComboBox.ItemHeight = 13;
             this.seccion_4ComboBox.Items.AddRange(new object[] {
+            "",
             "LAMINA Y PINTURA"});
             this.seccion_4ComboBox.Location = new System.Drawing.Point(347, 15);
             this.seccion_4ComboBox.Name = "seccion_4ComboBox";
             this.seccion_4ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_4ComboBox.TabIndex = 13;
+            this.seccion_4ComboBox.TabIndex = 15;
             // 
             // label12
             // 
@@ -433,11 +439,12 @@ namespace Soft_Team
             this.seccion_5ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_5", true));
             this.seccion_5ComboBox.FormattingEnabled = true;
             this.seccion_5ComboBox.Items.AddRange(new object[] {
+            "",
             "ELECTRICOS"});
             this.seccion_5ComboBox.Location = new System.Drawing.Point(347, 46);
             this.seccion_5ComboBox.Name = "seccion_5ComboBox";
             this.seccion_5ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_5ComboBox.TabIndex = 16;
+            this.seccion_5ComboBox.TabIndex = 18;
             // 
             // label11
             // 
@@ -454,11 +461,12 @@ namespace Soft_Team
             this.seccion_6ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_6", true));
             this.seccion_6ComboBox.FormattingEnabled = true;
             this.seccion_6ComboBox.Items.AddRange(new object[] {
+            "",
             "SOLDADURA"});
             this.seccion_6ComboBox.Location = new System.Drawing.Point(346, 71);
             this.seccion_6ComboBox.Name = "seccion_6ComboBox";
             this.seccion_6ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_6ComboBox.TabIndex = 19;
+            this.seccion_6ComboBox.TabIndex = 21;
             // 
             // label10
             // 
@@ -474,12 +482,14 @@ namespace Soft_Team
             // 
             this.seccion_7ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_7", true));
             this.seccion_7ComboBox.FormattingEnabled = true;
+            this.seccion_7ComboBox.ItemHeight = 13;
             this.seccion_7ComboBox.Items.AddRange(new object[] {
+            "",
             "TORNO"});
             this.seccion_7ComboBox.Location = new System.Drawing.Point(604, 16);
             this.seccion_7ComboBox.Name = "seccion_7ComboBox";
             this.seccion_7ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_7ComboBox.TabIndex = 14;
+            this.seccion_7ComboBox.TabIndex = 16;
             // 
             // label8
             // 
@@ -496,22 +506,24 @@ namespace Soft_Team
             this.seccion_8ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_8", true));
             this.seccion_8ComboBox.FormattingEnabled = true;
             this.seccion_8ComboBox.Items.AddRange(new object[] {
+            "",
             "MONTALLANTAS"});
             this.seccion_8ComboBox.Location = new System.Drawing.Point(604, 46);
             this.seccion_8ComboBox.Name = "seccion_8ComboBox";
             this.seccion_8ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_8ComboBox.TabIndex = 17;
+            this.seccion_8ComboBox.TabIndex = 19;
             // 
             // seccion_9ComboBox
             // 
             this.seccion_9ComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "seccion_9", true));
             this.seccion_9ComboBox.FormattingEnabled = true;
             this.seccion_9ComboBox.Items.AddRange(new object[] {
+            "",
             "MECANICOS CAMPO"});
             this.seccion_9ComboBox.Location = new System.Drawing.Point(604, 71);
             this.seccion_9ComboBox.Name = "seccion_9ComboBox";
             this.seccion_9ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.seccion_9ComboBox.TabIndex = 20;
+            this.seccion_9ComboBox.TabIndex = 22;
             // 
             // label1
             // 
@@ -530,13 +542,14 @@ namespace Soft_Team
             this.observacionesTextBox.Multiline = true;
             this.observacionesTextBox.Name = "observacionesTextBox";
             this.observacionesTextBox.Size = new System.Drawing.Size(228, 97);
-            this.observacionesTextBox.TabIndex = 9;
+            this.observacionesTextBox.TabIndex = 11;
             // 
             // tipo_mantenimientoComboBox
             // 
             this.tipo_mantenimientoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinaria_mantenimientoBindingSource, "tipo_mantenimiento", true));
             this.tipo_mantenimientoComboBox.FormattingEnabled = true;
             this.tipo_mantenimientoComboBox.Items.AddRange(new object[] {
+            "",
             "Preventivo",
             "Predictivo",
             "Correctivo",
@@ -544,7 +557,7 @@ namespace Soft_Team
             this.tipo_mantenimientoComboBox.Location = new System.Drawing.Point(268, 138);
             this.tipo_mantenimientoComboBox.Name = "tipo_mantenimientoComboBox";
             this.tipo_mantenimientoComboBox.Size = new System.Drawing.Size(229, 21);
-            this.tipo_mantenimientoComboBox.TabIndex = 7;
+            this.tipo_mantenimientoComboBox.TabIndex = 9;
             this.tipo_mantenimientoComboBox.Text = "Seleccione el tipo de mantenimiento";
             // 
             // horometro_actualTextBox
@@ -553,7 +566,7 @@ namespace Soft_Team
             this.horometro_actualTextBox.Location = new System.Drawing.Point(268, 73);
             this.horometro_actualTextBox.Name = "horometro_actualTextBox";
             this.horometro_actualTextBox.Size = new System.Drawing.Size(229, 20);
-            this.horometro_actualTextBox.TabIndex = 4;
+            this.horometro_actualTextBox.TabIndex = 6;
             // 
             // id_MaquinaTextBox
             // 
@@ -561,7 +574,7 @@ namespace Soft_Team
             this.id_MaquinaTextBox.Location = new System.Drawing.Point(268, 22);
             this.id_MaquinaTextBox.Name = "id_MaquinaTextBox";
             this.id_MaquinaTextBox.Size = new System.Drawing.Size(229, 20);
-            this.id_MaquinaTextBox.TabIndex = 3;
+            this.id_MaquinaTextBox.TabIndex = 4;
             // 
             // button4
             // 
@@ -573,7 +586,7 @@ namespace Soft_Team
             this.button4.Location = new System.Drawing.Point(530, 207);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(228, 26);
-            this.button4.TabIndex = 11;
+            this.button4.TabIndex = 13;
             this.button4.Text = "Generar correo";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -587,7 +600,7 @@ namespace Soft_Team
             this.button3.Location = new System.Drawing.Point(530, 177);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(228, 26);
-            this.button3.TabIndex = 10;
+            this.button3.TabIndex = 12;
             this.button3.Text = "Solicitar aprobación de salida";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);

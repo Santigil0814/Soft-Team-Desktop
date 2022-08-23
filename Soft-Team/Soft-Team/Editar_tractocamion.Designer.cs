@@ -130,7 +130,7 @@ namespace Soft_Team
             this.estadoComboBox.Location = new System.Drawing.Point(351, 176);
             this.estadoComboBox.Name = "estadoComboBox";
             this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.estadoComboBox.TabIndex = 86;
+            this.estadoComboBox.TabIndex = 3;
             this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress);
             // 
             // maquinasBindingSource
@@ -159,7 +159,7 @@ namespace Soft_Team
             this.rPMTextBox.Location = new System.Drawing.Point(351, 573);
             this.rPMTextBox.Name = "rPMTextBox";
             this.rPMTextBox.Size = new System.Drawing.Size(298, 20);
-            this.rPMTextBox.TabIndex = 84;
+            this.rPMTextBox.TabIndex = 12;
             this.rPMTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rPMTextBox_KeyPress);
             // 
             // cilindrajeTextBox
@@ -168,13 +168,14 @@ namespace Soft_Team
             this.cilindrajeTextBox.Location = new System.Drawing.Point(351, 521);
             this.cilindrajeTextBox.Name = "cilindrajeTextBox";
             this.cilindrajeTextBox.Size = new System.Drawing.Size(298, 20);
-            this.cilindrajeTextBox.TabIndex = 83;
+            this.cilindrajeTextBox.TabIndex = 11;
             this.cilindrajeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cilindrajeTextBox_KeyPress);
             // 
             // horas_KmComboBox
             // 
             this.horas_KmComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horas_Km", true));
             this.horas_KmComboBox.FormattingEnabled = true;
+            this.horas_KmComboBox.ItemHeight = 13;
             this.horas_KmComboBox.Items.AddRange(new object[] {
             "Horas",
             "Kilómetros"});
@@ -190,7 +191,7 @@ namespace Soft_Team
             this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(351, 471);
             this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
             this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(174, 20);
-            this.horometro_Km_inicialTextBox.TabIndex = 81;
+            this.horometro_Km_inicialTextBox.TabIndex = 9;
             this.horometro_Km_inicialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horometro_Km_inicialTextBox_KeyPress);
             // 
             // modeloTextBox
@@ -199,7 +200,7 @@ namespace Soft_Team
             this.modeloTextBox.Location = new System.Drawing.Point(351, 421);
             this.modeloTextBox.Name = "modeloTextBox";
             this.modeloTextBox.Size = new System.Drawing.Size(298, 20);
-            this.modeloTextBox.TabIndex = 80;
+            this.modeloTextBox.TabIndex = 8;
             // 
             // marcaComboBox
             // 
@@ -211,7 +212,7 @@ namespace Soft_Team
             this.marcaComboBox.Location = new System.Drawing.Point(351, 370);
             this.marcaComboBox.Name = "marcaComboBox";
             this.marcaComboBox.Size = new System.Drawing.Size(199, 21);
-            this.marcaComboBox.TabIndex = 79;
+            this.marcaComboBox.TabIndex = 7;
             this.marcaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.marcaComboBox_KeyPress);
             // 
             // u_tecnicaComboBox
@@ -226,7 +227,7 @@ namespace Soft_Team
             this.u_tecnicaComboBox.Location = new System.Drawing.Point(351, 321);
             this.u_tecnicaComboBox.Name = "u_tecnicaComboBox";
             this.u_tecnicaComboBox.Size = new System.Drawing.Size(199, 21);
-            this.u_tecnicaComboBox.TabIndex = 78;
+            this.u_tecnicaComboBox.TabIndex = 6;
             this.u_tecnicaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.u_tecnicaComboBox_KeyPress);
             // 
             // serieTextBox
@@ -235,7 +236,7 @@ namespace Soft_Team
             this.serieTextBox.Location = new System.Drawing.Point(351, 271);
             this.serieTextBox.Name = "serieTextBox";
             this.serieTextBox.Size = new System.Drawing.Size(298, 20);
-            this.serieTextBox.TabIndex = 77;
+            this.serieTextBox.TabIndex = 5;
             // 
             // referenciaTextBox
             // 
@@ -243,7 +244,7 @@ namespace Soft_Team
             this.referenciaTextBox.Location = new System.Drawing.Point(351, 221);
             this.referenciaTextBox.Name = "referenciaTextBox";
             this.referenciaTextBox.Size = new System.Drawing.Size(298, 20);
-            this.referenciaTextBox.TabIndex = 76;
+            this.referenciaTextBox.TabIndex = 4;
             // 
             // tipo_maquinaComboBox
             // 
@@ -254,7 +255,7 @@ namespace Soft_Team
             this.tipo_maquinaComboBox.Location = new System.Drawing.Point(351, 126);
             this.tipo_maquinaComboBox.Name = "tipo_maquinaComboBox";
             this.tipo_maquinaComboBox.Size = new System.Drawing.Size(199, 21);
-            this.tipo_maquinaComboBox.TabIndex = 75;
+            this.tipo_maquinaComboBox.TabIndex = 2;
             this.tipo_maquinaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipo_maquinaComboBox_KeyPress);
             // 
             // n_internoTextBox
@@ -264,7 +265,7 @@ namespace Soft_Team
             this.n_internoTextBox.Location = new System.Drawing.Point(351, 76);
             this.n_internoTextBox.Name = "n_internoTextBox";
             this.n_internoTextBox.Size = new System.Drawing.Size(298, 20);
-            this.n_internoTextBox.TabIndex = 74;
+            this.n_internoTextBox.TabIndex = 1;
             // 
             // label12
             // 
@@ -382,7 +383,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(194, 502);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -392,7 +393,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(89, 502);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

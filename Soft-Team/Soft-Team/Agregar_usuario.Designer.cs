@@ -181,7 +181,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(327, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -197,7 +197,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(427, 434);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
-            this.button2.TabIndex = 10;
+            this.button2.TabIndex = 11;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -278,7 +278,7 @@ namespace Soft_Team
             this.usuarioTextBox.MaxLength = 10;
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(232, 20);
-            this.usuarioTextBox.TabIndex = 7;
+            this.usuarioTextBox.TabIndex = 8;
             this.usuarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usuarioTextBox_KeyPress);
             this.usuarioTextBox.Validated += new System.EventHandler(this.usuarioTextBox_Validated);
             // 
@@ -289,7 +289,7 @@ namespace Soft_Team
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.PasswordChar = '*';
             this.contrasenaTextBox.Size = new System.Drawing.Size(218, 20);
-            this.contrasenaTextBox.TabIndex = 8;
+            this.contrasenaTextBox.TabIndex = 9;
             // 
             // correoTextBox
             // 
@@ -309,7 +309,7 @@ namespace Soft_Team
             this.estadoComboBox.Location = new System.Drawing.Point(162, 314);
             this.estadoComboBox.Name = "estadoComboBox";
             this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.estadoComboBox.TabIndex = 29;
+            this.estadoComboBox.TabIndex = 7;
             this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress);
             // 
             // Agregar_usuario

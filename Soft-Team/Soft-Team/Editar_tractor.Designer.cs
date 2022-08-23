@@ -33,9 +33,19 @@ namespace Soft_Team
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Editar_tractor));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tipo_maquinaComboBox = new System.Windows.Forms.ComboBox();
+            this.rPMTextBox = new System.Windows.Forms.TextBox();
             this.maquinasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.cilindrajeTextBox = new System.Windows.Forms.TextBox();
+            this.horas_KmComboBox = new System.Windows.Forms.ComboBox();
+            this.horometro_Km_inicialTextBox = new System.Windows.Forms.TextBox();
+            this.modeloTextBox = new System.Windows.Forms.TextBox();
+            this.marcaComboBox = new System.Windows.Forms.ComboBox();
+            this.u_tecnicaComboBox = new System.Windows.Forms.ComboBox();
+            this.serieTextBox = new System.Windows.Forms.TextBox();
+            this.referenciaTextBox = new System.Windows.Forms.TextBox();
+            this.n_internoTextBox = new System.Windows.Forms.TextBox();
+            this.tipo_maquinaComboBox = new System.Windows.Forms.ComboBox();
             this.estadoComboBox = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -55,16 +65,6 @@ namespace Soft_Team
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maquinasTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.MaquinasTableAdapter();
             this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
-            this.n_internoTextBox = new System.Windows.Forms.TextBox();
-            this.referenciaTextBox = new System.Windows.Forms.TextBox();
-            this.serieTextBox = new System.Windows.Forms.TextBox();
-            this.u_tecnicaComboBox = new System.Windows.Forms.ComboBox();
-            this.marcaComboBox = new System.Windows.Forms.ComboBox();
-            this.modeloTextBox = new System.Windows.Forms.TextBox();
-            this.horometro_Km_inicialTextBox = new System.Windows.Forms.TextBox();
-            this.horas_KmComboBox = new System.Windows.Forms.ComboBox();
-            this.cilindrajeTextBox = new System.Windows.Forms.TextBox();
-            this.rPMTextBox = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maquinasBindingSource)).BeginInit();
@@ -120,17 +120,14 @@ namespace Soft_Team
             this.panel1.Size = new System.Drawing.Size(791, 617);
             this.panel1.TabIndex = 10;
             // 
-            // tipo_maquinaComboBox
+            // rPMTextBox
             // 
-            this.tipo_maquinaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Tipo_maquina", true));
-            this.tipo_maquinaComboBox.FormattingEnabled = true;
-            this.tipo_maquinaComboBox.Items.AddRange(new object[] {
-            "Tractor"});
-            this.tipo_maquinaComboBox.Location = new System.Drawing.Point(351, 126);
-            this.tipo_maquinaComboBox.Name = "tipo_maquinaComboBox";
-            this.tipo_maquinaComboBox.Size = new System.Drawing.Size(205, 21);
-            this.tipo_maquinaComboBox.TabIndex = 81;
-            this.tipo_maquinaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipo_maquinaComboBox_KeyPress);
+            this.rPMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "RPM", true));
+            this.rPMTextBox.Location = new System.Drawing.Point(352, 577);
+            this.rPMTextBox.Name = "rPMTextBox";
+            this.rPMTextBox.Size = new System.Drawing.Size(297, 20);
+            this.rPMTextBox.TabIndex = 12;
+            this.rPMTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rPMTextBox_KeyPress);
             // 
             // maquinasBindingSource
             // 
@@ -142,6 +139,96 @@ namespace Soft_Team
             this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
             this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // cilindrajeTextBox
+            // 
+            this.cilindrajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Cilindraje", true));
+            this.cilindrajeTextBox.Location = new System.Drawing.Point(351, 525);
+            this.cilindrajeTextBox.Name = "cilindrajeTextBox";
+            this.cilindrajeTextBox.Size = new System.Drawing.Size(298, 20);
+            this.cilindrajeTextBox.TabIndex = 11;
+            this.cilindrajeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cilindrajeTextBox_KeyPress);
+            // 
+            // horas_KmComboBox
+            // 
+            this.horas_KmComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horas_Km", true));
+            this.horas_KmComboBox.FormattingEnabled = true;
+            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 475);
+            this.horas_KmComboBox.Name = "horas_KmComboBox";
+            this.horas_KmComboBox.Size = new System.Drawing.Size(121, 21);
+            this.horas_KmComboBox.TabIndex = 10;
+            // 
+            // horometro_Km_inicialTextBox
+            // 
+            this.horometro_Km_inicialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horometro_Km_inicial", true));
+            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(351, 475);
+            this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
+            this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(174, 20);
+            this.horometro_Km_inicialTextBox.TabIndex = 9;
+            this.horometro_Km_inicialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horometro_Km_inicialTextBox_KeyPress);
+            // 
+            // modeloTextBox
+            // 
+            this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Modelo", true));
+            this.modeloTextBox.Location = new System.Drawing.Point(351, 425);
+            this.modeloTextBox.Name = "modeloTextBox";
+            this.modeloTextBox.Size = new System.Drawing.Size(298, 20);
+            this.modeloTextBox.TabIndex = 8;
+            // 
+            // marcaComboBox
+            // 
+            this.marcaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Marca", true));
+            this.marcaComboBox.FormattingEnabled = true;
+            this.marcaComboBox.Location = new System.Drawing.Point(351, 374);
+            this.marcaComboBox.Name = "marcaComboBox";
+            this.marcaComboBox.Size = new System.Drawing.Size(205, 21);
+            this.marcaComboBox.TabIndex = 7;
+            // 
+            // u_tecnicaComboBox
+            // 
+            this.u_tecnicaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "U_tecnica", true));
+            this.u_tecnicaComboBox.FormattingEnabled = true;
+            this.u_tecnicaComboBox.Location = new System.Drawing.Point(351, 325);
+            this.u_tecnicaComboBox.Name = "u_tecnicaComboBox";
+            this.u_tecnicaComboBox.Size = new System.Drawing.Size(205, 21);
+            this.u_tecnicaComboBox.TabIndex = 6;
+            // 
+            // serieTextBox
+            // 
+            this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Serie", true));
+            this.serieTextBox.Location = new System.Drawing.Point(352, 275);
+            this.serieTextBox.Name = "serieTextBox";
+            this.serieTextBox.Size = new System.Drawing.Size(297, 20);
+            this.serieTextBox.TabIndex = 5;
+            // 
+            // referenciaTextBox
+            // 
+            this.referenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Referencia", true));
+            this.referenciaTextBox.Location = new System.Drawing.Point(351, 225);
+            this.referenciaTextBox.Name = "referenciaTextBox";
+            this.referenciaTextBox.Size = new System.Drawing.Size(298, 20);
+            this.referenciaTextBox.TabIndex = 4;
+            // 
+            // n_internoTextBox
+            // 
+            this.n_internoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "N_interno", true));
+            this.n_internoTextBox.Enabled = false;
+            this.n_internoTextBox.Location = new System.Drawing.Point(351, 76);
+            this.n_internoTextBox.Name = "n_internoTextBox";
+            this.n_internoTextBox.Size = new System.Drawing.Size(298, 20);
+            this.n_internoTextBox.TabIndex = 1;
+            // 
+            // tipo_maquinaComboBox
+            // 
+            this.tipo_maquinaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Tipo_maquina", true));
+            this.tipo_maquinaComboBox.FormattingEnabled = true;
+            this.tipo_maquinaComboBox.Items.AddRange(new object[] {
+            "Tractor"});
+            this.tipo_maquinaComboBox.Location = new System.Drawing.Point(351, 126);
+            this.tipo_maquinaComboBox.Name = "tipo_maquinaComboBox";
+            this.tipo_maquinaComboBox.Size = new System.Drawing.Size(205, 21);
+            this.tipo_maquinaComboBox.TabIndex = 2;
+            this.tipo_maquinaComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tipo_maquinaComboBox_KeyPress);
+            // 
             // estadoComboBox
             // 
             this.estadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Estado", true));
@@ -152,7 +239,7 @@ namespace Soft_Team
             this.estadoComboBox.Location = new System.Drawing.Point(351, 176);
             this.estadoComboBox.Name = "estadoComboBox";
             this.estadoComboBox.Size = new System.Drawing.Size(121, 21);
-            this.estadoComboBox.TabIndex = 80;
+            this.estadoComboBox.TabIndex = 3;
             this.estadoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.estadoComboBox_KeyPress);
             // 
             // label13
@@ -281,7 +368,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(194, 502);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -292,7 +379,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(89, 502);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -329,93 +416,6 @@ namespace Soft_Team
             this.tableAdapterManager.OperadoresTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // n_internoTextBox
-            // 
-            this.n_internoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "N_interno", true));
-            this.n_internoTextBox.Enabled = false;
-            this.n_internoTextBox.Location = new System.Drawing.Point(351, 76);
-            this.n_internoTextBox.Name = "n_internoTextBox";
-            this.n_internoTextBox.Size = new System.Drawing.Size(298, 20);
-            this.n_internoTextBox.TabIndex = 82;
-            // 
-            // referenciaTextBox
-            // 
-            this.referenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Referencia", true));
-            this.referenciaTextBox.Location = new System.Drawing.Point(351, 225);
-            this.referenciaTextBox.Name = "referenciaTextBox";
-            this.referenciaTextBox.Size = new System.Drawing.Size(298, 20);
-            this.referenciaTextBox.TabIndex = 83;
-            // 
-            // serieTextBox
-            // 
-            this.serieTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Serie", true));
-            this.serieTextBox.Location = new System.Drawing.Point(352, 275);
-            this.serieTextBox.Name = "serieTextBox";
-            this.serieTextBox.Size = new System.Drawing.Size(297, 20);
-            this.serieTextBox.TabIndex = 84;
-            // 
-            // u_tecnicaComboBox
-            // 
-            this.u_tecnicaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "U_tecnica", true));
-            this.u_tecnicaComboBox.FormattingEnabled = true;
-            this.u_tecnicaComboBox.Location = new System.Drawing.Point(351, 325);
-            this.u_tecnicaComboBox.Name = "u_tecnicaComboBox";
-            this.u_tecnicaComboBox.Size = new System.Drawing.Size(205, 21);
-            this.u_tecnicaComboBox.TabIndex = 85;
-            // 
-            // marcaComboBox
-            // 
-            this.marcaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Marca", true));
-            this.marcaComboBox.FormattingEnabled = true;
-            this.marcaComboBox.Location = new System.Drawing.Point(351, 374);
-            this.marcaComboBox.Name = "marcaComboBox";
-            this.marcaComboBox.Size = new System.Drawing.Size(205, 21);
-            this.marcaComboBox.TabIndex = 86;
-            // 
-            // modeloTextBox
-            // 
-            this.modeloTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Modelo", true));
-            this.modeloTextBox.Location = new System.Drawing.Point(351, 425);
-            this.modeloTextBox.Name = "modeloTextBox";
-            this.modeloTextBox.Size = new System.Drawing.Size(298, 20);
-            this.modeloTextBox.TabIndex = 87;
-            // 
-            // horometro_Km_inicialTextBox
-            // 
-            this.horometro_Km_inicialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horometro_Km_inicial", true));
-            this.horometro_Km_inicialTextBox.Location = new System.Drawing.Point(351, 475);
-            this.horometro_Km_inicialTextBox.Name = "horometro_Km_inicialTextBox";
-            this.horometro_Km_inicialTextBox.Size = new System.Drawing.Size(174, 20);
-            this.horometro_Km_inicialTextBox.TabIndex = 88;
-            this.horometro_Km_inicialTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.horometro_Km_inicialTextBox_KeyPress);
-            // 
-            // horas_KmComboBox
-            // 
-            this.horas_KmComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Horas_Km", true));
-            this.horas_KmComboBox.FormattingEnabled = true;
-            this.horas_KmComboBox.Location = new System.Drawing.Point(544, 475);
-            this.horas_KmComboBox.Name = "horas_KmComboBox";
-            this.horas_KmComboBox.Size = new System.Drawing.Size(121, 21);
-            this.horas_KmComboBox.TabIndex = 89;
-            // 
-            // cilindrajeTextBox
-            // 
-            this.cilindrajeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "Cilindraje", true));
-            this.cilindrajeTextBox.Location = new System.Drawing.Point(351, 525);
-            this.cilindrajeTextBox.Name = "cilindrajeTextBox";
-            this.cilindrajeTextBox.Size = new System.Drawing.Size(298, 20);
-            this.cilindrajeTextBox.TabIndex = 90;
-            this.cilindrajeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cilindrajeTextBox_KeyPress);
-            // 
-            // rPMTextBox
-            // 
-            this.rPMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.maquinasBindingSource, "RPM", true));
-            this.rPMTextBox.Location = new System.Drawing.Point(352, 577);
-            this.rPMTextBox.Name = "rPMTextBox";
-            this.rPMTextBox.Size = new System.Drawing.Size(297, 20);
-            this.rPMTextBox.TabIndex = 91;
-            this.rPMTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rPMTextBox_KeyPress);
             // 
             // Editar_tractor
             // 

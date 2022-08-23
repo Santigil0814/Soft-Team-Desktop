@@ -179,7 +179,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(323, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 36);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -194,7 +194,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(423, 426);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 36);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 11;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -205,7 +205,7 @@ namespace Soft_Team
             this.correoTextBox.Location = new System.Drawing.Point(162, 255);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(322, 20);
-            this.correoTextBox.TabIndex = 34;
+            this.correoTextBox.TabIndex = 5;
             // 
             // usuarioBindingSource
             // 
@@ -229,7 +229,7 @@ namespace Soft_Team
             this.rolComboBox.MaxLength = 50;
             this.rolComboBox.Name = "rolComboBox";
             this.rolComboBox.Size = new System.Drawing.Size(153, 21);
-            this.rolComboBox.TabIndex = 35;
+            this.rolComboBox.TabIndex = 6;
             this.rolComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rolComboBox_KeyPress);
             // 
             // ape_2TextBox
@@ -238,7 +238,7 @@ namespace Soft_Team
             this.ape_2TextBox.Location = new System.Drawing.Point(162, 224);
             this.ape_2TextBox.Name = "ape_2TextBox";
             this.ape_2TextBox.Size = new System.Drawing.Size(354, 20);
-            this.ape_2TextBox.TabIndex = 36;
+            this.ape_2TextBox.TabIndex = 4;
             // 
             // ape_1TextBox
             // 
@@ -246,7 +246,7 @@ namespace Soft_Team
             this.ape_1TextBox.Location = new System.Drawing.Point(162, 191);
             this.ape_1TextBox.Name = "ape_1TextBox";
             this.ape_1TextBox.Size = new System.Drawing.Size(354, 20);
-            this.ape_1TextBox.TabIndex = 37;
+            this.ape_1TextBox.TabIndex = 3;
             // 
             // nom_2TextBox
             // 
@@ -254,7 +254,7 @@ namespace Soft_Team
             this.nom_2TextBox.Location = new System.Drawing.Point(162, 154);
             this.nom_2TextBox.Name = "nom_2TextBox";
             this.nom_2TextBox.Size = new System.Drawing.Size(354, 20);
-            this.nom_2TextBox.TabIndex = 38;
+            this.nom_2TextBox.TabIndex = 2;
             // 
             // nom_1TextBox
             // 
@@ -262,7 +262,7 @@ namespace Soft_Team
             this.nom_1TextBox.Location = new System.Drawing.Point(162, 121);
             this.nom_1TextBox.Name = "nom_1TextBox";
             this.nom_1TextBox.Size = new System.Drawing.Size(354, 20);
-            this.nom_1TextBox.TabIndex = 39;
+            this.nom_1TextBox.TabIndex = 1;
             // 
             // usuarioTextBox1
             // 
@@ -270,7 +270,7 @@ namespace Soft_Team
             this.usuarioTextBox1.Location = new System.Drawing.Point(162, 343);
             this.usuarioTextBox1.Name = "usuarioTextBox1";
             this.usuarioTextBox1.Size = new System.Drawing.Size(232, 20);
-            this.usuarioTextBox1.TabIndex = 40;
+            this.usuarioTextBox1.TabIndex = 8;
             this.usuarioTextBox1.TextChanged += new System.EventHandler(this.usuarioTextBox1_TextChanged);
             // 
             // contrasenaTextBox1
@@ -279,7 +279,7 @@ namespace Soft_Team
             this.contrasenaTextBox1.Location = new System.Drawing.Point(162, 374);
             this.contrasenaTextBox1.Name = "contrasenaTextBox1";
             this.contrasenaTextBox1.Size = new System.Drawing.Size(218, 20);
-            this.contrasenaTextBox1.TabIndex = 41;
+            this.contrasenaTextBox1.TabIndex = 9;
             // 
             // usuarioTableAdapter
             // 
@@ -304,7 +304,7 @@ namespace Soft_Team
             this.estadoComboBox.Location = new System.Drawing.Point(162, 316);
             this.estadoComboBox.Name = "estadoComboBox";
             this.estadoComboBox.Size = new System.Drawing.Size(153, 21);
-            this.estadoComboBox.TabIndex = 45;
+            this.estadoComboBox.TabIndex = 7;
             // 
             // EditarUsuario
             // 

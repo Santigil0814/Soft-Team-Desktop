@@ -127,14 +127,14 @@ namespace Soft_Team
             // ajustesToolStripMenuItem1
             // 
             this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
-            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ajustesToolStripMenuItem1.Text = "Ajustes";
             this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -146,7 +146,7 @@ namespace Soft_Team
             this.button1.Location = new System.Drawing.Point(105, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(278, 114);
-            this.button1.TabIndex = 43;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Generar reporte por fecha";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -178,7 +178,7 @@ namespace Soft_Team
             this.Fecha2.Location = new System.Drawing.Point(138, 27);
             this.Fecha2.Name = "Fecha2";
             this.Fecha2.Size = new System.Drawing.Size(104, 20);
-            this.Fecha2.TabIndex = 50;
+            this.Fecha2.TabIndex = 2;
             // 
             // Fecha1
             // 
@@ -186,7 +186,7 @@ namespace Soft_Team
             this.Fecha1.Location = new System.Drawing.Point(13, 27);
             this.Fecha1.Name = "Fecha1";
             this.Fecha1.Size = new System.Drawing.Size(104, 20);
-            this.Fecha1.TabIndex = 49;
+            this.Fecha1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -204,7 +204,7 @@ namespace Soft_Team
             this.textBox1.Location = new System.Drawing.Point(59, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 51;
+            this.textBox1.TabIndex = 6;
             // 
             // dateTime2
             // 
@@ -212,7 +212,7 @@ namespace Soft_Team
             this.dateTime2.Location = new System.Drawing.Point(137, 14);
             this.dateTime2.Name = "dateTime2";
             this.dateTime2.Size = new System.Drawing.Size(104, 20);
-            this.dateTime2.TabIndex = 50;
+            this.dateTime2.TabIndex = 5;
             // 
             // dateTime1
             // 
@@ -220,7 +220,7 @@ namespace Soft_Team
             this.dateTime1.Location = new System.Drawing.Point(13, 14);
             this.dateTime1.Name = "dateTime1";
             this.dateTime1.Size = new System.Drawing.Size(104, 20);
-            this.dateTime1.TabIndex = 49;
+            this.dateTime1.TabIndex = 4;
             // 
             // button2
             // 
@@ -230,7 +230,7 @@ namespace Soft_Team
             this.button2.Location = new System.Drawing.Point(466, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(278, 114);
-            this.button2.TabIndex = 46;
+            this.button2.TabIndex = 7;
             this.button2.Text = "Generar reporte por Número interno";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
