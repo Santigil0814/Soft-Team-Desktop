@@ -50,10 +50,16 @@ namespace Soft_Team
             this.button2 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this._Soft_Team1DataSet = new Soft_Team._Soft_Team1DataSet();
+            this.maquinaria_mantenimientoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maquinaria_mantenimientoTableAdapter = new Soft_Team._Soft_Team1DataSetTableAdapters.maquinaria_mantenimientoTableAdapter();
+            this.tableAdapterManager = new Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager();
             this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -127,14 +133,14 @@ namespace Soft_Team
             // ajustesToolStripMenuItem1
             // 
             this.ajustesToolStripMenuItem1.Name = "ajustesToolStripMenuItem1";
-            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ajustesToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.ajustesToolStripMenuItem1.Text = "Ajustes";
             this.ajustesToolStripMenuItem1.Click += new System.EventHandler(this.ajustesToolStripMenuItem1_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -169,7 +175,7 @@ namespace Soft_Team
             this.panel1.Controls.Add(this.Fecha1);
             this.panel1.Location = new System.Drawing.Point(115, 192);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(254, 74);
+            this.panel1.Size = new System.Drawing.Size(254, 61);
             this.panel1.TabIndex = 45;
             // 
             // Fecha2
@@ -250,6 +256,29 @@ namespace Soft_Team
             this.label2.Text = "Por favor seleccione tantno: el rango desde la \r\nfecha inicial a la fecha final y" +
     " el Número Interno \r\nde la máquina de la cual desea generar el reporte.";
             // 
+            // _Soft_Team1DataSet
+            // 
+            this._Soft_Team1DataSet.DataSetName = "_Soft_Team1DataSet";
+            this._Soft_Team1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // maquinaria_mantenimientoBindingSource
+            // 
+            this.maquinaria_mantenimientoBindingSource.DataMember = "maquinaria_mantenimiento";
+            this.maquinaria_mantenimientoBindingSource.DataSource = this._Soft_Team1DataSet;
+            // 
+            // maquinaria_mantenimientoTableAdapter
+            // 
+            this.maquinaria_mantenimientoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.maquinaria_mantenimientoTableAdapter = this.maquinaria_mantenimientoTableAdapter;
+            this.tableAdapterManager.MaquinasTableAdapter = null;
+            this.tableAdapterManager.OperadoresTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Soft_Team._Soft_Team1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuarioTableAdapter = null;
+            // 
             // Generar_reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +296,7 @@ namespace Soft_Team
             this.Name = "Generar_reporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generar_reporte";
+            this.Load += new System.EventHandler(this.Generar_reporte_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -274,6 +304,8 @@ namespace Soft_Team
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._Soft_Team1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maquinaria_mantenimientoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +332,9 @@ namespace Soft_Team
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
+        private _Soft_Team1DataSet _Soft_Team1DataSet;
+        private System.Windows.Forms.BindingSource maquinaria_mantenimientoBindingSource;
+        private _Soft_Team1DataSetTableAdapters.maquinaria_mantenimientoTableAdapter maquinaria_mantenimientoTableAdapter;
+        private _Soft_Team1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

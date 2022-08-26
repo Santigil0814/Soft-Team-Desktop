@@ -6253,7 +6253,7 @@ SELECT id_maquinaria_mantenimiento, id_usuario, fecha_hora_salida, horometro_act
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT id_maquinaria_mantenimiento, id_usuario, fecha_hora_salida, horometro_actual, observaciones, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5, seccion_6, seccion_7, seccion_8, seccion_9, fecha_hora_ingreso, id_maquina, ficha_operador FROM maquinaria_mantenimiento";
@@ -6306,11 +6306,21 @@ WHERE        (maquinaria_mantenimiento = @usuario)
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT        id_maquinaria_mantenimiento, id_maquina, id_usuario, fecha_hora_ingreso, fecha_hora_salida, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5,  seccion_6, seccion_7, seccion_8, seccion_9
+            this._commandCollection[3].CommandText = @"SELECT        maquinaria_mantenimiento.id_maquinaria_mantenimiento, maquinaria_mantenimiento.id_maquina, maquinaria_mantenimiento.id_usuario, maquinaria_mantenimiento.fecha_hora_ingreso, 
+                         maquinaria_mantenimiento.fecha_hora_salida, maquinaria_mantenimiento.observaciones, maquinaria_mantenimiento.ficha_operador, maquinaria_mantenimiento.horometro_actual, 
+                         maquinaria_mantenimiento.tipo_mantenimiento, maquinaria_mantenimiento.seccion_1, maquinaria_mantenimiento.seccion_2, maquinaria_mantenimiento.seccion_3, maquinaria_mantenimiento.seccion_4, 
+                         maquinaria_mantenimiento.seccion_5, maquinaria_mantenimiento.seccion_6, maquinaria_mantenimiento.seccion_7, maquinaria_mantenimiento.seccion_8, maquinaria_mantenimiento.seccion_9
+FROM            maquinaria_mantenimiento INNER JOIN
+                         Maquinas ON maquinaria_mantenimiento.id_maquina = Maquinas.id_Maquina INNER JOIN
+                         Usuario ON maquinaria_mantenimiento.id_usuario = Usuario.id_Usuario";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"SELECT        id_maquinaria_mantenimiento, id_maquina, id_usuario, fecha_hora_ingreso, fecha_hora_salida, observaciones, ficha_operador, horometro_actual, tipo_mantenimiento, seccion_1, seccion_2, seccion_3, seccion_4, seccion_5,  seccion_6, seccion_7, seccion_8, seccion_9
 FROM            maquinaria_mantenimiento
 WHERE        (id_maquina = @id_maquina)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_maquina", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_maquina", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6332,6 +6342,30 @@ WHERE        (id_maquina = @id_maquina)";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual _Soft_Team1DataSet.maquinaria_mantenimientoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            _Soft_Team1DataSet.maquinaria_mantenimientoDataTable dataTable = new _Soft_Team1DataSet.maquinaria_mantenimientoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int BuscaFecha(_Soft_Team1DataSet.maquinaria_mantenimientoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual _Soft_Team1DataSet.maquinaria_mantenimientoDataTable GetDataBy3() {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             _Soft_Team1DataSet.maquinaria_mantenimientoDataTable dataTable = new _Soft_Team1DataSet.maquinaria_mantenimientoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7128,7 +7162,7 @@ WHERE        (id_maquina = @id_maquina)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> TraerDatosMaquina(int id_maquina) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             command.Parameters[0].Value = ((int)(id_maquina));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
